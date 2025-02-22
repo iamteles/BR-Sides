@@ -28,36 +28,36 @@ class SaveData
 		"Resolution" => [
 			"1280x720",
 			SELECTOR,
-			"Change the game's resolution if it doesn't fit your monitor.",
+			"Muda a resolução do jogo, caso não caiba no seu monitor.",
 			["640x360","854x480","960x540","1024x576","1152x648","1280x720","1366x768","1600x900","1920x1080", "2560x1440", "3840x2160"],
 		],
 		'Flashing Lights' => [
 			"ON",
 			SELECTOR,
-			"Disable this if you have issues with Photosensitivity.",
+			"Desative isso caso tenha problemas com epilepsia ou luzes piscantes.",
 			["ON", "REDUCED", "OFF"]
 		],
 		"Cutscenes" => [
 			"ON",
 			SELECTOR,
-			"Decides if the song cutscenes should play.",
+			"Decide se cutscenes são tocadas.",
 			["ON", "OFF"],
 		],
 		"FPS Counter" => [
 			"OFF",
 			SELECTOR,
-			"Counter that can display debug information, such as the framerate or the memory usage.",
+			"Contador que mostra informação de teste, incluindo FPS e memória.",
 			["FULL", "SIMPLE", "OFF"]
 		],
 		'Unfocus Pause' => [
 			true,
 			CHECKMARK,
-			"Pauses the game when the window is unfocused.",
+			"Pausa o jogo quando a janela sai de foco.",
 		],
 		"Countdown on Unpause" => [
 			true,
 			CHECKMARK,
-			"When unpausing the game, this 4 beat timer will help you get back on rhythm.",
+			"Batida no pause para ajudar a voltar no ritmo.",
 		],
 		'Discord RPC' => [
 			#if DISCORD_RPC
@@ -66,17 +66,17 @@ class SaveData
 			false,
 			#end
 			CHECKMARK,
-			"Display game information on your Discord profile.",
+			"Mostra informações sobre o jogo no seu perfil de Discord.",
 		],
 		"Shaders" => [
 			true,
 			CHECKMARK,
-			"Fancy graphical effects. Disable this if you get GPU related crashes."
+			"Efeitos graficos legais. Desative isso caso não consiga abrir algumas musicas."
 		],
 		"Low Quality" => [
 			false,
 			CHECKMARK,
-			"Disables extra assets that might make very low end computers lag."
+			"Desativa alguns objetos nos stages, para diminuir lag."
 		],
 		/*
 		*
@@ -86,29 +86,29 @@ class SaveData
 		"Ghost Tapping" => [
 			true,
 			CHECKMARK,
-			"Makes you able to press keys freely without breaking notes."
+			"Deixa apertar teclas sem quebrar seu combo."
 		],
 		"Downscroll" => [
 			false,
 			CHECKMARK,
-			"Decides if the notes should scroll down or up."
+			"Decide se suas notas sobem ou descem."
 		],
 		"FPS Cap"	=> [
 			"60",
 			SELECTOR,
-			"How many frames can displayed in a second.",
+			"Quantos frames são mostrados num segundo.",
 			["30", "60", "75", "120", "144"]
 		],
 		'Hitsounds' => [
 			"OFF",
 			SELECTOR,
-			"Clicking sounds whenever you hit a note.",
+			"Som quando você aperta uma nota.",
 			["OFF", "OSU", "CD"]
 		],
 		'Hitsound Volume' => [
 			100,
 			SELECTOR,
-			"The volume at which hitsounds are played.",
+			"Volume dos Hitsounds.",
 			[0, 100]
 		],
 		/*
@@ -119,12 +119,12 @@ class SaveData
 		"Antialiasing" => [
 			true,
 			CHECKMARK,
-			"Smoothing on sprite scaling. Disabling this may improve performance."
+			"Aumento de sprites suavizado."
 		],
 		"Dark Mode" => [
 			true,
 			CHECKMARK,
-			"The theme of the Window."
+			"Tema da janela."
 		],
 		/*
 		*
@@ -134,19 +134,19 @@ class SaveData
 		"Invert Swipes" => [
 			"OFF",
 			SELECTOR,
-			"Inverts the direction of the swipes.",
+			"Inverte a direção de deslizar a tela.",
 			["HORIZONTAL", "VERTICAL", "BOTH", "OFF"],
 		],
 		"Button Opacity" => [
 			5,
 			SELECTOR,
-			"Decides the transparency of the virtual buttons.",
+			"Decide a transparência dos botões.",
 			[0, 10]
 		],
 		"Hitbox Opacity" => [
 			7,
 			SELECTOR,
-			"Decides the transparency of the playing Hitboxes.",
+			"Decide a transparência dos Hitboxes.",
 			[0, 10]
 		],
 		/*

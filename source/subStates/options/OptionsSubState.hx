@@ -82,7 +82,7 @@ class OptionsSubState extends MusicBeatSubState
     var curSelected:Int = 0;
     var storedSelected:Map<String, Int> = [];
 
-    var grpItems:FlxTypedGroup<Alphabet>;
+    var grpItems:FlxTypedGroup<FlxText>;
     var grpAttachs:FlxGroup;
     var restartTxt:Alphabet;
     var infoBG:FlxSprite;
@@ -128,7 +128,7 @@ class OptionsSubState extends MusicBeatSubState
         bg.screenCenter();
         add(bg);
 
-        grpItems = new FlxTypedGroup<Alphabet>();
+        grpItems = new FlxTypedGroup<FlxText>();
         grpAttachs = new FlxGroup();
         add(grpItems);
         add(grpAttachs);
@@ -298,6 +298,7 @@ class OptionsSubState extends MusicBeatSubState
 
     function updateItemPos(lerpTime:Float)
     {
+        //return;
         var itemY:Array<Float> = [];
         for(item in grpItems.members)
         {
@@ -344,13 +345,13 @@ class OptionsSubState extends MusicBeatSubState
             {
                 var item:FlxSprite = cast rawItem;
                 item.x = FlxMath.lerp(item.x, posAttach - item.width, lerpTime);
-                item.y = daItem.y + daItem.height / 2 - item.height / 2;
+                item.y = daItem.y + daItem.height / 2 - item.height / 2 - 4;
             }
             if(Std.isOfType(rawItem, OptionSelector))
             {
                 var selec:OptionSelector = cast rawItem;
                 selec.setX(FlxMath.lerp(selec.arrowL.x, posAttach - selec.getWidth(), lerpTime));
-                selec.setY(daItem.y + daItem.height / 2);
+                selec.setY(daItem.y + daItem.height / 2 - 4);
                 if(selec.ID != curSelected)
                 {
                     selec.holdTimer = 0.0;
@@ -381,16 +382,20 @@ class OptionsSubState extends MusicBeatSubState
         {
             for(i in 0...mainShit.length)
             {
-                var item = new Alphabet(0, 0, mainShit[i], true);
-                grpItems.add(item);
-                item.align = CENTER;
-                item.updateHitbox();
-                item.ID = i;
+                var text = new FlxText(0, 0, 0, "");
+                text.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
+                text.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
+                text.text = mainShit[i].toUpperCase();
+                //text.scale.set(0.7,0.7);
+                text.updateHitbox();
+                text.ID = i;
 
-                item.x = FlxG.width / 2;
-                item.y = (FlxG.height / 2) - (item.height / 2);
-                item.y += (100 * i);
-                item.y -= (100 * ((mainShit.length - 1) / 2));
+                grpItems.add(text);
+
+                text.x = FlxG.width / 2;
+                text.y = (FlxG.height / 2) - (text.height / 2);
+                text.y += (100 * i);
+                text.y -= (100 * ((mainShit.length - 1) / 2));
             }
         }
         else
@@ -398,11 +403,15 @@ class OptionsSubState extends MusicBeatSubState
             var curOption = optionShit.get(curCat);
             for(i in 0...curOption.length)
             {
-                var item = new Alphabet(0, 0, curOption[i], true);
-                grpItems.add(item);
-                item.scale.set(0.75,0.75);
-                item.updateHitbox();
-                item.ID = i;
+                var text = new FlxText(0, 0, 0, "");
+                text.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
+                text.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
+                text.text = curOption[i];
+                //text.scale.set(0.7,0.7);
+                text.updateHitbox();
+                text.ID = i;
+
+                grpItems.add(text);
 
                 if(!SaveData.displaySettings.exists(curOption[i])) continue;
 

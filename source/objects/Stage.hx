@@ -5,6 +5,7 @@ import flixel.FlxSprite;
 import flixel.group.FlxGroup;
 import flixel.math.FlxPoint;
 import states.PlayState;
+import openfl.display.BlendMode;
 
 class Stage extends FlxGroup
 {
@@ -44,7 +45,7 @@ class Stage extends FlxGroup
 		{
 			default: ["w1"];
 			
-			//case "template": ["preload1", "preload2", "starting-stage"];
+			case "pisadona": ["w2"];
 		};
 
 		//this stops you from fucking stuff up by changing this mid song
@@ -125,6 +126,34 @@ class Stage extends FlxGroup
 
 		switch(curStage)
 		{
+			case "w1":
+				//dadPos.x += 80;
+				//dadCam.y -= 30;
+				gfPos.y -= 80;
+				gfPos.x += 20;
+			
+				this.gfVersion = "gf";
+				this.camZoom = 0.8;
+			
+				PlayState.zoomPl = 0.1;
+			
+				var bg = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w1/sky"));
+				bg.scrollFactor.set(0,0);
+				add(bg);
+			
+				var back = new FlxSprite(-400, -600).loadGraphic(Paths.image("stages/w1/back"));
+				back.scrollFactor.set(0.6,0.9);
+				add(back);
+			
+				var grd = new FlxSprite(-400, -570).loadGraphic(Paths.image("stages/w1/grd"));
+				grd.scale.set(1.1,1.1);
+				add(grd);
+			
+				var overlay = new FlxSprite(-400, -370).loadGraphic(Paths.image("stages/w1/overlay"));
+				overlay.scale.set(1.1,1.1);
+				overlay.blend = BlendMode.ADD;
+				overlay.alpha = 0.13;
+				foreground.add(overlay);
 			default:
 				this.curStage = "stage";
 				camZoom = 0.9;

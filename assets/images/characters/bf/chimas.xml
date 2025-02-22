@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ChimasBeto_Assests.png">
+	<!-- Created with Adobe Animate version 19.2.0.405 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Beto TOMANDO0000" x="0" y="0" width="518" height="570" frameX="-96" frameY="-75" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0001" x="0" y="0" width="518" height="570" frameX="-96" frameY="-75" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0002" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0003" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0004" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0005" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0006" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0007" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0008" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0009" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0010" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0011" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0012" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0013" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0014" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0015" x="518" y="0" width="520" height="569" frameX="-93" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0016" x="1038" y="0" width="518" height="569" frameX="-95" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0017" x="1038" y="0" width="518" height="569" frameX="-95" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0018" x="1556" y="0" width="517" height="569" frameX="-96" frameY="-77" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0019" x="2073" y="0" width="517" height="568" frameX="-96" frameY="-78" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0020" x="2590" y="0" width="529" height="585" frameX="-84" frameY="-61" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0021" x="3119" y="0" width="529" height="594" frameX="-84" frameY="-52" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0022" x="0" y="594" width="539" height="594" frameX="-74" frameY="-52" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0023" x="539" y="594" width="540" height="640" frameX="-73" frameY="-6" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0024" x="1079" y="594" width="541" height="640" frameX="-72" frameY="-6" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0025" x="1620" y="594" width="547" height="646" frameX="-66" frameY="0" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0026" x="1620" y="594" width="547" height="646" frameX="-66" frameY="0" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0027" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0028" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0029" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0030" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0031" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0032" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0033" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0034" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0035" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0036" x="2167" y="594" width="545" height="643" frameX="-68" frameY="-3" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0037" x="2712" y="594" width="551" height="631" frameX="-62" frameY="-15" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0038" x="2712" y="594" width="551" height="631" frameX="-62" frameY="-15" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0039" x="3263" y="594" width="553" height="635" frameX="-60" frameY="-11" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0040" x="3263" y="594" width="553" height="635" frameX="-60" frameY="-11" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0041" x="0" y="1240" width="603" height="588" frameX="-10" frameY="-58" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0042" x="603" y="1240" width="603" height="588" frameX="-10" frameY="-58" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0043" x="1206" y="1240" width="608" height="577" frameX="0" frameY="-69" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto TOMANDO0044" x="1814" y="1240" width="537" height="564" frameX="-71" frameY="-82" frameWidth="614" frameHeight="646"/>
+	<SubTexture name="Beto down0000" x="2351" y="1240" width="507" height="494" frameX="0" frameY="-6" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0001" x="2351" y="1240" width="507" height="494" frameX="0" frameY="-6" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0002" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0003" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0004" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0005" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0006" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0007" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0008" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0009" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0010" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0011" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0012" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0013" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0014" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0015" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0016" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0017" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0018" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0019" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0020" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0021" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0022" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down0023" x="2858" y="1240" width="501" height="501" frameX="-1" frameY="0" frameWidth="507" frameHeight="501"/>
+	<SubTexture name="Beto down miss0000" x="3359" y="1240" width="507" height="494" frameX="-1" frameY="-15" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0001" x="0" y="1828" width="502" height="509" frameX="0" frameY="0" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0002" x="0" y="1828" width="502" height="509" frameX="0" frameY="0" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0003" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0004" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0005" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0006" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0007" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0008" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0009" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0010" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0011" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0012" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0013" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0014" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0015" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0016" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0017" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0018" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0019" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0020" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0021" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0022" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto down miss0023" x="502" y="1828" width="502" height="501" frameX="0" frameY="-7" frameWidth="508" frameHeight="509"/>
+	<SubTexture name="Beto idle0000" x="1004" y="1828" width="556" height="556" frameX="0" frameY="-12" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0001" x="1004" y="1828" width="556" height="556" frameX="0" frameY="-12" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0002" x="1560" y="1828" width="554" height="557" frameX="-3" frameY="-11" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0003" x="1560" y="1828" width="554" height="557" frameX="-3" frameY="-11" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0004" x="2114" y="1828" width="545" height="564" frameX="-9" frameY="-4" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0005" x="2659" y="1828" width="545" height="565" frameX="-9" frameY="-4" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0006" x="3204" y="1828" width="542" height="568" frameX="-11" frameY="-1" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0007" x="0" y="2396" width="542" height="568" frameX="-11" frameY="-1" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0008" x="542" y="2396" width="544" height="569" frameX="-9" frameY="0" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0009" x="542" y="2396" width="544" height="569" frameX="-9" frameY="0" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0010" x="542" y="2396" width="544" height="569" frameX="-9" frameY="0" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0011" x="542" y="2396" width="544" height="569" frameX="-9" frameY="0" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0012" x="542" y="2396" width="544" height="569" frameX="-9" frameY="0" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0013" x="1086" y="2396" width="542" height="567" frameX="-12" frameY="-1" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto idle0014" x="1086" y="2396" width="542" height="567" frameX="-12" frameY="-1" frameWidth="557" frameHeight="569"/>
+	<SubTexture name="Beto left0000" x="1628" y="2396" width="495" height="573" frameX="0" frameY="0" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0001" x="1628" y="2396" width="495" height="573" frameX="0" frameY="0" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0002" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0003" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0004" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0005" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0006" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0007" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0008" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0009" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0010" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0011" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0012" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0013" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0014" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0015" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0016" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0017" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0018" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0019" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0020" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0021" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0022" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0023" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left0024" x="2123" y="2396" width="502" height="571" frameX="-7" frameY="-2" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left miss0000" x="1628" y="2396" width="495" height="573" frameX="0" frameY="0" frameWidth="509" frameHeight="573"/>
+	<SubTexture name="Beto left miss0001" x="2625" y="2396" width="502" height="571" frameX="-4" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0002" x="2625" y="2396" width="502" height="571" frameX="-4" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0003" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0004" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0005" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0006" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0007" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0008" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0009" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0010" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0011" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0012" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0013" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0014" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0015" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0016" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0017" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0018" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0019" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0020" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0021" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0022" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto left miss0023" x="3127" y="2396" width="503" height="571" frameX="-5" frameY="-2" frameWidth="508" frameHeight="573"/>
+	<SubTexture name="Beto right0000" x="3630" y="2396" width="462" height="564" frameX="-6" frameY="-2" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0001" x="3630" y="2396" width="462" height="564" frameX="-6" frameY="-2" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0002" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0003" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0004" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0005" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0006" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0007" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0008" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0009" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0010" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0011" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0012" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0013" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0014" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0015" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0016" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0017" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0018" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0019" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0020" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right0021" x="0" y="2969" width="464" height="566" frameX="0" frameY="0" frameWidth="468" frameHeight="566"/>
+	<SubTexture name="Beto right miss0000" x="464" y="2969" width="462" height="564" frameX="0" frameY="-2" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0001" x="926" y="2969" width="437" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0002" x="926" y="2969" width="437" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0003" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0004" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0005" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0006" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0007" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0008" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0009" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0010" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0011" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0012" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0013" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0014" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0015" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0016" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0017" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0018" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0019" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0020" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0021" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0022" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto right miss0023" x="1363" y="2969" width="432" height="566" frameX="-28" frameY="0" frameWidth="465" frameHeight="566"/>
+	<SubTexture name="Beto up0000" x="2241" y="2969" width="456" height="626"/>
+	<SubTexture name="Beto up0001" x="2241" y="2969" width="456" height="626"/>
+	<SubTexture name="Beto up0002" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0003" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0004" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0005" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0006" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0007" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0008" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0009" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0010" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0011" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0012" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0013" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0014" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0015" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0016" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0017" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0018" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0019" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0020" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0021" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0022" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0023" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up0024" x="1795" y="2969" width="446" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0000" x="2241" y="2969" width="456" height="626"/>
+	<SubTexture name="Beto up miss0001" x="2697" y="2969" width="439" height="623" frameX="-11" frameY="-3" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0002" x="2697" y="2969" width="439" height="623" frameX="-11" frameY="-3" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0003" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0004" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0005" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0006" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0007" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0008" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0009" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0010" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0011" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0012" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0013" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0014" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0015" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0016" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0017" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0018" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0019" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0020" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0021" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0022" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+	<SubTexture name="Beto up miss0023" x="3136" y="2969" width="447" height="619" frameX="-7" frameY="-7" frameWidth="456" frameHeight="626"/>
+</TextureAtlas>

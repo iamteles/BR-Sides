@@ -54,7 +54,9 @@ class CharacterUtil
 			"bf",
 			"bf-dead",
 			"danilo",
-			"test-note"
+			"purobobora",
+			"saco",
+			"bf-chimas",
 		];
 	}
 }

@@ -3,11 +3,12 @@ package objects.menu.options;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
+import flixel.text.FlxText;
 
 class OptionSelector extends FlxTypedGroup<FlxSprite>
 {
     public var arrowL:FlxSprite;
-    public var text:Alphabet;
+	public var text:FlxText;
     public var arrowR:FlxSprite;
 
     public var holdTimer:Float = 0;
@@ -33,9 +34,12 @@ class OptionSelector extends FlxTypedGroup<FlxSprite>
         arrowL = getArrow('left');
         arrowR = getArrow('right');
 
-        text = new Alphabet(0, 0, Std.string(value), true);
-        text.scale.set(0.75,0.75);
-        text.updateHitbox();
+        text = new FlxText(0, 0, 0, "");
+		text.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
+		text.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
+		text.text = Std.string(value).toUpperCase();
+		//text.scale.set(0.7,0.7);
+		text.updateHitbox();
 
         add(arrowL);
         add(text);
@@ -84,13 +88,15 @@ class OptionSelector extends FlxTypedGroup<FlxSprite>
     public function setX(x:Float):Void
     {
         arrowL.x = x;
-        text.x = arrowL.x + arrowL.width;
-        arrowR.x = text.x + text.width;
+        text.x = arrowL.x + arrowL.width + 2;
+        arrowR.x = text.x + text.width + 2;
     }
     public function setY(y:Float):Void
     {
         for(item in [arrowL, text, arrowR])
             item.y = y - (item.height / 2);
+
+        text.y += 8;
     }
 
     public function getWidth():Float

@@ -69,7 +69,7 @@ class SplashNote extends FlxSprite
 		{
 			default:
 				frames = Paths.getSparrowAtlas('notes/base/holdSplashes');
-				scale.set(0.7,0.7);
+				scale.set(0.95,0.95);
 
 				direction = direction.toUpperCase();
 				
@@ -77,8 +77,7 @@ class SplashNote extends FlxSprite
 				animation.addByPrefix("loop",  	'holdCover$direction', 		24, true);
 				animation.addByPrefix("splash",	'holdCoverEnd$direction', 	24, false);
 
-				for(anim in ["start", "loop", "splash"])
-					addOffset(anim, 6, -28);
+				addOffset("splash", -16, -10);
 				
 				updateHitbox();
 		}

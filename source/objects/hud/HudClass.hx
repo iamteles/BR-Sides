@@ -65,7 +65,7 @@ class HudClass extends FlxGroup
 		health = PlayState.health;
 	}
 
-	public final separator:String = " | ";
+	public final separator:String = " • ";
 
 	public function updateText()
 	{

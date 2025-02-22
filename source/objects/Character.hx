@@ -62,6 +62,37 @@ class Character extends FlxAnimate
 		var doidoChar = CharacterUtil.defaultChar();
 		switch(curChar)
 		{
+			case "bf-chimas":
+				doidoChar.spritesheet += 'bf/chimas';
+				doidoChar.anims = [
+					['idle', 			'Beto idle', 		24, false],
+					['singUP', 			'Beto up0', 			24, false],
+					['singLEFT', 		'Beto left0', 		24, false],
+					['singRIGHT', 		'Beto right0', 		24, false],
+					['singDOWN', 		'Beto down0', 		24, false],
+					['singUPmiss', 			'Beto up miss', 			24, false],
+					['singLEFTmiss', 		'Beto left miss', 		24, false],
+					['singRIGHTmiss', 		'Beto right miss', 		24, false],
+					['singDOWNmiss', 		'Beto down miss', 		24, false],
+					['hey', 			'Beto TOMANDO', 				24, false],
+				];
+				
+				flipX = true;
+
+				scale.set(0.75,0.75);
+			case "purobobora":
+				doidoChar.spritesheet += 'purobobora/purobobora';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
+					['arroz', 			'arroz0', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+				];
+
+				scale.set(0.75,0.75);
 			case "gf":
 				spriteType = ATLAS;
 				doidoChar.spritesheet += 'gf/gf-spritemap';
@@ -91,6 +122,19 @@ class Character extends FlxAnimate
 				doidoChar.anims = [
 					['idle', 'idle'],
 				];
+
+			case 'saco':
+				doidoChar.spritesheet += 'saco/saco';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+				];
+
+				scale.set(0.75,0.75);
 
 			case 'danilo':
 				doidoChar.spritesheet += 'danilo/danilo';

@@ -42,17 +42,26 @@ class SongData
 {
 	public static var defaultDiffs:Array<String> = ['normal'];
 	public static var weeks:Array<FunkyWeek> = [
-		/*{
+		{
 			songs: [
-				['bopeebo', 	'dad'],
-				['fresh', 		'dad'],
-				['dadbattle', 	'dad'],
+				['microondas-freestyle', 	'danilo'],
+				['fluxo', 		'danilo'],
+				['vei-brabo', 	'danilo'],
 			],
 			weekFile: 'week1',
 			weekName: 'daddy dearest',
 			chars: ['dad', 'bf', 'gf'],
-			diffs: ['easy', 'normal', 'hard', 'erect', 'nightmare'],
-		},*/
+			diffs: ['normal'],
+		},
+		{
+			songs: [
+				['pisadona', 	'purobobora']
+			],
+			weekFile: 'week2',
+			weekName: 'daddy dearest',
+			chars: ['dad', 'bf', 'gf'],
+			diffs: ['normal'],
+		},
 		{
 			songs: [
 				["useless",			"dad"]

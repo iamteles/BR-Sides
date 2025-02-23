@@ -6,6 +6,7 @@ import flixel.group.FlxGroup;
 import flixel.math.FlxPoint;
 import states.PlayState;
 import openfl.display.BlendMode;
+import flixel.addons.display.FlxBackdrop;
 
 class Stage extends FlxGroup
 {
@@ -45,7 +46,7 @@ class Stage extends FlxGroup
 		{
 			default: ["w1"];
 			
-			case "pisadona": ["w2"];
+			case "calorao": ["w2"];
 		};
 
 		//this stops you from fucking stuff up by changing this mid song
@@ -126,6 +127,47 @@ class Stage extends FlxGroup
 
 		switch(curStage)
 		{
+			case "w2":
+				gfPos.y -= 20;
+				gfPos.x += 230;
+			
+				bfPos.x += 250;
+			
+				dadPos.x += 100;
+			
+				this.gfVersion = "gf";
+				this.camZoom = 0.7; // 0.7
+			
+				PlayState.zoomPl = 0.1;
+			
+				var bg = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w2/sky"));
+				bg.scrollFactor.set(0.3,0.7);
+				add(bg);
+			
+				/*
+				var clouds = new FlxSprite(-400, -500).loadGraphic(Paths.image("stages/w2/clouds"));
+				clouds.scrollFactor.set(0.6,0.9);
+				add(clouds);*/
+
+				var clouds = new FlxBackdrop(Paths.image("stages/w2/clouds"), X, 0, 0);
+				clouds.scrollFactor.set(0.6,0.9);
+				clouds.velocity.set(12,0);
+				clouds.screenCenter();
+				clouds.x = -400;
+				clouds.y = -500;
+				add(clouds);
+			
+				var grd = new FlxSprite(-570, -360).loadGraphic(Paths.image("stages/w2/grd"));
+				grd.scale.set(1.1,1.1);
+				add(grd);
+			
+				var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w2/overlay"));
+				overlay.blend = BlendMode.ADD;
+				overlay.alpha = 0.4;
+				bg.scrollFactor.set(0.3,0.7);
+				foreground.add(overlay);
+
+				
 			case "w1":
 				//dadPos.x += 80;
 				//dadCam.y -= 30;

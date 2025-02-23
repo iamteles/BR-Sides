@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bf",
+		"player1": "bf-chimas",
 		"gfVersion": "gf",
 		"notes": [
 			{
@@ -4213,9 +4213,9 @@
 			}
 		],
 		"events": [],
-		"player2": "spooky",
+		"player2": "purobobora",
 		"splashSkin": "noteSplashes",
-		"song": "pisadona",
+		"song": "calorao",
 		"needsVoices": true,
 		"arrowSkin": "",
 		"stage": "stage",

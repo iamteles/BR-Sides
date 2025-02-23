@@ -440,6 +440,11 @@ class PlayState extends MusicBeatState
 		else
 			startCountdown();
 
+		switch(daSong) {
+			case "calorao":
+				setCamShader([getCamShader("heatshader.frag")]);
+		}
+
 		callScript("createPost");
 	}
 
@@ -1775,6 +1780,8 @@ class PlayState extends MusicBeatState
 	{
 		var shaderArr:Array<String> = [null, null];
 		shaderArr[key.endsWith('.frag') ? 0 : 1] = Paths.shader(key);
+
+		Logs.print("got shaderz " + shaderArr);
 
 		var runtime:FlxRuntimeShader = new FlxRuntimeShader(shaderArr[0], shaderArr[1]);
 		return new ShaderFilter(runtime);

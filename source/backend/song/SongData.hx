@@ -55,7 +55,7 @@ class SongData
 		},
 		{
 			songs: [
-				['pisadona', 	'purobobora']
+				['calorao', 	'purobobora']
 			],
 			weekFile: 'week2',
 			weekName: 'daddy dearest',

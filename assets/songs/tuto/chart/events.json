@@ -1,0 +1,148 @@
+{
+	"songEvents": [
+		[
+			8,
+			19200,
+			[
+				[
+					"Change Cam Section",
+					"none",
+					"",
+					""
+				],
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"0.8",
+					"linear"
+				]
+			]
+		],
+		[
+			7,
+			17700,
+			[
+				[
+					"Change Cam Section",
+					"dad",
+					"",
+					""
+				]
+			]
+		],
+		[
+			7,
+			18000,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"cheer",
+					"false"
+				],
+				[
+					"Change Subtitles",
+					"(Gi): É assim que se faz!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			30,
+			58800,
+			[
+				[
+					"Change Cam Alpha",
+					"0",
+					"2",
+					"camHUD"
+				],
+				[
+					"Change Cam Alpha",
+					"0",
+					"2",
+					"camStrum"
+				]
+			]
+		],
+		[
+			29,
+			55200,
+			[
+				[
+					"Change Cam Zoom",
+					"1",
+					"",
+					""
+				]
+			]
+		],
+		[
+			28,
+			52800,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				]
+			]
+		],
+		[
+			30,
+			57600,
+			[
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				]
+			]
+		],
+		[
+			0,
+			0,
+			[
+				[
+					"Change Cam Section",
+					"dad",
+					"",
+					""
+				]
+			]
+		],
+		[
+			1,
+			2400,
+			[
+				[
+					"Change Cam Section",
+					"none",
+					"",
+					""
+				]
+			]
+		],
+		[
+			3,
+			8400,
+			[
+				[
+					"Change HudB Alpha",
+					"1",
+					"1",
+					""
+				],
+				[
+					"Do Note Intro",
+					"",
+					"",
+					""
+				]
+			]
+		]
+	]
+}

@@ -47,6 +47,7 @@ class Stage extends FlxGroup
 			default: ["w1"];
 			
 			case "calorao": ["w2"];
+			case "verdadeira-historia": ["quarto"];
 		};
 
 		//this stops you from fucking stuff up by changing this mid song
@@ -173,11 +174,10 @@ class Stage extends FlxGroup
 				//dadCam.y -= 30;
 				gfPos.y -= 80;
 				gfPos.x += 20;
+				gfCam.y += 100;
 			
 				this.gfVersion = "gf";
 				this.camZoom = 0.8;
-			
-				PlayState.zoomPl = 0.1;
 			
 				var bg = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w1/sky"));
 				bg.scrollFactor.set(0,0);

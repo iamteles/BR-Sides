@@ -137,7 +137,20 @@ class Character extends FlxAnimate
 				scale.set(0.75,0.75);
 
 			case 'danilo':
-				doidoChar.spritesheet += 'danilo/danilo';
+				doidoChar.spritesheet += 'danilo/DaniloNormal';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+				];
+
+				scale.set(0.75,0.75);
+
+			case 'danilo-brabo':
+				doidoChar.spritesheet += 'danilo/DaniloBrabo';
 				doidoChar.anims = [
 					['idle', 			'idle0', 		24, false],
 
@@ -214,6 +227,60 @@ class Character extends FlxAnimate
 				flipX = true;
 
 				scale.set(0.72,0.72);
+
+			case 'dublando':
+				doidoChar.spritesheet += 'dublando/DublandoCalls';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
+					['ring', 			'ring0', 		24, false],
+					['sound', 			'sound0', 		24, false],
+				];
+
+				scale.set(0.75,0.75);
+
+			case 'dublando-alt':
+				doidoChar.spritesheet += 'dublando/DublandoCalls';
+				doidoChar.anims = [
+					['idle', 			'altid0', 		24, false],
+					['idle-old', 			'idle0', 		24, false],
+					['ring', 			'ring0', 		24, false],
+					['sound', 			'sound0', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+				];
+
+				scale.set(0.75,0.75);
+
+			case 'renan':
+				doidoChar.spritesheet += 'renan/RenanDraw';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+				];
+
+				scale.set(0.75,0.75);
+
+			case 'vrazillian':
+				doidoChar.spritesheet += 'vrazillian/VrazilianGuyNewRe';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+				];
+
+				scale.set(3,3);
+				isPixelSprite = true;
+				flipX = true;
 		}
 
 		if(isPixelSprite) antialiasing = false;
@@ -344,7 +411,7 @@ class Character extends FlxAnimate
 
 	public var singAnims:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
 	public var absoluteAnims:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
-	public function playNote(note:Note, miss:Bool = false)
+	public function playNote(note:Note, miss:Bool = false, alt:String = '')
 	{
 		var daAnim:String = singAnims[note.noteData];
 		if(animExists(daAnim + 'miss') && miss)
@@ -352,6 +419,9 @@ class Character extends FlxAnimate
 
 		if(animExists(daAnim + altSing))
 			daAnim += altSing;
+
+		if(animExists(daAnim + alt))
+			daAnim += alt;
 
 		holdTimer = 0;
 		specialAnim = 0;

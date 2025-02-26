@@ -8,7 +8,6 @@ import flixel.FlxG;
 import flixel.FlxBasic;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.text.FlxText;
 import flixel.group.FlxGroup;
 import flixel.math.FlxMath;
 import objects.*;
@@ -34,6 +33,7 @@ class LoadingState extends MusicBeatState
 	#end
 
 	var behind:FlxGroup;
+	var bg:FlxSprite;
 	
 	var loadBar:FlxSprite;
 	var loadPercent:Float = 0;
@@ -50,18 +50,19 @@ class LoadingState extends MusicBeatState
 		behind = new FlxGroup();
 		add(behind);
 		
-		var color = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+		var color = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFFCAFF4D);
 		color.screenCenter();
 		add(color);
-
-		var loadingTxt = new FlxText(0,0,0,"Loading...");
-		loadingTxt.setFormat(Main.gFont, 40, 0xFFFFFFFF, LEFT);
-		loadingTxt.x = 5;
-		loadingTxt.y = FlxG.height - loadingTxt.height - 15;
-		add(loadingTxt);
 		
-		loadBar = new FlxSprite().makeGraphic(FlxG.width - 16, 20, 0xFFFFFFFF);
-		loadBar.y = FlxG.height - loadBar.height + 10;
+		// loading image
+		bg = new FlxSprite().loadGraphic(Paths.image('funkay'));
+		bg.scale.set(0.7,0.7);
+		bg.updateHitbox();
+		bg.screenCenter();
+		add(bg);
+		
+		loadBar = new FlxSprite().makeGraphic(FlxG.width - 16, 20 - 8, 0xFFFF16D2);
+		loadBar.y = FlxG.height - loadBar.height - 8;
 		changeBarSize(0);
 		add(loadBar);
 
@@ -107,7 +108,9 @@ class LoadingState extends MusicBeatState
 					case 'Change Stage':
 						stageBuild.reloadStage(daEvent.value1);
 						addBehind(stageBuild);
-						charList.push(stageBuild.gfVersion);
+
+						if(!charList.contains(stageBuild.gfVersion))
+							charList.push(stageBuild.gfVersion);
 				}
 			}
 			Logs.print('preloaded stage and hud');
@@ -192,6 +195,17 @@ class LoadingState extends MusicBeatState
 			Main.switchState(new PlayState());
 		}
 		
+		if(Controls.justPressed(ACCEPT))
+		{
+			bg.scale.x += 0.04;
+			bg.scale.y += 0.04;
+		}
+		
+		var bgCalc = FlxMath.lerp(bg.scale.x, 0.65, elapsed * 6);
+		bg.scale.set(bgCalc, bgCalc);
+		bg.updateHitbox();
+		bg.screenCenter();
+		
 		changeBarSize(FlxMath.lerp(loadBar.scale.x, loadPercent, elapsed * 6));
 	}
 	
@@ -199,5 +213,6 @@ class LoadingState extends MusicBeatState
 	{
 		loadBar.scale.x = newSize;
 		loadBar.updateHitbox();
+		loadBar.screenCenter(X);
 	}
 }

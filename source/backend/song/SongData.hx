@@ -44,12 +44,21 @@ class SongData
 	public static var weeks:Array<FunkyWeek> = [
 		{
 			songs: [
+				['tuto', 	'gf'],
+			],
+			weekFile: 'tuto',
+			weekName: 'Tutorial',
+			chars: ['dad', 'bf', 'gf'],
+			diffs: ['normal'],
+		},
+		{
+			songs: [
 				['microondas-freestyle', 	'danilo'],
 				['fluxo', 		'danilo'],
 				['vei-brabo', 	'danilo'],
 			],
 			weekFile: 'week1',
-			weekName: 'daddy dearest',
+			weekName: 'São Paulo',
 			chars: ['dad', 'bf', 'gf'],
 			diffs: ['normal'],
 		},
@@ -58,9 +67,15 @@ class SongData
 				['calorao', 	'purobobora']
 			],
 			weekFile: 'week2',
-			weekName: 'daddy dearest',
+			weekName: 'Ceará',
 			chars: ['dad', 'bf', 'gf'],
 			diffs: ['normal'],
+		},
+		{
+			songs: [
+				["verdadeira-historia",			"renan"]
+			],
+			freeplayOnly: true,
 		},
 		{
 			songs: [

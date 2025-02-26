@@ -1,0 +1,31 @@
+{
+	"globalOffset": [
+		0,
+		0
+	],
+	"animOffsets": [
+		[
+			"ring",
+			-2,
+			8
+		],
+		[
+			"idle",
+			0,
+			0
+		],
+		[
+			"sound",
+			126,
+			684
+		]
+	],
+	"ratingsOffset": [
+		0,
+		0
+	],
+	"cameraOffset": [
+		0,
+		0
+	]
+}

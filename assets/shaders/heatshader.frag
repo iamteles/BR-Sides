@@ -13,17 +13,17 @@ uniform int effectType;
 /**
  * How fast the waves move over time
  */
-uniform float uSpeed;
+const float uSpeed = 0.5;
 
 /**
  * Number of waves over time
  */
-uniform float uFrequency;
+const float uFrequency = 8.0;
 
 /**
  * How much the pixels are going to stretch over the waves
  */
-uniform float uWaveAmplitude;
+const float uWaveAmplitude = 0.01;
 
 /**
  * activate this to use it on camGame

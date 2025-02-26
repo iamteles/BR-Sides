@@ -1,0 +1,232 @@
+{
+	"songEvents": [
+		[
+			0,
+			1200,
+			[
+				[
+					"Change Cam Section",
+					"bf",
+					"",
+					""
+				]
+			]
+		],
+		[
+			1,
+			2400,
+			[
+				[
+					"Change Cam Section",
+					"none",
+					"",
+					""
+				]
+			]
+		],
+		[
+			0,
+			0,
+			[
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				]
+			]
+		],
+		[
+			5,
+			12000,
+			[
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.83",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"2",
+					"",
+					""
+				],
+				[
+					"Change Note Speed",
+					"2",
+					"0",
+					""
+				],
+				[
+					"Change Char Zoom",
+					"",
+					"0.1",
+					""
+				]
+			]
+		],
+		[
+			11,
+			31200,
+			[
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"4",
+					"",
+					""
+				]
+			]
+		],
+		[
+			13,
+			40800,
+			[
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"1",
+					"",
+					""
+				]
+			]
+		],
+		[
+			15,
+			50400,
+			[
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"2",
+					"",
+					""
+				]
+			]
+		],
+		[
+			19,
+			60000,
+			[
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.83",
+					"",
+					""
+				]
+			]
+		],
+		[
+			25,
+			79200,
+			[
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"4",
+					"",
+					""
+				]
+			]
+		],
+		[
+			26,
+			86400,
+			[
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				]
+			]
+		],
+		[
+			26,
+			88200,
+			[
+				[
+					"Change Cam Section",
+					"gf",
+					"",
+					""
+				]
+			]
+		],
+		[
+			26,
+			88800,
+			[
+				[
+					"Change Cam Alpha",
+					"0",
+					"2",
+					"camHUD"
+				],
+				[
+					"Change Cam Alpha",
+					"0",
+					"2",
+					"camStrum"
+				]
+			]
+		]
+	]
+}

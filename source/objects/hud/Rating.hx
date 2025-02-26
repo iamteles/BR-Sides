@@ -80,7 +80,7 @@ class Rating extends FlxGroup
 		var center:Float = daRating.x + daRating.width / 2;
 		for(item in daNum)
 		{
-			item.x = center + ((item.width - numOffset.x) * item.ID);
+			item.x = center + (((item.width - 4) - numOffset.x) * item.ID);
 			item.y = daRating.y + daRating.height - numOffset.y;
 		}
 		
@@ -154,9 +154,9 @@ class RatingFNF extends FlxSprite
 			assetModifier = "base";
 		
 		var daGraph = Paths.image('hud/$assetModifier/ratings');
-		loadGraphic(daGraph, true, Math.floor(daGraph.width), Math.floor(daGraph.height / 4));
+		loadGraphic(daGraph, true, Math.floor(daGraph.width), Math.floor(daGraph.height / 5));
 		
-		var ratingNum:Int = ["sick", "good", "bad", "shit"].indexOf(rating);
+		var ratingNum:Int = ["sick", "good", "bad", "shit", "miss"].indexOf(rating);
 		
 		if(ratingNum == -1)
 		{

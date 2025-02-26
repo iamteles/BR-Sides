@@ -54,9 +54,14 @@ class CharacterUtil
 			"bf",
 			"bf-dead",
 			"danilo",
+			"danilo-brabo",
 			"purobobora",
 			"saco",
 			"bf-chimas",
+			"dublando",
+			"dublando-alt",
+			"renan",
+			"vrazillian"
 		];
 	}
 }

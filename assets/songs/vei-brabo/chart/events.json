@@ -1,0 +1,370 @@
+{
+	"songEvents": [
+		[
+			0,
+			0,
+			[
+				[
+					"Change Beat",
+					"2",
+					"0.07",
+					""
+				]
+			]
+		],
+		[
+			8,
+			10666.6666666667,
+			[
+				[
+					"Change Beat",
+					"2",
+					"0.04",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				]
+			]
+		],
+		[
+			24,
+			32000,
+			[
+				[
+					"Change Beat",
+					"1",
+					"0.02",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Bars",
+					"0.7",
+					"10",
+					"true"
+				],
+				[
+					"Change Cam Zoom",
+					"0.78",
+					"",
+					""
+				]
+			]
+		],
+		[
+			72,
+			95999.9999999999,
+			[
+				[
+					"Change Beat",
+					"1",
+					"0.04",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Bars",
+					"0.7",
+					"10",
+					"true"
+				],
+				[
+					"Change Cam Zoom",
+					"0.78",
+					"",
+					""
+				],
+				[
+					"Change Gradient Alpha",
+					"0.3",
+					"",
+					""
+				]
+			]
+		],
+		[
+			40,
+			53333.3333333334,
+			[
+				[
+					"Change Beat",
+					"4",
+					"0",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Change Bars",
+					"0.7",
+					"10",
+					"false"
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Pos",
+					"",
+					"",
+					"0.1"
+				],
+				[
+					"Change Char Zoom",
+					"",
+					"0",
+					""
+				]
+			]
+		],
+		[
+			56,
+			74666.6666666667,
+			[
+				[
+					"Change Beat",
+					"2",
+					"0.02",
+					""
+				],
+				[
+					"Flash Screen",
+					"1",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Change Tween Zoom",
+					"0",
+					"0",
+					"linear"
+				],
+				[
+					"Change Cam Pos",
+					"",
+					"",
+					"1"
+				],
+				[
+					"Change Char Zoom",
+					"",
+					"0.1",
+					""
+				]
+			]
+		],
+		[
+			23,
+			31333.3333333333,
+			[
+				[
+					"Change Cam Zoom",
+					"0.95",
+					"",
+					""
+				]
+			]
+		],
+		[
+			71,
+			95333.3333333333,
+			[
+				[
+					"Change Cam Zoom",
+					"0.95",
+					"",
+					""
+				]
+			]
+		],
+		[
+			80,
+			106666.666666667,
+			[
+				[
+					"Change Beat",
+					"2",
+					"0.07",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Change HudB Alpha",
+					"0",
+					"2",
+					"linear"
+				],
+				[
+					"Change Bars",
+					"0.67",
+					"10",
+					"false"
+				],
+				[
+					"Change Gradient Alpha",
+					"0",
+					"",
+					""
+				]
+			]
+		],
+		[
+			82,
+			109333.333333333,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				]
+			]
+		],
+		[
+			88,
+			117333.333333333,
+			[
+				[
+					"Change Beat",
+					"4",
+					"0",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Change Cam Alpha",
+					"0",
+					"2",
+					"camStrum"
+				],
+				[
+					"Change Cam Alpha",
+					"0",
+					"2",
+					"camHUD"
+				]
+			]
+		],
+		[
+			40,
+			53666.6666666667,
+			[
+				[
+					"Change Tween Zoom",
+					"0.4",
+					"9.8",
+					"linear"
+				]
+			]
+		],
+		[
+			48,
+			64000,
+			[
+				[
+					"Change Tween Zoom",
+					"0",
+					"5",
+					"linear"
+				]
+			]
+		],
+		[
+			52,
+			69333.3333333334,
+			[
+				[
+					"Change Tween Zoom",
+					"0.3",
+					"4",
+					"linear"
+				]
+			]
+		],
+		[
+			64,
+			85333.3333333333,
+			[
+				[
+					"Change Cam Zoom",
+					"1",
+					"",
+					""
+				]
+			]
+		],
+		[
+			64,
+			86000,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"",
+					"",
+					""
+				]
+			]
+		]
+	]
+}

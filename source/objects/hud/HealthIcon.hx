@@ -71,8 +71,15 @@ class HealthIcon extends FlxSprite
 	{
 		var colorMap:Map<String, FlxColor> = [
 			"face" 		=> 0xFFA1A1A1,
-			"bf" 		=> 0xFF31B0D1,
-			"gf"		=> 0xFFA5004D,
+			"bf" 		=> 0xFF66FFFF,
+			"gf"		=> 0xFF603657,
+			"danilo"	=> 0xFFE5E3FA,
+			"purobobora"=> 0xFF339999,
+			"saco"		=> 0xFF74A40D,
+			"fuleco"	=> 0xFFF5963D,
+			"renan"		=> 0xFFFFFF99,
+			"vraziilian"=> 0xFF4D4DF9,
+			"dublando"	=> 0xFF663333,
 		];
 
 		function loopMap()

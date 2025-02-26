@@ -19,12 +19,12 @@ import subStates.options.OptionsSubState;
 
 class PauseSubState extends MusicBeatSubState
 {
-	var optionShit:Array<String> = [
-		"resume",
-		"restart song",
+	var optionshit:Array<String> = [
+		"resumir",
+		"recomecar",
 		"botplay",
-		"options",
-		"exit to menu",
+		"opcoes",
+		"sair",
 	];
 	
 	var curSelected:Int = 0;
@@ -50,14 +50,14 @@ class PauseSubState extends MusicBeatSubState
 		FlxTween.tween(banana, {alpha: 0.4}, 0.1);
 
 		if(!PlayState.startedSong)
-			optionShit.remove("options");
+			optionshit.remove("opcoes");
 
 		optionsGrp = new FlxTypedGroup<AlphabetMenu>();
 		add(optionsGrp);
 
-		for(i in 0...optionShit.length)
+		for(i in 0...optionshit.length)
 		{
-			var newItem = new AlphabetMenu(0, 0, optionShit[i], true);
+			var newItem = new AlphabetMenu(0, 0, optionshit[i], true);
 			newItem.ID = i;
 			newItem.focusY = i - curSelected;
 
@@ -77,8 +77,7 @@ class PauseSubState extends MusicBeatSubState
 		
 		var textArray:Array<String> = [
 			PlayState.SONG.song,
-			PlayState.songDiff,
-			'BLUEBALLED: ' + PlayState.blueballed,
+			'BOLA AZUL: ' + PlayState.blueballed,
 		];
 		for(i in 0...textArray.length)
 		{
@@ -162,15 +161,15 @@ class PauseSubState extends MusicBeatSubState
 
 			if(Controls.justPressed(ACCEPT))
 			{
-				switch(optionShit[curSelected])
+				switch(optionshit[curSelected])
 				{
 					default:
 						FlxG.sound.play(Paths.sound("menu/cancel"));
 					
-					case "resume":
+					case "resumir":
 						closePause();
 
-					case "restart song":
+					case "recomecar":
 						Main.skipStuff();
 						Main.resetState();
 					
@@ -178,20 +177,20 @@ class PauseSubState extends MusicBeatSubState
 						FlxG.sound.play(Paths.sound("menu/cancel"));
 						PlayState.botplay = !PlayState.botplay;
 
-					case "options":
-						//Main.switchState(new states.menu.OptionsState(new LoadSongState()));
+					case "opcoes":
+						//Main.switchState(new states.menu.opcoesState(new LoadSongState()));
 						persistentDraw = false;
 						pauseSong.pause();
 						this.openSubState(new OptionsSubState(PlayState.instance));
 
-					case "exit to menu":
+					case "sair":
 						//Main.switchState(new MenuState());
 						persistentDraw = true;
 						PlayState.sendToMenu();
 				}
 			}
 
-			// works the same as resume
+			// works the same as resumir
 			if(Controls.justPressed(BACK))
 				closePause();
 		}
@@ -244,7 +243,7 @@ class PauseSubState extends MusicBeatSubState
 	function changeSelection(change:Int = 0)
 	{
 		curSelected += change;
-		curSelected = FlxMath.wrap(curSelected, 0, optionShit.length - 1);
+		curSelected = FlxMath.wrap(curSelected, 0, optionshit.length - 1);
 
 		for(item in optionsGrp)
 		{

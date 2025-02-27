@@ -1,7 +1,0 @@
-function create() {
-    this.gfVersion = "dublando";
-    this.camZoom = 0.7;
-
-    var bg = new FlxSprite(-640, -1000).loadGraphic(Paths.image("stages/quarto"));
-    add(bg);
-}

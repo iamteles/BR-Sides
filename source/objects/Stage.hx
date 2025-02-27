@@ -128,6 +128,16 @@ class Stage extends FlxGroup
 
 		switch(curStage)
 		{
+			case "quarto":
+				gfVersion = "dublando";
+				camZoom = 0.7;
+			
+				bfPos.y += 20;
+			
+				var bg = new FlxSprite(150, -60).loadGraphic(Paths.image("stages/quarto"));
+				bg.scale.set(2.15,2.15);
+				bg.antialiasing = false;
+				add(bg);
 			case "w2":
 				gfPos.y -= 20;
 				gfPos.x += 230;

@@ -47,7 +47,7 @@ class Stage extends FlxGroup
 			default: ["w1"];
 			
 			case "tuto": ["w1-tuto"];
-			case "calorao": ["w2"];
+			case "calorao" | "nordeste": ["w2"];
 			case "verdadeira-historia": ["quarto"];
 		};
 
@@ -141,6 +141,7 @@ class Stage extends FlxGroup
 			case "w2":
 				gfPos.y -= 20;
 				gfPos.x += 230;
+				gfCam.y += 100;
 			
 				bfPos.x += 250;
 			

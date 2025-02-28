@@ -158,24 +158,25 @@ class Stage extends FlxGroup
 				clouds.scrollFactor.set(0.6,0.9);
 				add(clouds);*/
 
-				var clouds = new FlxBackdrop(Paths.image("stages/w2/clouds"), X, 0, 0);
-				clouds.scrollFactor.set(0.6,0.9);
-				clouds.velocity.set(12,0);
-				clouds.screenCenter();
-				clouds.x = -400;
-				clouds.y = -500;
-				add(clouds);
-			
+				if(!lowQuality) {
+					var clouds = new FlxBackdrop(Paths.image("stages/w2/clouds"), X, 0, 0);
+					clouds.scrollFactor.set(0.6,0.9);
+					clouds.velocity.set(12,0);
+					clouds.screenCenter();
+					clouds.x = -400;
+					clouds.y = -500;
+					add(clouds);
+
+					var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w2/overlay"));
+					overlay.blend = BlendMode.ADD;
+					overlay.alpha = 0.4;
+					bg.scrollFactor.set(0.3,0.7);
+					foreground.add(overlay);
+				}
+
 				var grd = new FlxSprite(-570, -360).loadGraphic(Paths.image("stages/w2/grd"));
 				grd.scale.set(1.1,1.1);
 				add(grd);
-			
-				var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w2/overlay"));
-				overlay.blend = BlendMode.ADD;
-				overlay.alpha = 0.4;
-				bg.scrollFactor.set(0.3,0.7);
-				foreground.add(overlay);
-
 				
 			case "w1" | "w1-tuto":
 				//dadPos.x += 80;
@@ -189,20 +190,22 @@ class Stage extends FlxGroup
 				var bg = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w1/sky"));
 				bg.scrollFactor.set(0,0);
 				add(bg);
-			
-				var back = new FlxSprite(-400, -600).loadGraphic(Paths.image("stages/w1/back"));
-				back.scrollFactor.set(0.6,0.9);
-				add(back);
+
+				if(!lowQuality) {
+					var back = new FlxSprite(-400, -600).loadGraphic(Paths.image("stages/w1/back"));
+					back.scrollFactor.set(0.6,0.9);
+					add(back);
+
+					var overlay = new FlxSprite(-400, -370).loadGraphic(Paths.image("stages/w1/overlay"));
+					overlay.scale.set(1.1,1.1);
+					overlay.blend = BlendMode.ADD;
+					overlay.alpha = 0.13;
+					foreground.add(overlay);
+				}
 			
 				var grd = new FlxSprite(-400, -570).loadGraphic(Paths.image("stages/w1/grd"));
 				grd.scale.set(1.1,1.1);
 				add(grd);
-			
-				var overlay = new FlxSprite(-400, -370).loadGraphic(Paths.image("stages/w1/overlay"));
-				overlay.scale.set(1.1,1.1);
-				overlay.blend = BlendMode.ADD;
-				overlay.alpha = 0.13;
-				foreground.add(overlay);
 			default:
 				this.curStage = "stage";
 				camZoom = 0.9;

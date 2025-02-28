@@ -61,7 +61,7 @@ class SongData
 			weekName: 'São Paulo',
 			chars: ['dad', 'bf', 'gf'],
 			diffs: ['normal'],
-		},/*
+		},
 		{
 			songs: [
 				['calorao', 	'purobobora']
@@ -70,7 +70,7 @@ class SongData
 			weekName: 'Ceará',
 			chars: ['dad', 'bf', 'gf'],
 			diffs: ['normal'],
-		},*/
+		},
 		{
 			songs: [
 				["verdadeira-historia",			"renan"]

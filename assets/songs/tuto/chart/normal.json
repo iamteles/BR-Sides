@@ -2,7 +2,7 @@
 	"song": {
 		"speed": 1.8,
 		"player1": "bf",
-		"player2": "gf",
+		"player2": "gf-tutorial",
 		"notes": [
 			{
 				"lengthInSteps": 16,

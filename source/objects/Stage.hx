@@ -46,6 +46,7 @@ class Stage extends FlxGroup
 		{
 			default: ["w1"];
 			
+			case "tuto": ["w1-tuto"];
 			case "calorao": ["w2"];
 			case "verdadeira-historia": ["quarto"];
 		};
@@ -129,7 +130,6 @@ class Stage extends FlxGroup
 		switch(curStage)
 		{
 			case "quarto":
-				gfVersion = "dublando";
 				camZoom = 0.7;
 			
 				bfPos.y += 20;
@@ -145,9 +145,7 @@ class Stage extends FlxGroup
 				bfPos.x += 250;
 			
 				dadPos.x += 100;
-			
-				this.gfVersion = "gf";
-				this.camZoom = 0.7; // 0.7
+				camZoom = 0.7; // 0.7
 			
 				PlayState.zoomPl = 0.1;
 			
@@ -179,15 +177,14 @@ class Stage extends FlxGroup
 				foreground.add(overlay);
 
 				
-			case "w1":
+			case "w1" | "w1-tuto":
 				//dadPos.x += 80;
 				//dadCam.y -= 30;
 				gfPos.y -= 80;
 				gfPos.x += 20;
 				gfCam.y += 100;
 			
-				this.gfVersion = "gf";
-				this.camZoom = 0.8;
+				camZoom = 0.8;
 			
 				var bg = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w1/sky"));
 				bg.scrollFactor.set(0,0);
@@ -228,6 +225,8 @@ class Stage extends FlxGroup
 	{
 		return switch(curStage)
 		{
+			case "w1-tuto": "gf-tutorial";
+			case "quarto": "dublando";
 			default: "gf";
 		}
 	}

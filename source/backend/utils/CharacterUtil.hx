@@ -51,6 +51,7 @@ class CharacterUtil
 		return [
 			"face",
 			"gf",
+			"gf-tutorial",
 			"bf",
 			"bf-dead",
 			"danilo",

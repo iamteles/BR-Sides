@@ -94,8 +94,21 @@ class Character extends FlxAnimate
 
 				scale.set(0.75,0.75);
 			case "gf":
-				spriteType = ATLAS;
-				doidoChar.spritesheet += 'gf/gf-spritemap';
+				//spriteType = ATLAS; // man
+				doidoChar.spritesheet += 'gf/gi_ass_sets';
+				doidoChar.anims = [
+					['idle', 			'idle', 		24, false],
+				];
+
+				idleAnims = ["idle"];
+				//quickDancer = true;
+				flipX = isPlayer;
+
+				scale.set(0.75,0.75);
+
+			case "gf-tutorial":
+				doidoChar.spritesheet += 'gf/gi_ass_sets';
+				doidoChar.extrasheets = ['gf/gi_tutorial'];
 				doidoChar.anims = [
 					['idle', 			'idle', 		24, false],
 					['cheer', 		'hooray', 	24, false],
@@ -312,7 +325,7 @@ class Character extends FlxAnimate
 				spriteType = ASEPRITE;
 			}
 			else if(doidoChar.extrasheets != null) {
-				frames = Paths.getMultiSparrowAtlas(doidoChar.spritesheet, doidoChar.extrasheets);
+				frames = Paths.getMultiSparrowAtlas(doidoChar.spritesheet, doidoChar.extrasheets, '', 'characters/');
 				spriteType = MULTISPARROW;
 			}
 			else

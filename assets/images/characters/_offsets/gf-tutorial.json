@@ -6,13 +6,8 @@
 	"animOffsets": [
 		[
 			"singDOWNalt",
-			0,
-			0
-		],
-		[
-			"singDOWN",
-			0,
-			0
+			11,
+			-20
 		],
 		[
 			"danceRight",
@@ -20,9 +15,9 @@
 			0
 		],
 		[
-			"singUP",
-			0,
-			0
+			"singDOWN",
+			12,
+			-21
 		],
 		[
 			"danceLeft",
@@ -30,34 +25,44 @@
 			0
 		],
 		[
+			"singUP",
+			-5,
+			46
+		],
+		[
 			"singLEFTalt",
+			38,
+			2
+		],
+		[
+			"idle",
 			0,
 			0
 		],
 		[
 			"singRIGHTalt",
-			0,
-			0
-		],
-		[
-			"cheer",
-			0,
-			0
+			-33,
+			-9
 		],
 		[
 			"singRIGHT",
-			0,
-			0
+			-34,
+			-9
+		],
+		[
+			"cheer",
+			-13,
+			1
 		],
 		[
 			"singLEFT",
-			0,
-			0
+			37,
+			2
 		],
 		[
 			"singUPalt",
-			0,
-			0
+			-5,
+			47
 		]
 	],
 	"ratingsOffset": [

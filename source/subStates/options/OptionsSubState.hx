@@ -118,13 +118,8 @@ class OptionsSubState extends MusicBeatSubState
 		DiscordIO.changePresence("Options - Tweakin' the Settings");
 
         bg = new FlxSprite();
-        if(playState == null)
-            bg.loadGraphic(Paths.image('menu/backgrounds/menuDesat'));
-        else
-        {
-            bg.makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
-            bg.alpha = 0.80;
-        }
+        bg.makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+        bg.alpha = 0.80;
         bg.screenCenter();
         add(bg);
 
@@ -186,13 +181,8 @@ class OptionsSubState extends MusicBeatSubState
             if(curCat == 'main')
             {
                 persistentDraw = true;
-                if(playState == null)
-                    Main.switchState(new DebugState());
-                else
-                {
-                    CoolUtil.playMusic();
-                    close();
-                }
+                CoolUtil.playPrev();
+                close();
             }
             else
             {
@@ -392,7 +382,7 @@ class OptionsSubState extends MusicBeatSubState
 
                 grpItems.add(text);
 
-                text.x = FlxG.width / 2;
+                text.x = (FlxG.width / 2) - (text.width / 2);
                 text.y = (FlxG.height / 2) - (text.height / 2);
                 text.y += (100 * i);
                 text.y -= (100 * ((mainShit.length - 1) / 2));

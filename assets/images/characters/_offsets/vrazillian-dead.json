@@ -1,0 +1,31 @@
+{
+	"globalOffset": [
+		0,
+		0
+	],
+	"animOffsets": [
+		[
+			"deathConfirm",
+			16,
+			-29
+		],
+		[
+			"deathLoop",
+			0,
+			-18
+		],
+		[
+			"firstDeath",
+			0,
+			-12
+		]
+	],
+	"ratingsOffset": [
+		0,
+		0
+	],
+	"cameraOffset": [
+		0,
+		0
+	]
+}

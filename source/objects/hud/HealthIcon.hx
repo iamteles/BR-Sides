@@ -78,7 +78,7 @@ class HealthIcon extends FlxSprite
 			"saco"		=> 0xFF74A40D,
 			"fuleco"	=> 0xFFF5963D,
 			"renan"		=> 0xFFFFFF99,
-			"vraziilian"=> 0xFF4D4DF9,
+			"vrazillian"=> 0xFF4D4DF9,
 			"dublando"	=> 0xFF663333,
 		];
 

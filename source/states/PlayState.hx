@@ -1110,6 +1110,9 @@ class PlayState extends MusicBeatState
 			
 			Main.switchState(new CharacterEditorState(char.curChar, true));
 		}
+
+		if(FlxG.keys.justPressed.ONE)
+			endSong();
 		#end
 		
 		if(startedCountdown)

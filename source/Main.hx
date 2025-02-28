@@ -29,7 +29,7 @@ class Main extends Sprite
 	public static var fpsCounter:FPSCounter;
 
 	// Use these to customize your mod further!
-	public static final savePath:String = "teles/DoidoEngine";
+	public static final savePath:String = "teles/BRSides";
 	public static var gFont:String = Paths.font("xilosa.ttf");
 
 	public function new()

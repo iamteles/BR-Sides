@@ -77,7 +77,7 @@ class PauseSubState extends MusicBeatSubState
 		
 		var textArray:Array<String> = [
 			PlayState.SONG.song,
-			'BOLA AZUL: ' + PlayState.blueballed,
+			'INFARTOS PATRIOTAS: ' + PlayState.blueballed,
 		];
 		for(i in 0...textArray.length)
 		{

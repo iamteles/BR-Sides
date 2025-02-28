@@ -61,7 +61,8 @@ class CharacterUtil
 			"dublando",
 			"dublando-alt",
 			"renan",
-			"vrazillian"
+			"vrazillian",
+			"vrazillian-dead"
 		];
 	}
 }

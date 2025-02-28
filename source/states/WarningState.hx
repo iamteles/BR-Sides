@@ -13,10 +13,10 @@ class WarningState extends MusicBeatState
 	{
 		super.create();
 		var tex:String = "Warning!\n\n"
-			+ "This mod features flashing lights that may\n"
-			+ "be harmful to those with photosensitivity.\n"
-			+ "You can disable them in the Options menu.\n\n"
-			+ "Press ACCEPT to continue";
+			+ " \n"
+			+ "comi o cu de quem leu\n"
+			+ " \n\n"
+			+ "Press ACCEPT to continue \n";
 		var popUpTxt = new FlxText(0,0,0,tex);
 		popUpTxt.setFormat(Main.gFont, 36, 0xFFFFFFFF, CENTER);
 		popUpTxt.screenCenter();
@@ -29,7 +29,7 @@ class WarningState extends MusicBeatState
 		
 		if(Controls.justPressed(ACCEPT))
 		{
-            Main.switchState(new states.DebugState());
+            Main.switchState(new states.SplashState());
 
             FlxG.save.data.beenWarned = true;
             FlxG.save.flush();

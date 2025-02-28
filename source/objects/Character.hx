@@ -217,9 +217,9 @@ class Character extends FlxAnimate
 			case "bf-dead":
 				doidoChar.spritesheet += 'bf/BETO';
 				doidoChar.anims = [
-					['firstDeath', 		"BF dies", 			24, false],
-					['deathLoop', 		"BF Dead Loop", 	24, true],
-					['deathConfirm', 	"BF Dead confirm", 	24, false],
+					['firstDeath', 		"Beto dies", 			24, false],
+					['deathLoop', 		"Beto Dead Loop", 	24, true],
+					['deathConfirm', 	"Beto Dead confirm", 	24, false],
 				];
 
 				idleAnims = ['firstDeath'];
@@ -278,6 +278,22 @@ class Character extends FlxAnimate
 					['singDOWN', 	'down0', 24, false],
 				];
 
+				scale.set(3,3);
+				isPixelSprite = true;
+				flipX = true;
+
+				deathChar = "vrazillian-dead";
+
+			case "vrazillian-dead":
+				doidoChar.spritesheet += 'vrazillian/DeadVrazilian';
+				doidoChar.anims = [
+					['firstDeath', 		"dead", 			24, false],
+					['deathLoop', 		"loop", 	24, true],
+					['deathConfirm', 	"confirm", 	24, false],
+				];
+
+				idleAnims = ['firstDeath'];
+				
 				scale.set(3,3);
 				isPixelSprite = true;
 				flipX = true;

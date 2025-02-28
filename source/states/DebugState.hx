@@ -9,6 +9,7 @@ import flixel.util.FlxColor;
 import backend.game.GameData.MusicBeatState;
 import objects.menu.Alphabet;
 import flixel.text.FlxText;
+import backend.song.SongData;
 
 using StringTools;
 
@@ -23,6 +24,7 @@ class DebugState extends MusicBeatState
 	{
 		super.create();
 		CoolUtil.playMusic("freakyMenu");
+		//115 bpm
 
 		//Main.setMouse(true);
 
@@ -47,7 +49,7 @@ class DebugState extends MusicBeatState
 			optionGroup.add(item);
 		}
 
-		var doidoSplash:String = 'Doido Engine Kai ${FlxG.stage.application.meta.get('version')}';
+		var doidoSplash:String = 'BR Sides v0.5 (IN-DEV)\nDoido Engine Kai ${FlxG.stage.application.meta.get('version')}';
 
 		var splashTxt = new FlxText(4, 0, 0, '$doidoSplash');
 		splashTxt.setFormat(Main.gFont, 18, 0xFFFFFFFF, LEFT);
@@ -71,6 +73,22 @@ class DebugState extends MusicBeatState
 		{
 			switch(optionShit[curSelected])
 			{
+				case "week 1":
+					var daWeek = SongData.weeks[1];
+					
+					PlayState.curWeek = daWeek.weekFile;
+					PlayState.songDiff = "normal";
+					PlayState.isStoryMode = true;
+					PlayState.weekScore = 0;
+
+					var songList:Array<String> = [];
+					for(song in daWeek.songs)
+						songList.push(song[0]);
+					
+					PlayState.playList = songList;
+					PlayState.loadSong(songList[0]);
+					
+					Main.switchState(new LoadingState());
 				case "freeplay":
 					Main.switchState(new states.menu.FreeplayState());
 
@@ -78,7 +96,7 @@ class DebugState extends MusicBeatState
 					Main.switchState(new states.menu.CreditsState());
 						
 				case "options":
-					Main.switchState(new states.menu.OptionsState());
+					openSubState(new subStates.options.OptionsSubState());
 					
 			}
 		}

@@ -147,9 +147,7 @@ class Stage extends FlxGroup
 			
 				dadPos.x += 100;
 				camZoom = 0.7; // 0.7
-			
-				PlayState.zoomPl = 0.1;
-			
+		
 				var bg = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w2/sky"));
 				bg.scrollFactor.set(0.3,0.7);
 				add(bg);

@@ -281,7 +281,7 @@ class Character extends FlxAnimate
 				scale.set(0.75,0.75);
 
 			case 'vrazillian':
-				doidoChar.spritesheet += 'vrazillian/VrazilianGuyNewRe';
+				doidoChar.spritesheet += 'vrazillian/VrazilianNew';
 				doidoChar.anims = [
 					['idle', 			'idle0', 		24, false],
 
@@ -289,6 +289,11 @@ class Character extends FlxAnimate
 					['singRIGHT', 	'right0',24, false],
 					['singUP', 		'up0', 	24, false],
 					['singDOWN', 	'down0', 24, false],
+
+					['singLEFTmiss', 	'lemiss', 		24, false],
+					['singDOWNmiss', 	'domiss', 		24, false],
+					['singUPmiss', 		'umiss', 			24, false],
+					['singRIGHTmiss', 	'rimiss', 		24, false],
 				];
 
 				scale.set(3,3);

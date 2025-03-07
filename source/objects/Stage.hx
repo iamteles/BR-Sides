@@ -229,6 +229,7 @@ class Stage extends FlxGroup
 		{
 			case "w1-tuto": "gf-tutorial";
 			case "quarto": "dublando";
+			case "w2": "gf-week2";
 			default: "gf";
 		}
 	}

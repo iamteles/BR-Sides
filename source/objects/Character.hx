@@ -106,6 +106,17 @@ class Character extends FlxAnimate
 
 				scale.set(0.75,0.75);
 
+			case "gf-week2":
+				doidoChar.spritesheet += 'gf/week2/gi_week2';
+				doidoChar.anims = [
+					['idle', 			'idle', 		24, false],
+				];
+
+				idleAnims = ["idle"];
+				flipX = isPlayer;
+
+				scale.set(0.72,0.72);
+
 			case "gf-tutorial":
 				doidoChar.spritesheet += 'gf/gi_ass_sets';
 				doidoChar.extrasheets = ['gf/gi_tutorial'];
@@ -242,7 +253,7 @@ class Character extends FlxAnimate
 				scale.set(0.72,0.72);
 
 			case 'dublando':
-				doidoChar.spritesheet += 'dublando/DublandoCalls';
+				doidoChar.spritesheet += 'dublando/DublandoCoisasRe';
 				doidoChar.anims = [
 					['idle', 			'idle0', 		24, false],
 					['ring', 			'ring0', 		24, false],
@@ -252,7 +263,7 @@ class Character extends FlxAnimate
 				scale.set(0.75,0.75);
 
 			case 'dublando-alt':
-				doidoChar.spritesheet += 'dublando/DublandoCalls';
+				doidoChar.spritesheet += 'dublando/DublandoCoisasRe';
 				doidoChar.anims = [
 					['idle', 			'altid0', 		24, false],
 					['idle-old', 			'idle0', 		24, false],

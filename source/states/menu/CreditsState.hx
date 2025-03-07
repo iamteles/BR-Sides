@@ -75,7 +75,28 @@ class CreditsState extends MusicBeatState
 		// :D
 		
 		// btw you dont need to credit everyone here on your mod, just credit doido engine as a whole and we're good
+		addCredit('JulianoBeta', 				'juliano', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Daniel DGL', 				'dgl', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Bew', 				'bew', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Lamenzito', 				'lamenzito', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		//addCredit('Julitolito', 				'Tel', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('DoubleoNikoo', 				'nikoo', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Guityz', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('DiogoTV', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Novaize', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Knira', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Lucas Barbosa', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Neverminds', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('ZieroSama', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Anna The Fennec', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Telly', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Morgan', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Hiro Mizuki', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Léozito', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
 		addCredit('teles', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+
+
+		//addCredit('teles', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
 		
 		for(i in 0...creditList.length)
 		{

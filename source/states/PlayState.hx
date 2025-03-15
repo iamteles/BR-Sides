@@ -1110,7 +1110,7 @@ class PlayState extends MusicBeatState
 				if(startedSong)
 					presenceTxt += ' - ${CoolUtil.posToTimer(Conductor.songPos)} / ${CoolUtil.posToTimer(songLength)}';
 
-				DiscordIO.changePresence(presenceTxt, false);
+				DiscordIO.changePresence(presenceTxt, null, 'icon-' + backend.utils.CharacterUtil.formatChar(dad.char.curChar), true);
 			}
 		}
 		

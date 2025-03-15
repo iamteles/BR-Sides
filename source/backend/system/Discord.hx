@@ -56,10 +56,10 @@ class DiscordIO
 		#end
 	}
 
-	public static function changePresence(?details:String = 'In the Menus', ?state:Null<String>, ?log:Bool = true)
+	public static function changePresence(?details:String = 'In the Menus', ?state:Null<String>, ?smallKey:Null<String>, ?log:Bool = true)
 	{
 		#if DISCORD_RPC
-		DiscordAPI.changePresence(details, state);
+		DiscordAPI.changePresence(details, state, smallKey);
 		if(log)
 			Logs.print("changed RPC to " + details);
 		lastDetails = details;
@@ -81,7 +81,7 @@ class DiscordIO
 class DiscordAPI
 {
 	public static var isInitialized:Bool = false;
-	private static final _defaultID:String = "1125409482101493823";
+	private static final _defaultID:String = "1350456013253382185";
 	public static var clientID(default, set):String = _defaultID;
 	private static var presence:DiscordRichPresence = DiscordRichPresence.create();
 
@@ -149,7 +149,7 @@ class DiscordAPI
 		presence.details = details;
 		presence.state = state;
 		presence.largeImageKey = 'icon';
-		presence.largeImageText = "Engine Version: " + Application.current.meta.get('version');
+		presence.largeImageText = "BR Version: " + Application.current.meta.get('version');
 		presence.smallImageKey = smallImageKey;
 		// Obtained times are in milliseconds so they are divided so Discord can use it
 		presence.startTimestamp = Std.int(startTimestamp / 1000);

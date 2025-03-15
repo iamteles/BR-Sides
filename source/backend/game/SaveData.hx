@@ -62,7 +62,7 @@ class SaveData
 		],
 		'Discord RPC' => [
 			#if DISCORD_RPC
-			false, // MUDAR DPS
+			true, // MUDAR DPS
 			#else
 			false,
 			#end

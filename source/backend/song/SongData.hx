@@ -34,6 +34,7 @@ typedef FunkyWeek = {
 	var ?weekName:String;
 	var ?chars:Array<String>;
 	var ?freeplayOnly:Bool;
+	var ?freeplayUnlock:String;
 	var ?storyModeOnly:Bool;
 	var ?diffs:Array<String>;
 }
@@ -41,6 +42,7 @@ typedef FunkyWeek = {
 class SongData
 {
 	public static var defaultDiffs:Array<String> = ['normal'];
+	public static var savedWeeks:Map<String, Bool> = [];
 	public static var weeks:Array<FunkyWeek> = [
 		{
 			songs: [
@@ -61,6 +63,7 @@ class SongData
 			weekName: 'São Paulo',
 			chars: ['dad', 'bf', 'gf'],
 			diffs: ['normal'],
+			freeplayUnlock: 'week1'
 		},
 		{
 			songs: [
@@ -71,20 +74,69 @@ class SongData
 			weekName: 'Ceará',
 			chars: ['dad', 'bf', 'gf'],
 			diffs: ['normal'],
+			freeplayUnlock: 'week2'
 		},
 		{
 			songs: [
-				["verdadeira-historia",			"renan"]
+				["verdadeira-historia",			"renan"],
+				["muito-lerdo",					"fuleco"]
 			],
 			freeplayOnly: true,
+			freeplayUnlock: 'week2',
+			weekFile: 'extra',
 		},
-		{
+		/*{
 			songs: [
 				["useless",			"dad"]
 			],
 			freeplayOnly: true,
-		},
+		},*/
 	];
+
+	public static function load()
+	{
+		if(FlxG.save.data.weeks == null)
+		{
+			for(fWeek in weeks) {
+				var week:String = fWeek.weekFile;
+				savedWeeks.set(week, false);
+			}
+
+			FlxG.save.data.weeks = savedWeeks;
+		}
+
+		if(weeks.length != Lambda.count(FlxG.save.data.weeks)) {
+			savedWeeks = FlxG.save.data.weeks;
+			
+			for(fWeek in weeks) {
+				var week:String = fWeek.weekFile;
+				trace("try week " + week);
+				if(savedWeeks.get(week) == null) {
+					savedWeeks.set(week, false);
+					trace("set week " + week);
+				}
+			}
+
+			FlxG.save.data.weeks = savedWeeks;
+		}
+
+		savedWeeks = FlxG.save.data.weeks;
+		save();
+	}
+
+	public static function save()
+	{
+		FlxG.save.data.weeks = savedWeeks;
+		FlxG.save.flush();
+	}
+
+	public static function unlockAll()
+	{
+		for(key => values in savedWeeks)
+			savedWeeks[key] = true;
+
+		save();
+	}
 
 	inline public static function getWeek(index:Int):FunkyWeek
 	{

@@ -49,6 +49,7 @@ class Stage extends FlxGroup
 			case "tuto": ["w1-tuto"];
 			case "calorao" | "nordeste": ["w2"];
 			case "verdadeira-historia": ["quarto"];
+			case "muito-lerdo": ["stadium"];
 		};
 
 		//this stops you from fucking stuff up by changing this mid song
@@ -205,6 +206,43 @@ class Stage extends FlxGroup
 				var grd = new FlxSprite(-400, -570).loadGraphic(Paths.image("stages/w1/grd"));
 				grd.scale.set(1.1,1.1);
 				add(grd);
+			
+			case 'stadium':
+				camZoom = 0.7;
+
+				gfPos.x -= 170;
+				bfPos.x -= 150;
+				dadPos.x -= 150;
+			
+				var bg = new FlxSprite(-600, -400).loadGraphic(Paths.image("stages/stadium/sky"));
+				bg.scrollFactor.set(0.3,0.7);
+				bg.scale.set(1.3,1.3);
+				add(bg);
+			
+				var wall = new FlxSprite(-600, 0).loadGraphic(Paths.image("stages/stadium/wall"));
+				wall.scrollFactor.set(0.5,0.9);
+				wall.scale.set(1.3,1.3);
+				add(wall);
+			
+				var back = new FlxSprite(-600, -260).loadGraphic(Paths.image("stages/stadium/back"));
+				back.scrollFactor.set(0.7,0.9);
+				back.scale.set(1.3,1.3);
+				add(back);
+			
+				var grd = new FlxSprite(-640, -500).loadGraphic(Paths.image("stages/stadium/grd"));
+				grd.scale.set(1.3,1.3);
+				add(grd);
+			
+				var lights = new FlxSprite(-640, -300).loadGraphic(Paths.image("stages/stadium/lights"));
+				lights.scale.set(1.3,1.3);
+				lights.scrollFactor.set(1.3,1);
+				lights.alpha = 0.56;
+				foreground.add(lights);
+			
+				var grass = new FlxSprite(-640, -400).loadGraphic(Paths.image("stages/stadium/grass"));
+				grass.scale.set(1.3,1.3);
+				grass.scrollFactor.set(1.3,1);
+				foreground.add(grass);
 			default:
 				this.curStage = "stage";
 				camZoom = 0.9;

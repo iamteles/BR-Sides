@@ -64,7 +64,9 @@ class CharacterUtil
 			"dublando-alt",
 			"renan",
 			"vrazillian",
-			"vrazillian-dead"
+			"vrazillian-dead",
+			"fuleco",
+			"fuleco-rar"
 		];
 	}
 }

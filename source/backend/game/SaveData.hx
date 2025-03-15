@@ -6,6 +6,7 @@ import openfl.system.Capabilities;
 import backend.song.Conductor;
 import backend.song.Highscore;
 import backend.native.Windows;
+import backend.song.SongData;
 
 /*
 	Save data such as options and other things.
@@ -177,12 +178,13 @@ class SaveData
 		FlxG.save.bind("save-data"); // these are for other stuff, not recquiring to access the SaveData class
 		
 		load();
+		SongData.load();
 		Controls.load();
 		Highscore.load();
 		subStates.editors.ChartAutoSaveSubState.load(); // uhhh
 		updateWindowSize();
 	}
-	
+
 	public static function load()
 	{
 		if(saveSettings.data.volume != null)
@@ -221,7 +223,7 @@ class SaveData
 
 			saveSettings.data.settings = data;
 		}
-		
+
 		for(hitsound in Paths.readDir('sounds/hitsounds', [".ogg"], true))
 			if(!displaySettings.get("Hitsounds")[3].contains(hitsound))
 				displaySettings.get("Hitsounds")[3].insert(1, hitsound);

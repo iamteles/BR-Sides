@@ -1,0 +1,484 @@
+{
+	"songEvents": [
+		[
+			0,
+			0,
+			[
+				[
+					"Change Vignette Alpha",
+					"0.7",
+					"0",
+					""
+				]
+			]
+		],
+		[
+			1,
+			1714.28571428571,
+			[
+				[
+					"Fade Screen",
+					"true",
+					"10",
+					"black"
+				]
+			]
+		],
+		[
+			15,
+			26571.4285714286,
+			[
+				[
+					"Do Note Intro",
+					"",
+					"",
+					""
+				],
+				[
+					"Change HudB Alpha",
+					"1",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			16,
+			27428.5714285714,
+			[
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				]
+			]
+		],
+		[
+			32,
+			54857.1428571429,
+			[
+				[
+					"Change Cam Zoom",
+					"0.76",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"1",
+					"",
+					""
+				]
+			]
+		],
+		[
+			48,
+			82285.7142857143,
+			[
+				[
+					"Change Beat",
+					"4",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Play Animation",
+					"dad",
+					"trans",
+					"true"
+				],
+				[
+					"Change Cam Alpha",
+					"0",
+					"1",
+					"camStrum"
+				],
+				[
+					"Change HudB Alpha",
+					"0",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			50,
+			85285.7142857143,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"laugh",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"1",
+					"",
+					""
+				],
+				[
+					"Shake Screen",
+					"0.006",
+					"0.2",
+					"camGame"
+				]
+			]
+		],
+		[
+			50,
+			85473.2142857143,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"laugh",
+					""
+				],
+				[
+					"Shake Screen",
+					"0.006",
+					"0.2",
+					"camGame"
+				]
+			]
+		],
+		[
+			51,
+			86785.7142857143,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"laugh",
+					""
+				],
+				[
+					"Fade Screen",
+					"false",
+					"0.4",
+					"black"
+				],
+				[
+					"Shake Screen",
+					"0.01",
+					"0.2",
+					""
+				]
+			]
+		],
+		[
+			52,
+			88285.7142857143,
+			[
+				[
+					"Change Beat",
+					"1",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Change Cam Alpha",
+					"1",
+					"0.01",
+					"camStrum"
+				],
+				[
+					"Change HudB Alpha",
+					"1",
+					"0.01",
+					"linear"
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Fade Screen",
+					"true",
+					"0.01",
+					"true"
+				],
+				[
+					"Change Character",
+					"dad",
+					"fuleco-rar",
+					""
+				],
+				[
+					"Change Note Speed",
+					"3",
+					"1",
+					"linear"
+				],
+				[
+					"Health Drain",
+					"true",
+					"",
+					""
+				]
+			]
+		],
+		[
+			50,
+			85660.7142857143,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"laugh",
+					""
+				],
+				[
+					"Shake Screen",
+					"0.006",
+					"0.2",
+					"camGame"
+				]
+			]
+		],
+		[
+			50,
+			85848.2142857143,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"laugh",
+					""
+				],
+				[
+					"Shake Screen",
+					"0.006",
+					"0.2",
+					"camGame"
+				]
+			]
+		],
+		[
+			50,
+			86035.7142857143,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"laugh",
+					""
+				],
+				[
+					"Shake Screen",
+					"0.006",
+					"0.2",
+					"camGame"
+				]
+			]
+		],
+		[
+			50,
+			86223.2142857143,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"laugh",
+					""
+				],
+				[
+					"Shake Screen",
+					"0.006",
+					"0.2",
+					"camGame"
+				]
+			]
+		],
+		[
+			50,
+			86410.7142857143,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"laugh",
+					""
+				],
+				[
+					"Shake Screen",
+					"0.006",
+					"0.2",
+					"camGame"
+				]
+			]
+		],
+		[
+			60,
+			100285.714285714,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white ",
+					""
+				]
+			]
+		],
+		[
+			68,
+			111922.077922078,
+			[
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white ",
+					""
+				]
+			]
+		],
+		[
+			76,
+			123216.195569137,
+			[
+				[
+					"Change Cam Zoom",
+					"1",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white ",
+					""
+				],
+				[
+					"Change Bars",
+					"0.5",
+					"10",
+					"true"
+				]
+			]
+		],
+		[
+			84,
+			134510.313216196,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white ",
+					""
+				],
+				[
+					"Change Bars",
+					"0.5",
+					"10",
+					"false"
+				],
+				[
+					"Change Note Speed",
+					"3.3",
+					"2",
+					"linear"
+				]
+			]
+		],
+		[
+			100,
+			156510.313216196,
+			[
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white ",
+					""
+				],
+				[
+					"Change Cam Section",
+					"gf",
+					"",
+					""
+				],
+				[
+					"Change Cam Alpha",
+					"0",
+					"3",
+					"camHUD"
+				],
+				[
+					"Change Cam Alpha",
+					"0",
+					"3",
+					"camStrum"
+				]
+			]
+		],
+		[
+			100,
+			155843.646549529,
+			[
+				[
+					"Change Beat",
+					"4",
+					"",
+					""
+				]
+			]
+		],
+		[
+			51,
+			87160.7142857143,
+			[
+				[
+					"Change Middlescroll",
+					"true",
+					"0.5",
+					"linear"
+				]
+			]
+		]
+	]
+}

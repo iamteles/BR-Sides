@@ -68,6 +68,8 @@ class ChartingState extends MusicBeatState
 		['Shake Screen',		'Value 1: Intensity\nValue 2: Duration (in seconds)\nValue 3: Camera? (camGame, camHUD, camStrum)'],
 		['Change Beat', 		'Value 1: Beat Speed (Default: 4)\nValue 2: Beat Zoom (Default: 0)'],
 		['Change Gradient Alpha','Value 1: New Alpha \nValue 2: Duration (in seconds)\nValue 3: $easeDesc'],
+		['Change Vignette Alpha','Value 1: New Alpha \nValue 2: Duration (in seconds)\nValue 3: $easeDesc'],
+
 		// game objects
 		['Change Character', 	'Value 1: Character to change (dad/gf/bf)\nValue 2: New Character (dad/pico/senpai-angry)'],
 		['Change Stage',		'Value 1: New Stage'],
@@ -85,6 +87,8 @@ class ChartingState extends MusicBeatState
 		['Change HudB Alpha',	'Value 1: New Alpha \nValue 2: Duration (in seconds)\nValue 3: $easeDesc'],
 		['Do Note Intro',		''],
 		['Do Countdown',		''],
+		['Change Middlescroll',		'Value 1: Middlescroll (true/false)\nValue 2: Duration (in seconds)\nValue 3: $easeDesc'],
+		['Health Drain', '']
 		//
 
 
@@ -98,7 +102,7 @@ class ChartingState extends MusicBeatState
 		'none',
 		'no animation',
 		'gf note',
-		'bomb',
+		'eye note',
 		'hurt note',
 		'warn note',
 		'alt anim',

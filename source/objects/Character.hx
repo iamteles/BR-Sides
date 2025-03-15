@@ -326,6 +326,35 @@ class Character extends FlxAnimate
 				scale.set(3,3);
 				isPixelSprite = true;
 				flipX = true;
+
+			case 'fuleco':
+				doidoChar.spritesheet += 'fuleco/FulecoNormal';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
+					['laugh', 			'laugh', 		24, false],
+					['trans', 			'trans', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+				];
+
+				scale.set(0.75,0.75);
+
+			case 'fuleco-rar':
+				doidoChar.spritesheet += 'fuleco/FulecoRar';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+				];
+
+				scale.set(0.75,0.75);
+	
 		}
 
 		if(isPixelSprite) antialiasing = false;

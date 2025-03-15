@@ -91,6 +91,19 @@ class Note extends FlxSprite
 				
 				animation.addByPrefix('hurt', '$typeName', 0, false);
 				animation.play('hurt');
+
+			case "eye note":
+				noteType = "eye note";
+
+				if(!isHold)
+				{
+					noteSize = 0.7;
+					frames = Paths.getSparrowAtlas('notes/base/eye');
+					animation.addByPrefix('warn', colArray[noteData] + '0', 24, true);
+					animation.play('warn');
+				}
+				else
+					color = 0xFF000000;
 			
 			case "Shoot Note"|"warn note":
 				noteSize = 0.7;

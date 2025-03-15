@@ -74,6 +74,7 @@ class CreditsState extends MusicBeatState
 		// yes, this implies coders aren't people
 		// :D
 		
+		/*
 		// btw you dont need to credit everyone here on your mod, just credit doido engine as a whole and we're good
 		addCredit('JulianoBeta', 				'juliano', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
 		addCredit('Daniel DGL', 				'dgl', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
@@ -94,9 +95,9 @@ class CreditsState extends MusicBeatState
 		addCredit('Hiro Mizuki', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
 		addCredit('Léozito', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
 		addCredit('teles', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		*/
 
-
-		//addCredit('teles', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('teles', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
 		
 		for(i in 0...creditList.length)
 		{

@@ -168,6 +168,7 @@ class PlayState extends MusicBeatState
 	var doHudBAlpha:Bool = true;
 
 	var gradient:FlxSprite;
+	var vgblack:FlxSprite;
 
 	var barUp:FlxSprite;
 	var barDown:FlxSprite;
@@ -328,6 +329,14 @@ class PlayState extends MusicBeatState
 			type: PINGPONG,
 		});
 		add(gradient);
+
+		vgblack = new FlxSprite(0,0).loadGraphic(Paths.image('hud/base/vignette'));
+		vgblack.scale.set(1.1,1.1);
+		vgblack.updateHitbox();
+		vgblack.screenCenter();
+		vgblack.cameras = [camHUD];
+		vgblack.alpha = 0;
+		add(vgblack);
 
 		barUp = new FlxSprite();
 		barUp.makeGraphic(FlxG.width + 20, 130 + 10, 0xFF000000);
@@ -501,8 +510,13 @@ class PlayState extends MusicBeatState
 			startCountdown();
 
 		switch(daSong) {
-			case "calorao":
+			case "calorao" | "nordeste":
 				setCamShader([getCamShader("heatshader.frag")]);
+			case "muito-lerdo":
+				doNoteUp = false;
+				doHudBAlpha = false;
+				camGame.fade(0xff000000, 0.001, false);
+				hasModchart = true; // i guess so
 			case "tuto":
 				zoomOpp = 0.1;
 				doNoteUp = false;
@@ -748,6 +762,8 @@ class PlayState extends MusicBeatState
 		else
 			onNoteMiss(note, strumline);
 	}
+
+	var healthDrain:Bool = false;
 		
 	// actual note functions
 	function onNoteHit(note:Note, strumline:Strumline)
@@ -784,6 +800,17 @@ class PlayState extends MusicBeatState
 		{
 			if(vocalsOpp == null)
 				vocals.volume = 1;
+
+
+			if (health > 0.05 && healthDrain)
+			{
+				if (note.isHold)
+				{
+					health -= 0.005;
+				}
+				else
+					health -= 0.025;
+			}
 		}
 		
 		switch(note.noteType)
@@ -934,6 +961,10 @@ class PlayState extends MusicBeatState
 			{
 				case "warn note":
 					healthJudge = -0.5;
+
+				case "eye note":
+					healthJudge = -0.5;
+					CoolUtil.playHitSound("SPIKE", 1.0);
 	
 				case "EX Note":
 					startGameOver();
@@ -1611,20 +1642,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		// hey!!
-		switch(SONG.song)
-		{
-			case "tutorial":
-				if([30, 46].contains(curBeat))
-				{
-					dad.char.holdTimer = 0;
-					dad.char.playAnim('cheer', true);
-				}
-			case 'bopeebo':
-				if(curBeat % 8 == 7 && curBeat > 0 && !['erect', 'nightmare'].contains(songDiff))
-					boyfriend.char.playAnim("hey");
-		}
-
 		callScript("beatHit", [curBeat]);
 	}
 
@@ -1713,6 +1730,9 @@ class PlayState extends MusicBeatState
 					accuracy: 	0,
 					breaks: 	0,
 				});
+
+				SongData.savedWeeks.set(curWeek, true);
+				SongData.save();
 			}
 			
 			sendToMenu();
@@ -1830,8 +1850,6 @@ class PlayState extends MusicBeatState
 						thisStrumline = strumline;
 				
 				if(thisStrumline.customData) continue;
-				if(!thisStrumline.isPlayer)
-					note.visible = !SaveData.data.get('Middlescroll');
 				if(note.gotHit)
 					note.visible = false;
 			}
@@ -1879,11 +1897,11 @@ class PlayState extends MusicBeatState
 		for(strumline in strumlines.members)
 			if(!strumline.isPlayer)
 				for(strum in strumline.strumGroup)
-					strum.visible = !SaveData.data.get('Middlescroll');
+					strum.visible = !middlescroll;
 
 		var strumPos:Array<Float> = [FlxG.width / 2, FlxG.width / 4];
 
-		if(SaveData.data.get('Middlescroll'))
+		if(middlescroll)
 			return [-strumPos[0], strumPos[0]];
 		else
 			return [strumPos[0] - strumPos[1], strumPos[0] + strumPos[1]];
@@ -1943,6 +1961,52 @@ class PlayState extends MusicBeatState
 
 	function onEventHit(daEvent:EventNote) {
 		switch(daEvent.eventName) {
+			case 'Health Drain':
+				healthDrain = CoolUtil.stringToBool(daEvent.value1);
+			case 'Change Middlescroll':
+				var md:Bool = CoolUtil.stringToBool(daEvent.value1);
+				var duration:Float = CoolUtil.stringToFloat(daEvent.value2, 1);
+				var ease:EaseFunction = CoolUtil.stringToEase(daEvent.value3);
+
+				var strumPos:Array<Float> = [FlxG.width / 2, FlxG.width / 4];
+				dadStrumline.doSplash = false;
+	
+				for (strum in strumlines) {
+					if(strum.customData) continue;
+					strum.updatePlz = true;
+					FlxTween.tween(strum, {x: strumPos[0]}, duration, {ease: ease, onComplete: function(twn:FlxTween)
+					{
+						strum.updatePlz = false;
+					}});
+				}
+
+				for (thing in dadStrumline.strumGroup) {
+					FlxTween.tween(thing, {alpha: 0}, duration, {ease: ease});
+				}
+
+				for (thing in dadStrumline.allNotes) {
+					FlxTween.tween(thing, {realAlpha: 0.24}, duration, {ease: ease});
+				}
+				dadStrumline.noteAlpha = 0.24;
+
+				middlescroll = md;
+			case 'Change Vignette Alpha':
+				var newAlpha:Float  = CoolUtil.stringToFloat(daEvent.value1, 1);
+				var duration:Float = CoolUtil.stringToFloat(daEvent.value2, 0);
+
+				if(duration <= 0) {
+					vgblack.alpha = newAlpha;
+				}
+				else
+				{
+					FlxTween.tween(
+						vgblack, {alpha: newAlpha},
+						duration,
+						{
+							ease: CoolUtil.stringToEase(daEvent.value3)
+						},
+					);
+				}
 			case 'Change Gradient Alpha':
 				var newAlpha:Float  = CoolUtil.stringToFloat(daEvent.value1, 1);
 				var duration:Float = CoolUtil.stringToFloat(daEvent.value2, 0);

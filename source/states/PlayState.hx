@@ -506,7 +506,7 @@ class PlayState extends MusicBeatState
 			}
 
 			playedCutscene = true;
-			startDialogue(DialogueUtil.loadDialogue(SONG.song, songDiff));
+			//startDialogue(DialogueUtil.loadDialogue(SONG.song, songDiff));
 		}
 		else
 			startCountdown();

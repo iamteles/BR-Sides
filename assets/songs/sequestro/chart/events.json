@@ -1,0 +1,88 @@
+{
+	"songEvents": [
+		[
+			22,
+			46817.5629680055,
+			[
+				[
+					"Change Note Speed",
+					"3",
+					"4",
+					"cubeInOut"
+				]
+			]
+		],
+		[
+			40,
+			73356.024506467,
+			[
+				[
+					"Change Note Speed",
+					"2",
+					"4",
+					"cubeInOut"
+				]
+			]
+		],
+		[
+			73,
+			134077.603812117,
+			[
+				[
+					"Change Note Speed",
+					"2",
+					"4",
+					"cubeInOut"
+				],
+				[
+					"Change Character",
+					"dad",
+					"saco-creep",
+					""
+				]
+			]
+		],
+		[
+			86,
+			161688.223281143,
+			[
+				[
+					"Change Note Speed",
+					"3",
+					"4",
+					"cubeInOut"
+				]
+			]
+		],
+		[
+			57,
+			109462.219196732,
+			[
+				[
+					"Change Note Speed",
+					"3",
+					"4",
+					"cubeInOut"
+				]
+			]
+		],
+		[
+			85,
+			159564.329475834,
+			[
+				[
+					"Change Character",
+					"dad",
+					"saco",
+					""
+				],
+				[
+					"Play Animation",
+					"dad",
+					"ai",
+					""
+				]
+			]
+		]
+	]
+}

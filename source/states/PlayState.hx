@@ -500,11 +500,13 @@ class PlayState extends MusicBeatState
 		
 		if(hasCutscene() && !playedCutscene)
 		{
+			switch(SONG.song) {
+				case "sequestro":
+					startVideo("test");
+			}
+
 			playedCutscene = true;
 			startDialogue(DialogueUtil.loadDialogue(SONG.song, songDiff));
-			#if VIDEOS_ALLOWED
-				//startVideo("test");
-			#end
 		}
 		else
 			startCountdown();
@@ -517,6 +519,9 @@ class PlayState extends MusicBeatState
 				doHudBAlpha = false;
 				camGame.fade(0xff000000, 0.001, false);
 				hasModchart = true; // i guess so
+			case "sequestro":
+				doNoteUp = false;
+				doHudBAlpha = false;
 			case "tuto":
 				zoomOpp = 0.1;
 				doNoteUp = false;
@@ -699,17 +704,18 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	#if VIDEOS_ALLOWED
+
 	public function startVideo(key:String, onEnd:Bool = false):Void
 	{
+		#if VIDEOS_ALLOWED
 		openSubState(new VideoPlayerSubState(key, function() {
 			if(onEnd)
 				endSong();
 			else
 				startCountdown();
 		}));
+		#end
 	}
-	#end
 	
 	public function hasCutscene():Bool
 		return SaveData.data.get('Cutscenes') != "OFF";
@@ -1894,15 +1900,12 @@ class PlayState extends MusicBeatState
 
 	public function setStrumlineDefaultX():Array<Float>
 	{
-		for(strumline in strumlines.members)
-			if(!strumline.isPlayer)
-				for(strum in strumline.strumGroup)
-					strum.visible = !middlescroll;
-
 		var strumPos:Array<Float> = [FlxG.width / 2, FlxG.width / 4];
 
 		if(middlescroll)
 			return [-strumPos[0], strumPos[0]];
+		else if(SONG.song == "sequestro")
+			return [-strumPos[0], strumPos[0] + strumPos[1]];
 		else
 			return [strumPos[0] - strumPos[1], strumPos[0] + strumPos[1]];
 	}

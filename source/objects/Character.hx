@@ -151,6 +151,25 @@ class Character extends FlxAnimate
 				doidoChar.spritesheet += 'saco/saco';
 				doidoChar.anims = [
 					['idle', 			'idle0', 		24, false],
+					['ai', 			'ai0', 		24, false],
+
+					['singLEFT', 	'left0', 24, false],
+					['singRIGHT', 	'right0',24, false],
+					['singUP', 		'up0', 	24, false],
+					['singDOWN', 	'down0', 24, false],
+
+					['singLEFTalt', 	'lealt0', 24, false],
+					['singRIGHTalt', 	'rialt0',24, false],
+					['singUPalt', 		'ualt0', 	24, false],
+					['singDOWNalt', 	'doalt0', 24, false],
+				];
+
+				scale.set(0.75,0.75);
+
+			case 'saco-creep':
+				doidoChar.spritesheet += 'saco/creep';
+				doidoChar.anims = [
+					['idle', 			'idle0', 		24, false],
 
 					['singLEFT', 	'left0', 24, false],
 					['singRIGHT', 	'right0',24, false],

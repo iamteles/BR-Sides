@@ -59,6 +59,7 @@ class CharacterUtil
 			"danilo-brabo",
 			"purobobora",
 			"saco",
+			"saco-creep",
 			"bf-chimas",
 			"dublando",
 			"dublando-alt",

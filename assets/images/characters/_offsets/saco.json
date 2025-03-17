@@ -5,19 +5,44 @@
 	],
 	"animOffsets": [
 		[
+			"singDOWNalt",
+			28,
+			-38
+		],
+		[
+			"ai",
+			-6,
+			17
+		],
+		[
+			"singDOWN",
+			37,
+			-61
+		],
+		[
+			"singUP",
+			2,
+			38
+		],
+		[
+			"singLEFTalt",
+			47,
+			9
+		],
+		[
 			"idle",
 			0,
 			0
 		],
 		[
-			"singDOWN",
-			28,
-			-31
+			"singRIGHTalt",
+			-30,
+			-10
 		],
 		[
 			"singRIGHT",
-			-31,
-			-10
+			8,
+			-39
 		],
 		[
 			"singLEFT",
@@ -25,9 +50,9 @@
 			7
 		],
 		[
-			"singUP",
-			0,
-			32
+			"singUPalt",
+			3,
+			46
 		]
 	],
 	"ratingsOffset": [

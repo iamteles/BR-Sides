@@ -68,7 +68,8 @@ class SongData
 		{
 			songs: [
 				['calorao', 	'purobobora'],
-				['nordeste', 	'purobobora']
+				['nordeste', 	'purobobora'],
+				['sequestro',	'saco']
 			],
 			weekFile: 'week2',
 			weekName: 'Ceará',

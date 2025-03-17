@@ -48,6 +48,7 @@ class Stage extends FlxGroup
 			
 			case "tuto": ["w1-tuto"];
 			case "calorao" | "nordeste": ["w2"];
+			case "sequestro": ["w2-n"];
 			case "verdadeira-historia": ["quarto"];
 			case "muito-lerdo": ["stadium"];
 		};
@@ -139,7 +140,8 @@ class Stage extends FlxGroup
 				bg.scale.set(2.15,2.15);
 				bg.antialiasing = false;
 				add(bg);
-			case "w2":
+				
+			case "w2" | "w2-n":
 				gfPos.y -= 20;
 				gfPos.x += 230;
 				gfCam.y += 100;
@@ -148,8 +150,12 @@ class Stage extends FlxGroup
 			
 				dadPos.x += 100;
 				camZoom = 0.7; // 0.7
+
+				var suf:String = '';
+				if(curStage == "w2-n")
+					suf = "night/";
 		
-				var bg = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w2/sky"));
+				var bg = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}sky'));
 				bg.scrollFactor.set(0.3,0.7);
 				add(bg);
 			
@@ -159,7 +165,7 @@ class Stage extends FlxGroup
 				add(clouds);*/
 
 				if(!lowQuality) {
-					var clouds = new FlxBackdrop(Paths.image("stages/w2/clouds"), X, 0, 0);
+					var clouds = new FlxBackdrop(Paths.image('stages/w2/${suf}clouds'), X, 0, 0);
 					clouds.scrollFactor.set(0.6,0.9);
 					clouds.velocity.set(12,0);
 					clouds.screenCenter();
@@ -167,14 +173,14 @@ class Stage extends FlxGroup
 					clouds.y = -500;
 					add(clouds);
 
-					var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image("stages/w2/overlay"));
+					var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay'));
 					overlay.blend = BlendMode.ADD;
 					overlay.alpha = 0.4;
 					bg.scrollFactor.set(0.3,0.7);
 					foreground.add(overlay);
 				}
 
-				var grd = new FlxSprite(-570, -360).loadGraphic(Paths.image("stages/w2/grd"));
+				var grd = new FlxSprite(-570, -360).loadGraphic(Paths.image('stages/w2/${suf}grd'));
 				grd.scale.set(1.1,1.1);
 				add(grd);
 				
@@ -267,7 +273,7 @@ class Stage extends FlxGroup
 		{
 			case "w1-tuto": "gf-tutorial";
 			case "quarto": "dublando";
-			case "w2": "gf-week2";
+			case "w2" | "w2-n": "gf-week2";
 			default: "gf";
 		}
 	}

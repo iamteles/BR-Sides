@@ -66,24 +66,26 @@ class HudClass extends FlxGroup
 		add(botplayTxt);
 		
 		subtitleA = new FlxText(0,0,0,"");
-		subtitleA.setFormat(Main.gFont, 30, 0xFFFFFFFF, CENTER);
+		subtitleA.setFormat(Main.gFont, 34, 0xFFFFFFFF, CENTER);
 		subtitleA.setBorderStyle(OUTLINE, FlxColor.BLACK, 2);
 		subtitleA.screenCenter(X);
 		subtitleA.y = FlxG.height - subtitleA.height - 160;
 		add(subtitleA);
 
 		subtitleB = new FlxText(0,0,0,"");
-		subtitleB.setFormat(Main.gFont, 30, 0xFFFFFFFF, CENTER);
+		subtitleB.setFormat(Main.gFont, 34, 0xFFFFFFFF, CENTER);
 		subtitleB.setBorderStyle(OUTLINE, FlxColor.BLACK, 2);
 		subtitleB.screenCenter(X);
 		subtitleB.y = subtitleA.y - subtitleB.height - 2;
 		add(subtitleB);
 
+		//updateLyrics("Infernum adducere", true);
+
 		updateHitbox();
 		health = PlayState.health;
 	}
 
-	public function updateLyrics(lineA:String = "", lineB:String = "") {
+	public function updateLyrics(lineA:String = "", lineB:String = "", latin:Bool = false) {
 		var colorMap:Map<String, FlxColor> = [
 			"(Gi)" 		=> 0xFF794D6F,
 			"(???)"		=> 0xFF000000
@@ -126,6 +128,15 @@ class HudClass extends FlxGroup
 			indexA = 10;
 		if(indexB < 0)
 			indexB = 10;
+
+		for(text in [subtitleA, subtitleB]) {
+			if(latin)
+				text.setFormat(Paths.font("lucius.ttf"), 34, 0xFFFFFFFF, CENTER);
+			else
+				text.setFormat(Main.gFont, 34, 0xFFFFFFFF, CENTER);
+
+			text.setBorderStyle(OUTLINE, FlxColor.BLACK, 2);
+		}
 
 		subtitleA.addFormat(formats[0], 0, indexA);
 		subtitleB.addFormat(formats[1], 0, indexB);

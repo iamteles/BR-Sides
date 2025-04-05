@@ -52,6 +52,7 @@ class CharacterUtil
 			"face",
 			"gf",
 			"gf-week2",
+			"gf-sequestro",
 			"gf-tutorial",
 			"bf",
 			"bf-dead",

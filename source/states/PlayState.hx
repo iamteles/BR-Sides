@@ -502,11 +502,11 @@ class PlayState extends MusicBeatState
 		{
 			switch(SONG.song) {
 				case "sequestro":
-					startVideo("test");
+					startVideo("seq");
 			}
 
 			playedCutscene = true;
-			//startDialogue(DialogueUtil.loadDialogue(SONG.song, songDiff));
+			startDialogue(DialogueUtil.loadDialogue(SONG.song, songDiff));
 		}
 		else
 			startCountdown();
@@ -522,6 +522,7 @@ class PlayState extends MusicBeatState
 			case "sequestro":
 				doNoteUp = false;
 				doHudBAlpha = false;
+				camGame.fade(0xff000000, 0.001, false);
 			case "tuto":
 				zoomOpp = 0.1;
 				doNoteUp = false;
@@ -2043,6 +2044,19 @@ class PlayState extends MusicBeatState
 				char.char.specialAnim = (CoolUtil.stringToBool(daEvent.value3) ? 2 : 1);
 				char.char.playAnim(daEvent.value2, true);
 
+			case 'Change Idle':
+				var char = strToChar(daEvent.value1);
+				var change:Bool = false;
+				char.char.curDance = 0;
+				for(anim in daEvent.value2.split(",")) {
+					if(char.char.animExists(anim)) {
+						if(!change)
+							char.char.idleAnims = [];
+
+						char.char.idleAnims.push(anim);
+					}
+				}
+
 			case 'Change Character':
 				var char = strToChar(daEvent.value1);
 				changeChar(char, daEvent.value2, (char != gf));
@@ -2191,7 +2205,7 @@ class PlayState extends MusicBeatState
 					cam.angle = newAngle;
 
 			case "Change Subtitles":
-				hudBuild.updateLyrics(daEvent.value1, daEvent.value2);
+				hudBuild.updateLyrics(daEvent.value1, daEvent.value2, CoolUtil.stringToBool(daEvent.value3));
 
 			case 'Change Subtitle Alpha':
 				if(subAlphaTween != null) subAlphaTween.cancel();

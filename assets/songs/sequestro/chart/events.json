@@ -21,6 +21,18 @@
 					"2",
 					"4",
 					"cubeInOut"
+				],
+				[
+					"Change Subtitles",
+					"Dois",
+					"",
+					""
+				],
+				[
+					"Change Subtitle Alpha",
+					"1",
+					"0",
+					""
 				]
 			]
 		],
@@ -51,6 +63,12 @@
 					"3",
 					"4",
 					"cubeInOut"
+				],
+				[
+					"Change Subtitles",
+					"Cuidado é o Homem do Saco",
+					"",
+					""
 				]
 			]
 		],
@@ -63,6 +81,18 @@
 					"3",
 					"4",
 					"cubeInOut"
+				],
+				[
+					"Change Subtitles",
+					"Venham se servir, senhores",
+					"",
+					""
+				],
+				[
+					"Change Subtitle Alpha",
+					"1",
+					"0",
+					""
 				]
 			]
 		],
@@ -80,6 +110,918 @@
 					"Play Animation",
 					"dad",
 					"ai",
+					""
+				],
+				[
+					"Change Subtitles",
+					"Ai...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			0,
+			0,
+			[
+				[
+					"Fade Screen",
+					"true",
+					"10",
+					"black"
+				],
+				[
+					"Change Cam Zoom",
+					"1.1",
+					"",
+					""
+				],
+				[
+					"Change Vignette Alpha",
+					"1",
+					"",
+					""
+				],
+				[
+					"Change Bars",
+					"0.001",
+					"110",
+					"true"
+				]
+			]
+		],
+		[
+			4,
+			9557.5221238938,
+			[
+				[
+					"Do Note Intro",
+					"",
+					"",
+					""
+				]
+			]
+		],
+		[
+			23,
+			47202.1783526208,
+			[
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Vignette Alpha",
+					"0.5",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"1",
+					"",
+					""
+				],
+				[
+					"Change Subtitles",
+					"Venham se servir, senhores",
+					"",
+					""
+				]
+			]
+		],
+		[
+			22,
+			46240.6398910824,
+			[
+				[
+					"Play Animation",
+					"gf",
+					"return",
+					""
+				],
+				[
+					"Change Idle",
+					"gf",
+					"idle",
+					""
+				]
+			]
+		],
+		[
+			4,
+			9823.00884955752,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				]
+			]
+		],
+		[
+			25,
+			50279.1014295439,
+			[
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Change Subtitles",
+					"No menu, há um novo item",
+					"",
+					""
+				]
+			]
+		],
+		[
+			26,
+			51817.5629680055,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Change Subtitles",
+					"carne de criancinha!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			27,
+			53356.024506467,
+			[
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			30,
+			57971.4091218516,
+			[
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				]
+			]
+		],
+		[
+			30,
+			58740.6398910824,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				]
+			]
+		],
+		[
+			34,
+			64125.2552756978,
+			[
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Change Subtitles",
+					"Mas tá, acho que dá pro gasto... : )",
+					"",
+					""
+				]
+			]
+		],
+		[
+			36,
+			67202.1783526208,
+			[
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				]
+			]
+		],
+		[
+			38,
+			70279.1014295439,
+			[
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				]
+			]
+		],
+		[
+			39,
+			71817.5629680054,
+			[
+				[
+					"Change Beat",
+					"4",
+					"",
+					""
+				]
+			]
+		],
+		[
+			31,
+			59509.8706603132,
+			[
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Subtitle Alpha",
+					"1",
+					"0",
+					""
+				],
+				[
+					"Change Subtitles",
+					"Nunca ouviram do Homem do Saco?",
+					"",
+					""
+				]
+			]
+		],
+		[
+			35,
+			65663.7168141593,
+			[
+				[
+					"Change Cam Zoom",
+					"1.1",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			8,
+			18053.0973451327,
+			[
+				[
+					"Change Subtitles",
+					"Aaah...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			9,
+			20176.9911504425,
+			[
+				[
+					"Change Subtitles",
+					"Aaah... deixe",
+					"",
+					""
+				]
+			]
+		],
+		[
+			10,
+			21769.9115044248,
+			[
+				[
+					"Change Subtitles",
+					"a panela esquentar...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			12,
+			26017.6991150442,
+			[
+				[
+					"Change Subtitles",
+					"Para os pequenos queimar...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			14,
+			30265.4867256637,
+			[
+				[
+					"Change Subtitles",
+					"É tão lindo os ouvir",
+					"",
+					""
+				]
+			]
+		],
+		[
+			15,
+			32920.3539823009,
+			[
+				[
+					"Change Subtitles",
+					"É tão lindo os ouvir gri",
+					"",
+					""
+				]
+			]
+		],
+		[
+			16,
+			33982.3008849557,
+			[
+				[
+					"Change Subtitles",
+					"É tão lindo os ouvir gritar...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			16,
+			35840.7079646018,
+			[
+				[
+					"Change Subtitles",
+					"de agonia...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			19,
+			40353.982300885,
+			[
+				[
+					"Change Subtitles",
+					"Sobre a luz do luar...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			20,
+			44336.2831858407,
+			[
+				[
+					"Change Subtitles",
+					"La",
+					"",
+					""
+				]
+			]
+		],
+		[
+			21,
+			44601.7699115044,
+			[
+				[
+					"Change Subtitles",
+					"La la",
+					"",
+					""
+				]
+			]
+		],
+		[
+			21,
+			44867.2566371681,
+			[
+				[
+					"Change Subtitles",
+					"La la la",
+					"",
+					""
+				]
+			]
+		],
+		[
+			21,
+			45132.7433628319,
+			[
+				[
+					"Change Subtitles",
+					"La la la la...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			22,
+			45856.024506467,
+			[
+				[
+					"Change Subtitles",
+					"Heheheheh...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			24,
+			48740.6398910824,
+			[
+				[
+					"Change Subtitles",
+					"Encher suas barriguinhas",
+					"",
+					""
+				]
+			]
+		],
+		[
+			32,
+			61048.3321987747,
+			[
+				[
+					"Change Subtitles",
+					"Nunca disseram pra tomar cuidado?",
+					"",
+					""
+				]
+			]
+		],
+		[
+			33,
+			62586.7937372362,
+			[
+				[
+					"Change Subtitles",
+					"Esperaria um rosto assustado...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			40,
+			74948.9448604493,
+			[
+				[
+					"Change Subtitles",
+					"Dois pivetes",
+					"",
+					""
+				]
+			]
+		],
+		[
+			41,
+			77072.838665759,
+			[
+				[
+					"Change Subtitles",
+					"Dois pivetes sozinhos...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			42,
+			78931.245745405,
+			[
+				[
+					"Change Subtitles",
+					"Alguém não sabe cuidar dos filhos...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			44,
+			82913.5466303608,
+			[
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			48,
+			90347.1749489449,
+			[
+				[
+					"Change Subtitle Alpha",
+					"1",
+					"0",
+					""
+				],
+				[
+					"Change Subtitles",
+					"Bem...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			48,
+			91940.0953029272,
+			[
+				[
+					"Change Subtitles",
+					"quem sou eu pra reclamar?",
+					"",
+					""
+				]
+			]
+		],
+		[
+			50,
+			95922.3961878829,
+			[
+				[
+					"Change Subtitles",
+					"Eu acabei de ganhar um jantar!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			52,
+			100170.183798502,
+			[
+				[
+					"Change Subtitles",
+					"A melhor parte, é de graça!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			54,
+			104683.458134786,
+			[
+				[
+					"Change Subtitles",
+					"Que maravilha :)",
+					"",
+					""
+				]
+			]
+		],
+		[
+			56,
+			107338.325391423,
+			[
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			58,
+			111000.680735194,
+			[
+				[
+					"Change Subtitles",
+					"Encher suas barriguinhas",
+					"",
+					""
+				]
+			]
+		],
+		[
+			59,
+			112539.142273656,
+			[
+				[
+					"Change Subtitles",
+					"No menu, há um novo item",
+					"",
+					""
+				]
+			]
+		],
+		[
+			60,
+			114077.603812117,
+			[
+				[
+					"Change Subtitles",
+					"carne de criancinha!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			61,
+			115616.065350579,
+			[
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			65,
+			121769.911504425,
+			[
+				[
+					"Change Subtitle Alpha",
+					"1",
+					"0",
+					""
+				],
+				[
+					"Change Subtitles",
+					"O que que há, neném?",
+					"",
+					""
+				]
+			]
+		],
+		[
+			65,
+			122923.757658271,
+			[
+				[
+					"Change Subtitles",
+					"Cu",
+					"",
+					""
+				]
+			]
+		],
+		[
+			66,
+			123308.373042886,
+			[
+				[
+					"Change Subtitles",
+					"Cuca não vem pegar!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			67,
+			124846.834581348,
+			[
+				[
+					"Change Subtitles",
+					"Só o Titio vem...",
+					"",
+					""
+				]
+			]
+		],
+		[
+			68,
+			126385.296119809,
+			[
+				[
+					"Change Subtitles",
+					"pra te sequestrar!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			69,
+			127923.757658271,
+			[
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			77,
+			143369.639210347,
+			[
+				[
+					"Change Subtitle Alpha",
+					"1",
+					"0",
+					""
+				],
+				[
+					"Change Subtitles",
+					"Infernum adducere",
+					"",
+					"true"
+				]
+			]
+		],
+		[
+			79,
+			146820.966643975,
+			[
+				[
+					"Change Subtitles",
+					"Ad chaos adducere",
+					"",
+					"true"
+				]
+			]
+		],
+		[
+			81,
+			151068.754254595,
+			[
+				[
+					"Change Subtitles",
+					"Has animas",
+					"",
+					"true"
+				]
+			]
+		],
+		[
+			82,
+			153192.648059905,
+			[
+				[
+					"Change Subtitles",
+					"mox habebis,",
+					"",
+					"true"
+				]
+			]
+		],
+		[
+			83,
+			155316.541865214,
+			[
+				[
+					"Change Subtitles",
+					"do",
+					"",
+					"true"
+				]
+			]
+		],
+		[
+			83,
+			156378.488767869,
+			[
+				[
+					"Change Subtitles",
+					"domi",
+					"",
+					"true"
+				]
+			]
+		],
+		[
+			84,
+			157440.435670524,
+			[
+				[
+					"Change Subtitles",
+					"domine!",
+					"",
+					"true"
+				]
+			]
+		],
+		[
+			85,
+			160626.276378489,
+			[
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"1",
+					"linear"
+				]
+			]
+		],
+		[
+			87,
+			163226.684819605,
+			[
+				[
+					"Change Subtitles",
+					"Amo os ver desesperados!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			88,
+			164765.146358066,
+			[
+				[
+					"Change Subtitles",
+					"Desculpe-me mas não vou entrega-los.",
+					"",
+					""
+				]
+			]
+		],
+		[
+			89,
+			166303.607896528,
+			[
+				[
+					"Change Subtitles",
+					"Até mais otários!",
+					"",
+					""
+				]
+			]
+		],
+		[
+			90,
+			167842.06943499,
+			[
+				[
+					"Change Subtitle Alpha",
+					"0",
+					"1",
 					""
 				]
 			]

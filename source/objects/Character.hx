@@ -106,13 +106,24 @@ class Character extends FlxAnimate
 
 				scale.set(0.75,0.75);
 
-			case "gf-week2":
+			case "gf-week2" | "gf-sequestro":
 				doidoChar.spritesheet += 'gf/week2/gi_week2';
 				doidoChar.anims = [
 					['idle', 			'idle', 		24, false],
 				];
 
-				idleAnims = ["idle"];
+				if(curChar == "gf-sequestro") {
+					doidoChar.extrasheets = ['gf/week2/gi_sequestro'];
+					doidoChar.anims.push(['staring1', 			'staring1', 		24, false]);
+					doidoChar.anims.push(['staring2', 			'staring2', 		24, false]);
+					doidoChar.anims.push(['return', 			'return idle', 		24, false]);
+
+					idleAnims = ["staring1", "staring2"];
+				}
+				else
+					idleAnims = ["idle"];
+
+
 				flipX = isPlayer;
 
 				scale.set(0.72,0.72);
@@ -466,7 +477,7 @@ class Character extends FlxAnimate
 		dance();
 	}
 
-	private var curDance:Int = 0;
+	public var curDance:Int = 0;
 
 	public function dance(forced:Bool = false)
 	{
@@ -479,7 +490,9 @@ class Character extends FlxAnimate
 				if(animExists(daIdle + altIdle))
 					daIdle += altIdle;
 				playAnim(daIdle);
-				curDance++;
+
+				if(daIdle != "staring" || FlxG.random.bool(30))
+					curDance++;
 
 				if (curDance >= idleAnims.length)
 					curDance = 0;

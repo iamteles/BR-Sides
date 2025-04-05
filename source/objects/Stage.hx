@@ -173,11 +173,20 @@ class Stage extends FlxGroup
 					clouds.y = -500;
 					add(clouds);
 
-					var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay'));
-					overlay.blend = BlendMode.ADD;
-					overlay.alpha = 0.4;
-					bg.scrollFactor.set(0.3,0.7);
-					foreground.add(overlay);
+					if(curStage != "w2-n") {
+						var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay'));
+						overlay.blend = BlendMode.ADD;
+						overlay.alpha = 0.4;
+						bg.scrollFactor.set(0.3,0.7);
+						foreground.add(overlay);
+					}
+					else {
+						var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay'));
+						//overlay.blend = BlendMode.ADD;
+						overlay.alpha = 0.2;
+						bg.scrollFactor.set(0.3,0.7);
+						foreground.add(overlay);
+					}
 				}
 
 				var grd = new FlxSprite(-570, -360).loadGraphic(Paths.image('stages/w2/${suf}grd'));
@@ -273,7 +282,8 @@ class Stage extends FlxGroup
 		{
 			case "w1-tuto": "gf-tutorial";
 			case "quarto": "dublando";
-			case "w2" | "w2-n": "gf-week2";
+			case "w2": "gf-week2";
+			case "w2-n": "gf-sequestro";
 			default: "gf";
 		}
 	}

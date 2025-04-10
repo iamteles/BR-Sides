@@ -64,6 +64,35 @@ class OptionsSubState extends MusicBeatSubState
         ]
         #end
 	];
+
+    var tl:Map<String, String> =
+	[
+        "graphics" => "gráficos",
+        "gameplay" => "gameplay",
+        "system" => "sistema",
+        "mobile" => "mobile",
+        "controls" => "controles",
+        "offsets" => "offsets",
+        "Shaders" => "Shaders",
+        "Low Quality" => "Qualidade Baixa",
+        "Dark Mode" => "Modo Escuro",
+        "Antialiasing" => "Antialiasing",
+        "Resolution" => "Resolução",
+        "FPS Cap" => "FPS Cap",
+        "Ghost Tapping" => "Ghost Tapping",
+        "Downscroll" => "Downscroll",
+        "Hitsounds" => "Hitsounds",
+        "Hitsound Volume" => "Volume dos Hitsounds",
+        "Countdown on Unpause" => "Contagem no Unpause",
+        "Discord RPC" => "Discord RPC",
+        "Unfocus Pause" => "Pause no Desfoque",
+        "FPS Counter" => "Contador FPS",
+        "Flashing Lights" => "Luzes Piscantes",
+        "Cutscenes" => "Cutscenes",
+        "Invert Swipes" => "Inverter Deslizes",
+        "Button Opacity" => "Opacidade dos Botões",
+        "Hitbox Opacity" => "Opacidade dos Hitboxes"
+	];
     
     var restartTimer:Float = 0;
     var forceRestartOptions:Array<String> = [ // options that you gotta restart the song for them to reload sorry
@@ -113,7 +142,7 @@ class OptionsSubState extends MusicBeatSubState
         }
 
         #if !html5
-        CoolUtil.playMusic('lilBitBack');
+        CoolUtil.playMusic('death/deathMusic');
         #end
 		DiscordIO.changePresence("Options - Tweakin' the Settings");
 
@@ -128,7 +157,7 @@ class OptionsSubState extends MusicBeatSubState
         add(grpItems);
         add(grpAttachs);
 
-        restartTxt = new Alphabet(FlxG.width / 2, 12, "restart the song to apply some settings", true);
+        restartTxt = new Alphabet(FlxG.width / 2, 12, "recomece a musica para aplicar algumas opções", true);
         restartTxt.align = CENTER;
         restartTxt.scale.set(0.45,0.45);
         restartTxt.updateHitbox();
@@ -375,7 +404,10 @@ class OptionsSubState extends MusicBeatSubState
                 var text = new FlxText(0, 0, 0, "");
                 text.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
                 text.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
-                text.text = mainShit[i].toUpperCase();
+                if(tl.get(mainShit[i]) != null)
+                    text.text = tl.get(mainShit[i]).toUpperCase();
+                else
+                    text.text = mainShit[i].toUpperCase();
                 //text.scale.set(0.7,0.7);
                 text.updateHitbox();
                 text.ID = i;
@@ -396,7 +428,10 @@ class OptionsSubState extends MusicBeatSubState
                 var text = new FlxText(0, 0, 0, "");
                 text.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
                 text.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
-                text.text = curOption[i];
+                if(tl.get(curOption[i]) != null)
+                    text.text = tl.get(curOption[i]);
+                else
+                    text.text = curOption[i];
                 //text.scale.set(0.7,0.7);
                 text.updateHitbox();
                 text.ID = i;

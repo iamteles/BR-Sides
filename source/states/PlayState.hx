@@ -353,21 +353,30 @@ class PlayState extends MusicBeatState
 		hudBuild.cameras = [camHUD];
 		add(hudBuild);
 
-		var cardAlpha:Int = 0;
-		var cardName:String = "microondas-freestyle";
-
-		if(Paths.fileExists('images/hud/cards/${SONG.song}.png')) {
-			cardName = SONG.song;
-			cardAlpha = 1;
+		if(SONG.song == "sequestro") {
+			card = new FlxSprite(0, 0).loadGraphic(Paths.image('hud/cards/sequestro-2'));
+			card.screenCenter();
+			card.alpha = 0;
+			card.cameras = [camHUD];
+			add(card);
 		}
-
-		card = new FlxSprite(-400, 0).loadGraphic(Paths.image('hud/cards/$cardName'));
-		card.scale.set(0.5,0.5);
-		card.updateHitbox();
-		card.y = (SaveData.data.get("Downscroll") ? 100 : FlxG.height - card.height - 100);
-		card.alpha = cardAlpha;
-		card.cameras = [camHUD];
-		add(card);
+		else {
+			var cardAlpha:Int = 0;
+			var cardName:String = "microondas-freestyle";
+	
+			if(Paths.fileExists('images/hud/cards/${SONG.song}.png')) {
+				cardName = SONG.song;
+				cardAlpha = 1;
+			}
+	
+			card = new FlxSprite(-400, 0).loadGraphic(Paths.image('hud/cards/$cardName'));
+			card.scale.set(0.5,0.5);
+			card.updateHitbox();
+			card.y = (SaveData.data.get("Downscroll") ? 100 : FlxG.height - card.height - 100);
+			card.alpha = cardAlpha;
+			card.cameras = [camHUD];
+			add(card);
+		}
 
 		spawnCountdown();
 		
@@ -503,10 +512,11 @@ class PlayState extends MusicBeatState
 			switch(SONG.song) {
 				case "sequestro":
 					startVideo("seq");
+				default:
+					startDialogue(DialogueUtil.loadDialogue(SONG.song, songDiff));
 			}
 
 			playedCutscene = true;
-			startDialogue(DialogueUtil.loadDialogue(SONG.song, songDiff));
 		}
 		else
 			startCountdown();
@@ -522,6 +532,7 @@ class PlayState extends MusicBeatState
 			case "sequestro":
 				doNoteUp = false;
 				doHudBAlpha = false;
+				healthDrain = true;
 				camGame.fade(0xff000000, 0.001, false);
 			case "tuto":
 				zoomOpp = 0.1;
@@ -640,17 +651,32 @@ class PlayState extends MusicBeatState
 			{
 				startSong();
 
-				FlxTween.tween(card, {x: -10}, 2.2, {
-					startDelay: 0.2,
-					ease: FlxEase.expoOut,
-					onComplete: function(twn:FlxTween)
-					{
-						FlxTween.tween(card, {x: -400}, 2.2, {
-							ease: FlxEase.expoIn,
-							startDelay: 0.3,
-						});
-					}
-				});
+				if(SONG.song == "sequestro") {
+					FlxTween.tween(card, {alpha: 1}, 3.2, {
+						startDelay: 0.6,
+						ease: FlxEase.expoOut,
+						onComplete: function(twn:FlxTween)
+						{
+							FlxTween.tween(card, {alpha: 0}, 3.2, {
+								ease: FlxEase.expoIn,
+								startDelay: 0.3,
+							});
+						}
+					});
+				}
+				else {
+					FlxTween.tween(card, {x: -10}, 2.2, {
+						startDelay: 0.2,
+						ease: FlxEase.expoOut,
+						onComplete: function(twn:FlxTween)
+						{
+							FlxTween.tween(card, {x: -400}, 2.2, {
+								ease: FlxEase.expoIn,
+								startDelay: 0.3,
+							});
+						}
+					});
+				}
 			}
 
 			if(daCount != 4)
@@ -1117,7 +1143,7 @@ class PlayState extends MusicBeatState
 				if(startedSong)
 					presenceTxt += ' - ${CoolUtil.posToTimer(Conductor.songPos)} / ${CoolUtil.posToTimer(songLength)}';
 
-				DiscordIO.changePresence(presenceTxt, null, 'icon-' + backend.utils.CharacterUtil.formatChar(dad.char.curChar), true);
+				DiscordIO.changePresence(presenceTxt, null, 'icon-' + backend.utils.CharacterUtil.formatChar(dad.char.curChar), false);
 			}
 		}
 		

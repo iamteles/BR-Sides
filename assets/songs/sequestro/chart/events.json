@@ -33,6 +33,24 @@
 					"1",
 					"0",
 					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Vignette Alpha",
+					"0.83",
+					"4",
+					"linear"
 				]
 			]
 		],
@@ -51,6 +69,30 @@
 					"dad",
 					"saco-creep",
 					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Vignette Alpha",
+					"0.9",
+					"4",
+					"linear"
+				],
+				[
+					"Change Beat",
+					"4",
+					"",
+					""
 				]
 			]
 		],
@@ -66,7 +108,25 @@
 				],
 				[
 					"Change Subtitles",
-					"Cuidado é o Homem do Saco",
+					"Cuidado é o Homem do Saco!",
+					"",
+					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"1",
 					"",
 					""
 				]
@@ -93,6 +153,30 @@
 					"1",
 					"0",
 					""
+				],
+				[
+					"Flash Screen",
+					"0.5",
+					"white",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"1",
+					"",
+					""
+				],
+				[
+					"Change Vignette Alpha",
+					"0.5",
+					"",
+					""
 				]
 			]
 		],
@@ -117,6 +201,18 @@
 					"Ai...",
 					"",
 					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Change Vignette Alpha",
+					"0.5",
+					"1",
+					"linear"
 				]
 			]
 		],
@@ -125,14 +221,8 @@
 			0,
 			[
 				[
-					"Fade Screen",
-					"true",
-					"10",
-					"black"
-				],
-				[
 					"Change Cam Zoom",
-					"1.1",
+					"0.8",
 					"",
 					""
 				],
@@ -147,6 +237,12 @@
 					"0.001",
 					"110",
 					"true"
+				],
+				[
+					"Change Cam Section",
+					"gf",
+					"",
+					""
 				]
 			]
 		],
@@ -157,6 +253,18 @@
 				[
 					"Do Note Intro",
 					"",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
+				],
+				[
+					"Change Cam Section",
+					"none",
 					"",
 					""
 				]
@@ -195,6 +303,18 @@
 					"Venham se servir, senhores",
 					"",
 					""
+				],
+				[
+					"Change HudB Alpha",
+					"1",
+					"1",
+					"linear"
+				],
+				[
+					"Change Bars",
+					"0.001",
+					"95",
+					"true"
 				]
 			]
 		],
@@ -212,18 +332,6 @@
 					"Change Idle",
 					"gf",
 					"idle",
-					""
-				]
-			]
-		],
-		[
-			4,
-			9823.00884955752,
-			[
-				[
-					"Change Cam Zoom",
-					"0.9",
-					"",
 					""
 				]
 			]
@@ -324,7 +432,7 @@
 				],
 				[
 					"Change Subtitles",
-					"Mas tá, acho que dá pro gasto... : )",
+					"Mas acho que dá pro gasto... ",
 					"",
 					""
 				]
@@ -361,6 +469,12 @@
 				[
 					"Change Beat",
 					"4",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
 					"",
 					""
 				]
@@ -687,6 +801,18 @@
 					"Bem...",
 					"",
 					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"1",
+					"0.04",
+					""
 				]
 			]
 		],
@@ -732,7 +858,7 @@
 			[
 				[
 					"Change Subtitles",
-					"Que maravilha :)",
+					"Que maravilha! :)",
 					"",
 					""
 				]
@@ -747,6 +873,18 @@
 					"0",
 					"1",
 					"linear"
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				],
+				[
+					"Change Beat",
+					"4",
+					"0",
+					""
 				]
 			]
 		],
@@ -771,6 +909,12 @@
 					"No menu, há um novo item",
 					"",
 					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.9",
+					"",
+					""
 				]
 			]
 		],
@@ -781,6 +925,12 @@
 				[
 					"Change Subtitles",
 					"carne de criancinha!",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"1",
 					"",
 					""
 				]
@@ -795,6 +945,12 @@
 					"0",
 					"1",
 					"linear"
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
 				]
 			]
 		],
@@ -810,7 +966,7 @@
 				],
 				[
 					"Change Subtitles",
-					"O que que há, neném?",
+					"Que que há, neném?",
 					"",
 					""
 				]
@@ -846,7 +1002,7 @@
 			[
 				[
 					"Change Subtitles",
-					"Só o Titio vem...",
+					"Só o titio vem...",
 					"",
 					""
 				]
@@ -861,6 +1017,12 @@
 					"pra te sequestrar!",
 					"",
 					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.8",
+					"",
+					""
 				]
 			]
 		],
@@ -873,6 +1035,12 @@
 					"0",
 					"1",
 					"linear"
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
 				]
 			]
 		],
@@ -999,6 +1167,12 @@
 					"Desculpe-me mas não vou entrega-los.",
 					"",
 					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.85",
+					"",
+					""
 				]
 			]
 		],
@@ -1009,6 +1183,12 @@
 				[
 					"Change Subtitles",
 					"Até mais otários!",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.76",
 					"",
 					""
 				]
@@ -1023,6 +1203,90 @@
 					"0",
 					"1",
 					""
+				],
+				[
+					"Change HudB Alpha",
+					"0",
+					"1.7",
+					"linear"
+				],
+				[
+					"Change Cam Alpha",
+					"0",
+					"1.7",
+					"camStrum"
+				],
+				[
+					"Change Cam Section",
+					"gf",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"0.7",
+					"",
+					""
+				]
+			]
+		],
+		[
+			47,
+			88223.2811436351,
+			[
+				[
+					"Change Cam Zoom",
+					"0.95",
+					"",
+					""
+				]
+			]
+		],
+		[
+			47,
+			89285.22804629,
+			[
+				[
+					"Change Cam Zoom",
+					"1",
+					"",
+					""
+				]
+			]
+		],
+		[
+			71,
+			131000.680735194,
+			[
+				[
+					"Change Cam Zoom",
+					"0.85",
+					"",
+					""
+				]
+			]
+		],
+		[
+			91,
+			170149.761742682,
+			[
+				[
+					"Fade Screen",
+					"false",
+					"0.001",
+					"black"
+				]
+			]
+		],
+		[
+			3,
+			7433.62831858407,
+			[
+				[
+					"Fade Screen",
+					"true",
+					"4",
+					"black"
 				]
 			]
 		]

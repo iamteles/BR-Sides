@@ -136,6 +136,8 @@ class HudClass extends FlxGroup
 				text.setFormat(Main.gFont, 34, 0xFFFFFFFF, CENTER);
 
 			text.setBorderStyle(OUTLINE, FlxColor.BLACK, 2);
+
+			text.scale.set(1.2,1.2);
 		}
 
 		subtitleA.addFormat(formats[0], 0, indexA);
@@ -230,6 +232,13 @@ class HudClass extends FlxGroup
 		{
 			botplaySin += elapsed * Math.PI;
 			botplayTxt.alpha = 0.5 + Math.sin(botplaySin) * 0.8;
+		}
+
+		for(text in [subtitleA, subtitleB]) {
+			text.scale.set(
+				FlxMath.lerp(text.scale.x, 1, FlxG.elapsed * 6),
+				FlxMath.lerp(text.scale.y, 1, FlxG.elapsed * 6)
+			);
 		}
 
 		healthBar.updateIconPos();

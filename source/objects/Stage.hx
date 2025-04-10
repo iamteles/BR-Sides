@@ -165,18 +165,22 @@ class Stage extends FlxGroup
 				add(clouds);*/
 
 				if(!lowQuality) {
+					var cloudSpeed:Float = 12;
+					if(curStage == "w2-n")
+						cloudSpeed = 24;
+
 					var clouds = new FlxBackdrop(Paths.image('stages/w2/${suf}clouds'), X, 0, 0);
 					clouds.scrollFactor.set(0.6,0.9);
-					clouds.velocity.set(12,0);
+					clouds.velocity.set(cloudSpeed,0);
 					clouds.screenCenter();
 					clouds.x = -400;
 					clouds.y = -500;
 					add(clouds);
 
 					if(curStage != "w2-n") {
-						var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay'));
+						var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay-s'));
 						overlay.blend = BlendMode.ADD;
-						overlay.alpha = 0.4;
+						overlay.alpha = 0.3;
 						bg.scrollFactor.set(0.3,0.7);
 						foreground.add(overlay);
 					}

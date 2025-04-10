@@ -1,6 +1,6 @@
 {
 	"globalOffset": [
-		20,
+		-20,
 		40
 	],
 	"animOffsets": [
@@ -85,7 +85,7 @@
 		0
 	],
 	"cameraOffset": [
-		-200,
-		40
+		-180,
+		-60
 	]
 }

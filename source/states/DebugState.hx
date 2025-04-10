@@ -15,7 +15,7 @@ using StringTools;
 
 class DebugState extends MusicBeatState
 {
-	var optionShit:Array<String> = ["week 1", "freeplay", "credits", "options"];
+	var optionShit:Array<String> = ["week 1", "week 2", "freeplay", "credits", "options"];
 	static var curSelected:Int = 0;
 
 	var optionGroup:FlxTypedGroup<Alphabet>;
@@ -44,7 +44,7 @@ class DebugState extends MusicBeatState
 			item.align = CENTER;
 			item.text = optionShit[i].toUpperCase();
 			item.x = FlxG.width / 2;
-			item.y = 50 + ((item.height + 100) * i);
+			item.y = 50 + ((item.height + 75) * i);
 			item.ID = i;
 			optionGroup.add(item);
 		}
@@ -76,8 +76,11 @@ class DebugState extends MusicBeatState
 		{
 			switch(optionShit[curSelected])
 			{
-				case "week 1":
+				case "week 1" | "week 2":
 					var daWeek = SongData.weeks[1];
+
+					if(optionShit[curSelected] == "week 2")
+						daWeek = SongData.weeks[2];
 					
 					PlayState.curWeek = daWeek.weekFile;
 					PlayState.songDiff = "normal";

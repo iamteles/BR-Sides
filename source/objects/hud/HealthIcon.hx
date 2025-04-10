@@ -19,6 +19,10 @@ class HealthIcon extends FlxSprite
 	public function setIcon(curIcon:String = "face", isPlayer:Bool = false):HealthIcon
 	{
 		this.curIcon = curIcon;
+
+		if(curIcon == "fuleco-rar" && FlxG.random.bool(5))
+			curIcon = "fuleco-tar";
+
 		if(!Paths.fileExists('images/icons/icon-${curIcon}.png'))
 		{
 			if(curIcon.contains('-'))

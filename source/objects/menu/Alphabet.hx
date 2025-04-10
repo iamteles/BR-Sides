@@ -28,6 +28,7 @@ class Alphabet extends FlxSpriteGroup
 	}
 
 	public var text(default, set):String = "";
+	public var rtext:String = "";
 	public var textArray:Array<String> = [];
 	public var bold:Bool = false;
 	public var fieldWidth:Float = 0;
@@ -41,6 +42,7 @@ class Alphabet extends FlxSpriteGroup
 		text = v;
 		text = Std.string(text);
 		textArray = text.split("");
+		rtext = v;
 		typeTxt();
 		return v;
 	}

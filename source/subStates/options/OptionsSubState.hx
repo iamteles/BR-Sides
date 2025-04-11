@@ -13,9 +13,13 @@ import objects.menu.Alphabet;
 import objects.menu.options.*;
 import states.PlayState;
 import states.DebugState;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 
 class OptionsSubState extends MusicBeatSubState
 {
+    var started:Int = 0;
+
     var mainShit:Array<String> = [
         "graphics",
         "gameplay",
@@ -148,9 +152,11 @@ class OptionsSubState extends MusicBeatSubState
 
         bg = new FlxSprite();
         bg.makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
-        bg.alpha = 0.80;
         bg.screenCenter();
         add(bg);
+
+        bg.alpha = 0;
+		FlxTween.tween(bg, {alpha: 0.8}, 0.1);
 
         grpItems = new FlxTypedGroup<FlxText>();
         grpAttachs = new FlxGroup();
@@ -227,7 +233,7 @@ class OptionsSubState extends MusicBeatSubState
 
         if(curCat == 'main')
         {
-            if(Controls.justPressed(ACCEPT))
+            if(Controls.justPressed(ACCEPT) && started == mainShit.length)
             {
                 switch(mainShit[curSelected])
                 {
@@ -418,6 +424,21 @@ class OptionsSubState extends MusicBeatSubState
                 text.y = (FlxG.height / 2) - (text.height / 2);
                 text.y += (100 * i);
                 text.y -= (100 * ((mainShit.length - 1) / 2));
+                
+                if(started != mainShit.length) {
+                    text.y += 20;
+                    text.alpha = 0;
+
+                    var newAlpha = 0.4;
+
+                    if(i == curSelected)
+                        newAlpha = 1.0;
+    
+                    FlxTween.tween(text, {y: text.y - 20, alpha: newAlpha}, 0.15, {ease: FlxEase.quadInOut, startDelay: 0.05 * i, onComplete: function(twn:FlxTween)
+                        {
+                            started++;
+                        }});
+                }
             }
         }
         else
@@ -465,6 +486,9 @@ class OptionsSubState extends MusicBeatSubState
     
     function changeSelection(change:Int = 0)
     {
+        if(started != mainShit.length)
+            return;
+
         if(change != 0)
             FlxG.sound.play(Paths.sound('menu/scroll'));
         

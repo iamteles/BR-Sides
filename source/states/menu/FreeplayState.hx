@@ -252,7 +252,6 @@ class ScoreCounter extends FlxGroup
 	public var bg:FlxSprite;
 
 	public var text:FlxText;
-	public var diffTxt:FlxText;
 
 	public var realValues:ScoreData;
 	public var lerpValues:ScoreData;
@@ -271,10 +270,6 @@ class ScoreCounter extends FlxGroup
 		text.setFormat(Main.gFont, txtSize, 0xFFFFFFFF, LEFT);
 		//text.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
 		add(text);
-		
-		diffTxt = new FlxText(0,0,0,"< DURO >");
-		diffTxt.setFormat(Main.gFont, txtSize, 0xFFFFFFFF, LEFT);
-		add(diffTxt);
 
 		realValues = {score: 0, accuracy: 0, breaks: 0};
 		lerpValues = {score: 0, accuracy: 0, breaks: 0};
@@ -308,7 +303,7 @@ class ScoreCounter extends FlxGroup
 			lerpValues.breaks = realValues.breaks;
 
 		bg.scale.x = ((text.width + 8) / 32);
-		bg.scale.y = ((text.height + diffTxt.height + 8) / 32);
+		bg.scale.y = ((text.height + 8) / 32);
 		bg.updateHitbox();
 
 		#if TOUCH_CONTROLS
@@ -319,15 +314,11 @@ class ScoreCounter extends FlxGroup
 
 		text.x = FlxG.width - text.width - 4;
 		text.y = bg.y + 4;
-		
-		diffTxt.x = bg.x + bg.width / 2 - diffTxt.width / 2;
-		diffTxt.y = text.y + text.height;
 	}
 
 	public function updateDisplay(song:String, diff:String)
 	{
 		realValues = Highscore.getScore('${song}-${diff}');
-		diffTxt.text = '< ${diff.toUpperCase()} >';
 		update(0);
 	}
 }

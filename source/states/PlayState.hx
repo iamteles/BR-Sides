@@ -524,16 +524,28 @@ class PlayState extends MusicBeatState
 		switch(daSong) {
 			case "calorao" | "nordeste":
 				setCamShader([getCamShader("heatshader.frag")]);
+
+				boyfriend.setRim(180, 0.05, -10, 0, -23, 20, 0xFFEB8322);
+				dad.setRim(0, 0.05, -10, 0, -23, 20, 0xFFEB8322);
+				gf.setRim(90, 0.05, -10, 0, -23, 20, 0xFFEB8322);
 			case "muito-lerdo":
 				doNoteUp = false;
 				doHudBAlpha = false;
 				camGame.fade(0xff000000, 0.001, false);
 				hasModchart = true; // i guess so
+
+				boyfriend.setRim(0, 0.05, -10, 0, 0, -20, 0xFFB1CAD6);
+				dad.setRim(180, 0.05, -10, 0, 0, -20, 0xFFB1CAD6);
+				gf.setRim(90, 0.05, -10, 0, 0, -20, 0xFFB1CAD6);
 			case "sequestro":
 				doNoteUp = false;
 				doHudBAlpha = false;
 				healthDrain = true;
 				camGame.fade(0xff000000, 0.001, false);
+
+				boyfriend.setRim(180, 0.1, -46, -38, -25, -20, 0xFF5D3CEF);
+				dad.setRim(0, 0.1, -46, -38, -25, -20, 0xFF5D3CEF);
+				gf.setRim(90, 0.1, -46, -38, -25, -20, 0xFF5D3CEF);
 			case "tuto":
 				zoomOpp = 0.1;
 				doNoteUp = false;
@@ -1889,7 +1901,8 @@ class PlayState extends MusicBeatState
 			hudBuild.updateHitbox(bfStrumline.downscroll);
 			updateNotes();
 
-			card.y = (SaveData.data.get("Downscroll") ? 100 : FlxG.height - card.height - 100);
+			if(SONG.song != "sequestro")
+				card.y = (SaveData.data.get("Downscroll") ? 100 : FlxG.height - card.height - 100);
 		}
 
 		switch(option)
@@ -1897,6 +1910,11 @@ class PlayState extends MusicBeatState
 			case 'Shaders':
 				for(i in ["camGame", "camHUD", "camStrum"])
 					stringToCam(i).filters = (SaveData.data.get("Shaders") ? tempShaders.get(i) : []);
+
+				for(char in [boyfriend, gf, dad]) {
+					if(char.riminfo != null)
+						char.reload();
+				}
 
 			case 'Song Offset':
 				for(note in unspawnNotes)
@@ -2023,6 +2041,9 @@ class PlayState extends MusicBeatState
 			case 'Change Vignette Alpha':
 				var newAlpha:Float  = CoolUtil.stringToFloat(daEvent.value1, 1);
 				var duration:Float = CoolUtil.stringToFloat(daEvent.value2, 0);
+
+				if(SONG.song == "sequestro")
+					newAlpha = FlxMath.bound(newAlpha - 0.075, 0, 1);
 
 				if(duration <= 0) {
 					vgblack.alpha = newAlpha;

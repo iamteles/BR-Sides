@@ -62,8 +62,8 @@
 	<SubTexture name="down0004" x="1776" y="1816" width="449" height="844" frameX="-5" frameY="0" frameWidth="468" frameHeight="844"/>
 	<SubTexture name="down0005" x="1776" y="1816" width="449" height="844" frameX="-5" frameY="0" frameWidth="468" frameHeight="844"/>
 	<SubTexture name="down0006" x="1328" y="1816" width="448" height="844" frameX="-6" frameY="0" frameWidth="468" frameHeight="844"/>
-	<SubTexture name="down0007" x="2225" y="1816" width="449" height="844" frameX="-5" frameY="0" frameWidth="468" frameHeight="844"/>
-	<SubTexture name="down0008" x="2225" y="1816" width="449" height="844" frameX="-5" frameY="0" frameWidth="468" frameHeight="844"/>
+	<SubTexture name="down0007" x="1776" y="1816" width="449" height="844" frameX="-5" frameY="0" frameWidth="468" frameHeight="844"/>
+	<SubTexture name="down0008" x="1776" y="1816" width="449" height="844" frameX="-5" frameY="0" frameWidth="468" frameHeight="844"/>
 	<SubTexture name="down0009" x="1776" y="1816" width="449" height="844" frameX="-5" frameY="0" frameWidth="468" frameHeight="844"/>
 	<SubTexture name="idle0000" x="2674" y="1816" width="387" height="898" frameX="0" frameY="-3" frameWidth="397" frameHeight="901"/>
 	<SubTexture name="idle0001" x="2674" y="1816" width="387" height="898" frameX="0" frameY="-3" frameWidth="397" frameHeight="901"/>

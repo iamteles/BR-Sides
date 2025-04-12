@@ -177,7 +177,7 @@ class Stage extends FlxGroup
 					clouds.y = -500;
 					add(clouds);
 
-					if(curStage != "w2-n") {
+					/*if(curStage != "w2-n") {
 						var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay-s'));
 						overlay.blend = BlendMode.ADD;
 						overlay.alpha = 0.3;
@@ -187,10 +187,10 @@ class Stage extends FlxGroup
 					else {
 						var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay'));
 						//overlay.blend = BlendMode.ADD;
-						overlay.alpha = 0.2;
+						overlay.alpha = 0;
 						bg.scrollFactor.set(0.3,0.7);
 						foreground.add(overlay);
-					}
+					}*/
 				}
 
 				var grd = new FlxSprite(-570, -360).loadGraphic(Paths.image('stages/w2/${suf}grd'));

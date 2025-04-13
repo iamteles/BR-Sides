@@ -108,6 +108,7 @@ class PlayState extends MusicBeatState
 	
 	// cameras!!
 	public var camGame:FlxCamera;
+	public var camFilter:FlxCamera;
 	public var camHUD:FlxCamera;
 	public var camStrum:FlxCamera;
 	public var camOther:FlxCamera; // used so substates dont collide with camHUD.alpha or camHUD.visible
@@ -155,6 +156,7 @@ class PlayState extends MusicBeatState
 	// This map holds which shaders are loaded, to help with disabling and enabling them in the options!
 	var tempShaders:Map<String,Array<BitmapFilter>> = [
 		"camGame" => [],
+		"camFilter" => [],
 		"camHUD" => [],
 		"camStrum" => []
 	];
@@ -246,6 +248,9 @@ class PlayState extends MusicBeatState
 		
 		// setting up the cameras
 		camGame = new FlxCamera();
+
+		camFilter = new FlxCamera();
+		camFilter.bgColor.alphaFloat = 0;
 		
 		camHUD = new FlxCamera();
 		camHUD.bgColor.alphaFloat = 0;
@@ -258,6 +263,7 @@ class PlayState extends MusicBeatState
 		
 		// adding the cameras
 		FlxG.cameras.reset(camGame);
+		FlxG.cameras.add(camFilter, false);
 		FlxG.cameras.add(camHUD, false);
 		FlxG.cameras.add(camStrum, false);
 		FlxG.cameras.add(camOther, false);
@@ -321,7 +327,7 @@ class PlayState extends MusicBeatState
 		gradient = FlxGradient.createGradientFlxSprite(FlxG.width + 20, (FlxG.height * 2) + 20, [0xff009440, 0xffffcb00]);
 		gradient.x = -10;
 		gradient.y = -10;
-		gradient.cameras = [camHUD];
+		gradient.cameras = [camFilter];
 		gradient.blend = BlendMode.ADD;
 		gradient.alpha = 0; // best: 0.3
 		FlxTween.tween(gradient, {y: -FlxG.height}, 3, {
@@ -334,7 +340,7 @@ class PlayState extends MusicBeatState
 		vgblack.scale.set(1.1,1.1);
 		vgblack.updateHitbox();
 		vgblack.screenCenter();
-		vgblack.cameras = [camHUD];
+		vgblack.cameras = [camFilter];
 		vgblack.alpha = 0;
 		add(vgblack);
 

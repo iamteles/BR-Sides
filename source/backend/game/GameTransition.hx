@@ -15,7 +15,7 @@ import backend.game.GameData.MusicBeatSubState;
 class GameTransition extends MusicBeatSubState
 {	
 	var fadeOut:Bool = false;
-	var transition:String = 'base';
+	var transition:String = 'funkin';
 	
 	// Callback at the end of the transition
 	public var finishCallback:Void->Void;
@@ -23,13 +23,34 @@ class GameTransition extends MusicBeatSubState
 	// Sprites used in transitions
 	var sprBlack:FlxSprite;
 	
-	public function new(fadeOut:Bool = true, transition:String = 'base')
+	public function new(fadeOut:Bool = true, transition:String = "side")
 	{
 		super();
 		this.fadeOut = fadeOut;
 		this.transition = transition;
 
 		switch(transition) {
+			case 'side':
+				sprBlack = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+				sprBlack.screenCenter(X);
+				add(sprBlack);
+				
+				var xPos:Array<Float> = [
+					-sprBlack.width - 40,
+					FlxG.width / 2 - sprBlack.width / 2,
+					sprBlack.width - 40,
+				];
+				var curX:Int = (fadeOut ? 1 : 0);
+				
+				sprBlack.x = xPos[curX];
+
+				FlxTween.tween(sprBlack, {x: xPos[curX + 1]}, 0.6, {
+					ease: CoolUtil.stringToEase("cubeOut"),
+					onComplete: function(twn:FlxTween)
+					{
+						endTransition();
+					}
+				});
 			default:
 				sprBlack = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
 				sprBlack.screenCenter();
@@ -52,6 +73,7 @@ class GameTransition extends MusicBeatSubState
 		else
 			close();
 	}
+	
 	
 	override function update(elapsed:Float)
 	{

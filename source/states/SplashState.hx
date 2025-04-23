@@ -186,7 +186,7 @@ class SplashState extends MusicBeatState
 	{
 		FlxG.stage.removeChild(_sprite);
 		FlxG.stage.removeChild(_text);
-		FlxG.switchState(new DebugState());
+		FlxG.switchState(new states.menu.TitleScreen());
 		//FlxG.game._gameJustStarted = true;
 	}
 

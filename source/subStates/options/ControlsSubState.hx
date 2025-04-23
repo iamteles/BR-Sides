@@ -20,6 +20,7 @@ import objects.menu.options.OptionSelector;
 import objects.note.Note;
 import objects.note.Strumline;
 import states.PlayState;
+import flixel.addons.display.FlxBackdrop;
 
 class ControlsSubState extends MusicBeatSubState
 {
@@ -29,7 +30,7 @@ class ControlsSubState extends MusicBeatSubState
     var deadIcon:HealthIcon;
 
     var gamepadSelector:OptionSelector;
-    var grpItems:FlxTypedGroup<Alphabet>;
+    var grpItems:FlxTypedGroup<FlxText>;
     var grpTxtOne:FlxTypedGroup<FlxText>;
     var grpTxtTwo:FlxTypedGroup<FlxText>;
     var backspaceTxt:FlxText;
@@ -53,9 +54,18 @@ class ControlsSubState extends MusicBeatSubState
         super();
         this.cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
         downMult = downscroll ? -1 : 1;
-        var bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuInvert'));
-        bg.color = 0xFFC500C5;
+
+        var black = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+        add(black);
+
+        var bg = new FlxBackdrop(Paths.image('menu/grid'), XY, 0, 0);
+        bg.velocity.set(40,40);
+        bg.scale.set(3,3);
+        bg.updateHitbox();
         bg.screenCenter();
+        bg.color = 0xFF3C94FF;
+        bg.alpha = 0.4;
+        bg.antialiasing = false;
         add(bg);
 
         strumline = new Strumline(FlxG.width / 2, null, false, true, true, PlayState.assetModifier);
@@ -86,23 +96,26 @@ class ControlsSubState extends MusicBeatSubState
         grpTxtOne.ID = 0;
         grpTxtTwo.ID = 1;
 
-        add(grpItems = new FlxTypedGroup<Alphabet>());
+        add(grpItems = new FlxTypedGroup<FlxText>());
         for(i in 0...optionShit.length)
         {
-            var item = new Alphabet(FlxG.width / 2, 0, optionShit[i], true);
-            item.align = CENTER;
-            item.scale.set(0.75,0.75);
+            var item = new FlxText(0, 0, 0, "");
+            item.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
+            item.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
+            item.text = optionShit[i].toUpperCase();
+            //option.scale.set(0.75,0.75);
             item.updateHitbox();
+            item.screenCenter(X);
+            item.ID = i;
             item.y = FlxG.height - item.height - 10;
             if(!downscroll)
                 item.y -= ((item.height + 10) * (optionShit.length - 1 - i));
             else
                 item.y = 10 + (item.height + 10) * i;
             grpItems.add(item);
-            item.ID = i;
         }
-        gamepadSelector = new OptionSelector('keyboard', false);
-        gamepadSelector.options = ['keyboard', 'gamepad'];
+        gamepadSelector = new OptionSelector('keyboard'.toUpperCase(), false);
+        gamepadSelector.options = ['keyboard'.toUpperCase(), 'gamepad'.toUpperCase()];
         var gamepadPos = grpItems.members[downscroll ? grpItems.members.length - 1 : 0].y + (70 / 2);
         gamepadSelector.setY(gamepadPos + (downscroll ? 60 : -70));
         add(gamepadSelector);

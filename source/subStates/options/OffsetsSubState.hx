@@ -13,6 +13,7 @@ import objects.hud.HealthIcon;
 import objects.menu.Alphabet;
 import objects.menu.options.OptionSelector;
 import states.PlayState;
+import flixel.addons.display.FlxBackdrop;
 
 class OffsetsSubState extends MusicBeatSubState
 {
@@ -23,7 +24,7 @@ class OffsetsSubState extends MusicBeatSubState
 
     static var curSelected:Int = 0;
     var optionShit = ["Music Offset", "Input Offset", "Test Input"];
-    var grpOptions:FlxTypedGroup<Alphabet>;
+    var grpOptions:FlxTypedGroup<FlxText>;
     var grpSelectors:FlxTypedGroup<OptionSelector>;
 
     var offsetCurBeat:Int = 0;
@@ -54,9 +55,18 @@ class OffsetsSubState extends MusicBeatSubState
         FlxG.sound.list.add(offsetMusic);
 
         downMult = downscroll ? -1 : 1;
-        var bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuInvert'));
-        bg.color = 0xFF7000CC;
+
+        var black = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+        add(black);
+
+        var bg = new FlxBackdrop(Paths.image('menu/grid'), XY, 0, 0);
+        bg.velocity.set(40,40);
+        bg.scale.set(3,3);
+        bg.updateHitbox();
         bg.screenCenter();
+        bg.color = 0xFFFF6C6C;
+        bg.alpha = 0.4;
+        bg.antialiasing = false;
         add(bg);
 
         countdownSpr = new Alphabet(0, 0, "holyshit", true);
@@ -82,12 +92,15 @@ class OffsetsSubState extends MusicBeatSubState
         strumline = new OffsetStrumline(downscroll);
         add(strumline);
 
-        grpOptions = new FlxTypedGroup<Alphabet>();
+        grpOptions = new FlxTypedGroup<FlxText>();
         var optionHeight:Float = (70 * 0.75) + 10;
         for(i in 0...optionShit.length)
         {
-            var option = new Alphabet(60, 0, optionShit[i], true);
-            option.scale.set(0.75,0.75);
+            var option = new FlxText(60, 0, 0, "");
+            option.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
+            option.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
+            option.text = optionShit[i].toUpperCase();
+            //option.scale.set(0.75,0.75);
             option.updateHitbox();
             option.ID = i;
             option.y = FlxG.height / 2 + (optionHeight * i);

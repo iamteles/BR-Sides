@@ -15,6 +15,7 @@ import states.PlayState;
 import states.DebugState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.addons.display.FlxBackdrop;
 
 class OptionsSubState extends MusicBeatSubState
 {
@@ -117,7 +118,7 @@ class OptionsSubState extends MusicBeatSubState
 
     var grpItems:FlxTypedGroup<FlxText>;
     var grpAttachs:FlxGroup;
-    var restartTxt:Alphabet;
+    var restartTxt:FlxText;
     var infoBG:FlxSprite;
     var infoTxt:FlxText;
     
@@ -125,10 +126,10 @@ class OptionsSubState extends MusicBeatSubState
 
     var bg:FlxSprite;
     var bgColors:Map<String, FlxColor> = [
-		"main" 		    => 0xFFCF68F7,
-        "preferences"   => 0xFFFF4949,
+		"main" 		    => 0xFF9F68F7,
+        "system"   => 0xFFFF4949,
 		"gameplay"	    => 0xFF83E6AA,
-		"appearance"    => 0xFFF36B8F,
+		"graphics"    => 0xFFF36B8F,
 	];
     
     public function new(?playState:PlayState)
@@ -150,9 +151,12 @@ class OptionsSubState extends MusicBeatSubState
         #end
 		DiscordIO.changePresence("Options - Tweakin' the Settings");
 
-        bg = new FlxSprite();
-        bg.makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+        bg = new FlxBackdrop(Paths.image('menu/grid'), XY, 0, 0);
+        bg.velocity.set(40,40);
+        bg.scale.set(3,3);
+        bg.updateHitbox();
         bg.screenCenter();
+        bg.antialiasing = false;
         add(bg);
 
         bg.alpha = 0;
@@ -163,10 +167,14 @@ class OptionsSubState extends MusicBeatSubState
         add(grpItems);
         add(grpAttachs);
 
-        restartTxt = new Alphabet(FlxG.width / 2, 12, "recomece a musica para aplicar algumas opções", true);
-        restartTxt.align = CENTER;
-        restartTxt.scale.set(0.45,0.45);
+        restartTxt = new FlxText(0, 0, 0, "");
+        restartTxt.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
+        restartTxt.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
+        restartTxt.text = "recomece a musica para aplicar algumas opções".toUpperCase();
+        restartTxt.scale.set(0.65,0.65);
         restartTxt.updateHitbox();
+        restartTxt.screenCenter(X);
+        restartTxt.y = 10;
         restartTxt.color = 0xFFFF0000;
         restartTxt.alpha = 0.0;
         add(restartTxt);

@@ -94,7 +94,8 @@ class MainMenu extends MusicBeatState
 			if(item.ID == curSelected) {
 				item.scale.x = FlxMath.lerp(item.scale.x, 1, elapsed * 8);
 				item.scale.y = FlxMath.lerp(item.scale.y, 1, elapsed * 8);
-				item.alpha = FlxMath.lerp(item.alpha, 1, elapsed * 10);
+				if(item.ID != 1 || SongData.savedWeeks.get("tuto"))
+					item.alpha = FlxMath.lerp(item.alpha, 1, elapsed * 10);
 			}
 			else {
 				item.scale.x = FlxMath.lerp(item.scale.x, 0.95, elapsed * 8);
@@ -123,7 +124,7 @@ class MainMenu extends MusicBeatState
 
 			if(Controls.justPressed(ACCEPT))
 			{
-				if(curSelected != 3) {
+				if(curSelected != 3 && (curSelected != 1 || SongData.savedWeeks.get("tuto"))) {
 					FlxG.sound.play(Paths.sound('menu/confirm'));
 					for(item in optionGroup.members)
 					{
@@ -145,6 +146,9 @@ class MainMenu extends MusicBeatState
 							});
 						}
 					}
+				}
+				else if(curSelected == 1) {
+					FlxG.sound.play(Paths.sound('menu/nope'));
 				}
 				else {
 					openSubState(new subStates.options.OptionsSubState());

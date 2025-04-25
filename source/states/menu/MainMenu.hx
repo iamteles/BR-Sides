@@ -69,6 +69,7 @@ class MainMenu extends MusicBeatState
 			item.y -= 240;
 			item.y += ((107 + 50) * i);
 			item.ID = i;
+			item.alpha = 0.56;
 			optionGroup.add(item);
 		}
 

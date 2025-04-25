@@ -71,7 +71,7 @@ class FreeplayState extends MusicBeatState
 			var week = SongData.getWeek(i);
 			var lockedWeek:Bool = false;
 			if(week.freeplayUnlock != null)
-				lockedWeek = !SongData.savedWeeks.get(week.weekFile);
+				lockedWeek = !SongData.savedWeeks.get(week.freeplayUnlock);
 			if(week.storyModeOnly || lockedWeek) continue;
 
 			for(song in week.songs)

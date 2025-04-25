@@ -22,9 +22,9 @@ class WebsiteSubState extends MusicBeatSubState
         add(bg);
 
         var messages:Array<String> = [
-            "Warning\nThis action will take you to",
+            "AVISO\nDeseja abrir o link",
             url,
-            "Are you sure?",
+            "???",
         ];
         var lastItem:Alphabet = null;
         for(i in 0...messages.length)
@@ -52,7 +52,7 @@ class WebsiteSubState extends MusicBeatSubState
         grpItems = new FlxTypedGroup<Alphabet>();
         for(i in 0...2)
         {
-            var opt = new Alphabet(0, 480, (i == 0) ? "NO" : "YES", true);
+            var opt = new Alphabet(0, 480, (i == 0) ? "CANCELAR" : "ABRIR", true);
             opt.x = (FlxG.width / 2) + 190 * ((i == 0) ? -1 : 1);
             opt.align = CENTER;
             opt.updateHitbox();

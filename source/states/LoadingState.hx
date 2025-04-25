@@ -14,6 +14,9 @@ import objects.*;
 import objects.hud.*;
 import objects.note.*;
 import objects.dialogue.Dialogue;
+#if VIDEOS_ALLOWED
+import backend.game.DoidoVideoSprite;
+#end
 
 #if PRELOAD_SONG
 import sys.thread.Mutex;
@@ -166,6 +169,13 @@ class LoadingState extends MusicBeatState
 			// add custom preloads here!!
 			switch(SONG.song)
 			{
+				case "sequestro":
+					#if VIDEOS_ALLOWED
+					if(SaveData.data.get('Cutscenes') != "OFF") {
+						var video = new DoidoVideoSprite();
+						video.load(Paths.video("seq"));
+					}
+					#end
 				default:
 					Logs.print('preloaded NOTHING extra lol');
 			}

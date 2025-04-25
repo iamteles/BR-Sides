@@ -44,7 +44,7 @@ class GameTransition extends MusicBeatSubState
 				
 				sprBlack.x = xPos[curX];
 
-				FlxTween.tween(sprBlack, {x: xPos[curX + 1]}, 0.6, {
+				FlxTween.tween(sprBlack, {x: xPos[curX + 1]}, 0.8, {
 					ease: CoolUtil.stringToEase("cubeOut"),
 					onComplete: function(twn:FlxTween)
 					{

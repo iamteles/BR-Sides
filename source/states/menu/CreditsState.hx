@@ -11,11 +11,12 @@ import backend.game.GameData.MusicBeatState;
 import backend.song.Highscore;
 import backend.song.Highscore.ScoreData;
 import backend.song.SongData;
-import objects.menu.AlphabetMenu;
+import objects.menu.AlphabetRetro;
 import objects.hud.HealthIcon;
 import states.*;
 import states.editors.ChartingState;
 import subStates.menu.DeleteScoreSubState;
+import flixel.addons.display.FlxBackdrop;
 
 using StringTools;
 
@@ -43,10 +44,10 @@ class CreditsState extends MusicBeatState
 
 	static var curSelected:Int = 0;
 
-	var bg:FlxSprite;
+	var bg:FlxBackdrop;
 	var bgTween:FlxTween;
 	var grpItems:FlxGroup;
-	var infoTxtFocus:AlphabetMenu;
+	var infoTxtFocus:AlphabetRetro;
 	var infoTxt:FlxText;
 
 	override function create()
@@ -56,10 +57,13 @@ class CreditsState extends MusicBeatState
 
 		DiscordIO.changePresence("Credits - Thanks!!");
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuDesat'));
-		bg.scale.set(1.2,1.2); bg.updateHitbox();
-		bg.screenCenter();
-		add(bg);
+        bg = new FlxBackdrop(Paths.image('menu/grid'), XY, 0, 0);
+        bg.velocity.set(40,40);
+        bg.scale.set(3,3);
+        bg.updateHitbox();
+        bg.screenCenter();
+        bg.antialiasing = false;
+        add(bg);
 
 		grpItems = new FlxGroup();
 		add(grpItems);
@@ -74,36 +78,33 @@ class CreditsState extends MusicBeatState
 		// yes, this implies coders aren't people
 		// :D
 		
-		/*
 		// btw you dont need to credit everyone here on your mod, just credit doido engine as a whole and we're good
-		addCredit('JulianoBeta', 				'juliano', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Daniel DGL', 				'dgl', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Bew', 				'bew', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Lamenzito', 				'lamenzito', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		//addCredit('Julitolito', 				'Tel', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('DoubleoNikoo', 				'nikoo', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Guityz', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('DiogoTV', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Novaize', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Knira', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Lucas Barbosa', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Neverminds', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('ZieroSama', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Anna The Fennec', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Telly', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Morgan', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Hiro Mizuki', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Léozito', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('teles', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		*/
-
-		addCredit('teles', 				'Teles', 	 0xFF696969, "SAI DAQUI PORRA NAO TA PRONTO",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('JulianoBeta', 				'juliano', 	 0xFF696969, "Diretor, Compositor e Charter",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Daniel DGL', 				'dgl', 	 0xFF696969, "Artista Principal",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('teles', 				'teles', 	 0xFF696969, "Programadora Principal, Sound Design",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('DiogoTV', 				'diogotv', 	 0xFF696969, "Artista e Programador",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Bew', 				'bew', 	 0xFF696969, "Artista",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Lamenzito', 				'lamenzito', 	 0xFF696969, "Artista",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Julitolito', 				'julito', 	 0xFF696969, "Artista",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('DoubleoNikoo', 				'nikoo', 	 0xFF696969, "Artista",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Guityz', 				'guityz', 	 0xFF696969, "Artes Adicionais",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Novaize', 				'dn', 	 0xFF696969, "Animador",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Knira', 				'knira', 	 0xFF696969, "Designs",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Lucas Barbosa', 				'lucas', 	 0xFF696969, "Compositor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Neverminds', 				'nevermindslol', 	 0xFF696969, "Compositor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('ZieroSama', 				'ziero', 	 0xFF696969, "Compositor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Anna The Fennec', 				'anna', 	 0xFF696969, "Charter",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Telly', 				'telly', 	 0xFF696969, "Compositor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Morgan', 				'morgan', 	 0xFF696969, "Voice Actor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Hiro Mizuki', 				'hiro', 	 0xFF696969, "Voice Actor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Leozito', 				'leo', 	 0xFF696969, "Voice Actor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('Tagaki', 				'tagaki', 	 0xFF696969, "Voice Actor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
 		
 		for(i in 0...creditList.length)
 		{
 			var credit = creditList[i];
 
-			var item = new AlphabetMenu(0, 0, credit.name, false);
+			var item = new AlphabetRetro(0, 0, credit.name, false);
 			item.align = CENTER;
 			item.updateHitbox();
 			grpItems.add(item);
@@ -137,18 +138,22 @@ class CreditsState extends MusicBeatState
 	{
 		curSelected += change;
 		curSelected = FlxMath.wrap(curSelected, 0, creditList.length - 1);
+
+		var color:FlxColor = 0xFF696969;
 		
 		for(rawItem in grpItems.members)
 		{
-			if(Std.isOfType(rawItem, AlphabetMenu))
+			if(Std.isOfType(rawItem, AlphabetRetro))
 			{
-				var item = cast(rawItem, AlphabetMenu);
+				var item = cast(rawItem, AlphabetRetro);
 				item.focusY = item.ID - curSelected;
 
 				item.alpha = 0.4;
 				if(item.ID == curSelected) {
 					infoTxtFocus = item;
 					item.alpha = 1;
+
+					color = CoolUtil.dominantColor(item.icon);
 				}
 			}
 		}
@@ -157,7 +162,7 @@ class CreditsState extends MusicBeatState
 		infoTxt.screenCenter(X);
 		
 		if(bgTween != null) bgTween.cancel();
-		bgTween = FlxTween.color(bg, 0.4, bg.color, creditList[curSelected].color);
+		bgTween = FlxTween.color(bg, 0.4, bg.color, color);
 
 		if(change != 0)
 			FlxG.sound.play(Paths.sound("menu/scroll"));
@@ -173,7 +178,7 @@ class CreditsState extends MusicBeatState
 			changeSelection(1);
 
 		if(Controls.justPressed(BACK))
-			Main.switchState(new DebugState());
+			Main.switchState(new states.menu.MainMenu());
 
 		if(Controls.justPressed(ACCEPT))
 		{
@@ -185,9 +190,9 @@ class CreditsState extends MusicBeatState
 		infoTxt.y = infoTxtFocus.y + infoTxtFocus.height + 48;
 		for(rawItem in grpItems.members)
 		{
-			if(Std.isOfType(rawItem, AlphabetMenu))
+			if(Std.isOfType(rawItem, AlphabetRetro))
 			{
-				var item = cast(rawItem, AlphabetMenu);
+				var item = cast(rawItem, AlphabetRetro);
 				item.icon.x = item.x + (item.width / 2);
 				item.icon.y = item.y - item.icon.height / 6;
 				item.icon.alpha = item.alpha;

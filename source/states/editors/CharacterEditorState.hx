@@ -482,7 +482,7 @@ class CharacterEditorState extends MusicBeatState
 			if(wasPlayState)
 				Main.switchState(new LoadingState());
 			else
-				Main.switchState(new DebugState());
+				Main.switchState(new states.menu.MainMenu());
 		}
 			
 		if(FlxG.mouse.wheel != 0)

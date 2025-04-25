@@ -52,6 +52,7 @@ class SongData
 			weekName: 'Tutorial',
 			chars: ['dad', 'bf', 'gf'],
 			diffs: ['normal'],
+			freeplayUnlock: 'tuto'
 		},
 		{
 			songs: [
@@ -135,6 +136,14 @@ class SongData
 	{
 		for(key => values in savedWeeks)
 			savedWeeks[key] = true;
+
+		save();
+	}
+
+	public static function lockAll()
+	{
+		for(key => values in savedWeeks)
+			savedWeeks[key] = false;
 
 		save();
 	}

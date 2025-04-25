@@ -12,7 +12,7 @@ import flixel.util.FlxColor;
 import objects.menu.Alphabet;
 import objects.menu.options.*;
 import states.PlayState;
-import states.DebugState;
+import states.menu.MainMenu;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.addons.display.FlxBackdrop;

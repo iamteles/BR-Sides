@@ -88,9 +88,9 @@ class TitleScreen extends MusicBeatState
         started = true;
         FlxG.sound.play(Paths.sound("menu/confirm"));
         CoolUtil.flash(FlxG.camera, 1, 0xffffffff); 
-        FlxFlicker.flicker(info, 2, 0.06, true, false, function(_)
+        FlxFlicker.flicker(info, 1.2, 0.06, true, false, function(_)
         {
-            Main.switchState(new states.DebugState());
+            Main.switchState(new states.menu.MainMenu());
         });
     }
 }

@@ -2,27 +2,17 @@ package objects.menu;
 
 import flixel.FlxSprite;
 import flixel.math.FlxMath;
-import flixel.text.FlxText;
-import objects.menu.Alphabet;
 
 /*
 **	instead of it being all mashed into one place
 **	i've separated the Alphabet into two classes
 **	use this one for menus such as Pause or Freeplay
 */
-class AlphabetMenu extends FlxText
+class AlphabetRetro extends Alphabet
 {
 	public function new(x:Float = 0, y:Float = 0, ?text:String = "", bold:Bool = false)
 	{
-		var ut:String = text;
-		if(bold)
-			ut = ut.toUpperCase();
-
-		super(x, y, 0, ut);
-
-		setFormat(Main.gFont, 68, 0xFFFFFFFF);
-		setBorderStyle(OUTLINE, 0xFF000000, 4);
-		updateHitbox();
+		super(x, y, text, bold);
 	}
 
 	public var xTo:Float = 100;
@@ -33,7 +23,6 @@ class AlphabetMenu extends FlxText
 	public var spaceY:Float = 150; // 200
 
 	public var posUpdate:Bool = true;
-	public var align:AlphabetAlign = LEFT;
 
 	// freeplay
 	public var icon:FlxSprite = null;
@@ -49,18 +38,5 @@ class AlphabetMenu extends FlxText
 	{
 		x = FlxMath.lerp(x, xTo + (spaceX * focusY * scale.x), lerp);
 		y = FlxMath.lerp(y, yTo + (spaceY * focusY * scale.y), lerp);
-	}
-
-	override function updateHitbox()
-	{
-		super.updateHitbox();
-		switch(align)
-		{
-			default:
-			case CENTER:
-				alignment = CENTER;
-			case RIGHT:
-				alignment = RIGHT;
-		}
 	}
 }

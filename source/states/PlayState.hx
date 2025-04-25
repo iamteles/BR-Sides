@@ -1970,7 +1970,7 @@ class PlayState extends MusicBeatState
 		if(isStoryMode)
 		{
 			isStoryMode = false;
-			Main.switchState(new DebugState());
+			Main.switchState(new states.menu.MainMenu());
 		}
 		else
 			Main.switchState(new FreeplayState());

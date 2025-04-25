@@ -17,6 +17,7 @@ import states.*;
 import states.editors.ChartingState;
 import subStates.menu.DeleteScoreSubState;
 import backend.song.Timings;
+import flixel.addons.display.FlxBackdrop;
 
 using StringTools;
 
@@ -56,10 +57,13 @@ class FreeplayState extends MusicBeatState
 
 		DiscordIO.changePresence("Freeplay - Choosin' a track");
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/menuDesat'));
-		bg.scale.set(1.2,1.2); bg.updateHitbox();
-		bg.screenCenter();
-		add(bg);
+        bg = new FlxBackdrop(Paths.image('menu/grid'), XY, 0, 0);
+        bg.velocity.set(40,40);
+        bg.scale.set(3,3);
+        bg.updateHitbox();
+        bg.screenCenter();
+        bg.antialiasing = false;
+        add(bg);
 		
 		// adding songs
 		for(i in 0...SongData.weeks.length)
@@ -105,7 +109,7 @@ class FreeplayState extends MusicBeatState
 		#if TOUCH_CONTROLS
 		createPad("reset");
 		#else
-		var resetTxt = new FlxText(0, 0, 0, "PRESS RESET TO DELETE SONG SCORE");
+		var resetTxt = new FlxText(0, 0, 0, "PRESSIONE RESET PARA DELETAR SUA PONTUAÇÃO");
 		resetTxt.setFormat(Main.gFont, 28, 0xFFFFFFFF, RIGHT);
 		var resetBg = new FlxSprite().makeGraphic(
 			Math.floor(FlxG.width * 1.5),
@@ -180,7 +184,7 @@ class FreeplayState extends MusicBeatState
 		if(Controls.justPressed(BACK))
 		{
 			FlxG.sound.play(Paths.sound('menu/cancel'));
-			Main.switchState(new DebugState());
+			Main.switchState(new states.menu.MainMenu());
 		}
 
 		for(rawItem in grpItems.members)
@@ -189,7 +193,7 @@ class FreeplayState extends MusicBeatState
 			{
 				var item = cast(rawItem, AlphabetMenu);
 				item.icon.x = item.x + item.width;
-				item.icon.y = item.y - item.icon.height / 6;
+				item.icon.y = item.y - 20 - item.icon.height / 6;
 				item.icon.alpha = item.alpha;
 			}
 		}
@@ -264,7 +268,7 @@ class ScoreCounter extends FlxGroup
 		bg.alpha = 0.4;
 		add(bg);
 		
-		var txtSize:Int = 28; // 36
+		var txtSize:Int = 32; // 36
 
 		text = new FlxText(0, 0, 0, "");
 		text.setFormat(Main.gFont, txtSize, 0xFFFFFFFF, LEFT);
@@ -280,9 +284,9 @@ class ScoreCounter extends FlxGroup
 		super.update(elapsed);
 		text.text = "";
 
-		text.text +=   "HIGHSCORE: " + Math.floor(lerpValues.score);
-		text.text += "\nACCURACY:  " +(Math.floor(lerpValues.accuracy * 100) / 100) + "%" + ' [$rank]';
-		text.text += "\nBREAKS:    " + Math.floor(lerpValues.breaks);
+		text.text +=   "PONTUAÇÃO: " + Math.floor(lerpValues.score);
+		text.text += "\nPRECISÃO:  " +(Math.floor(lerpValues.accuracy * 100) / 100) + "%" + ' [$rank]';
+		text.text += "\nQUEBRAS:    " + Math.floor(lerpValues.breaks);
 
 		lerpValues.score 	= FlxMath.lerp(lerpValues.score, 	realValues.score, 	 elapsed * 8);
 		lerpValues.accuracy = FlxMath.lerp(lerpValues.accuracy, realValues.accuracy, elapsed * 8);

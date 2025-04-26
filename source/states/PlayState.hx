@@ -516,6 +516,8 @@ class PlayState extends MusicBeatState
 		if(hasCutscene() && !playedCutscene)
 		{
 			switch(SONG.song) {
+				case "microondas-freestyle":
+					startVideo("test");
 				case "sequestro":
 					startVideo("seq");
 				default:

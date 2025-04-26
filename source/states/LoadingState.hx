@@ -180,6 +180,13 @@ class LoadingState extends MusicBeatState
 			// add custom preloads here!!
 			switch(SONG.song)
 			{
+				case "microondas-freestyle":
+					#if VIDEOS_ALLOWED
+					if(SaveData.data.get('Cutscenes') != "OFF") {
+						var video = new DoidoVideoSprite();
+						video.load(Paths.video("test"));
+					}
+					#end
 				case "sequestro":
 					#if VIDEOS_ALLOWED
 					if(SaveData.data.get('Cutscenes') != "OFF") {

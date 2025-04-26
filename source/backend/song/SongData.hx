@@ -76,16 +76,47 @@ class SongData
 			weekName: 'Ceará',
 			chars: ['dad', 'bf', 'gf'],
 			diffs: ['normal'],
-			freeplayUnlock: 'week2'
+			freeplayUnlock: 'week2',
+			storyModeOnly: true,
+		},
+		{
+			songs: [
+				['calorao', 	'purobobora'],
+				['nordeste', 	'purobobora'],
+			],
+			weekFile: 'week2-f',
+			weekName: 'Ceará',
+			chars: ['dad', 'bf', 'gf'],
+			diffs: ['normal'],
+			freeplayUnlock: 'week2',
+			freeplayOnly: true,
+		},
+		{
+			songs: [
+				['sequestro',	'saco']
+			],
+			weekFile: 'week2-s',
+			weekName: 'Ceará',
+			chars: ['dad', 'bf', 'gf'],
+			diffs: ['normal'],
+			freeplayUnlock: 'week2',
+			freeplayOnly: true,
 		},
 		{
 			songs: [
 				["verdadeira-historia",			"renan"],
+			],
+			freeplayOnly: true,
+			freeplayUnlock: 'week2',
+			weekFile: 'hist',
+		},
+		{
+			songs: [
 				["muito-lerdo",					"fuleco"]
 			],
 			freeplayOnly: true,
 			freeplayUnlock: 'week2',
-			weekFile: 'extra',
+			weekFile: 'fuleco',
 		},
 		/*{
 			songs: [

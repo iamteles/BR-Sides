@@ -1170,31 +1170,33 @@ class PlayState extends MusicBeatState
 			validScore = false;
 
 		#if !mobile
-		if(FlxG.keys.justPressed.SEVEN)
-		{
-			if(ChartingState.SONG.song != SONG.song)
-				ChartingState.curSection = 0;
-			
-			ChartingState.songDiff = songDiff;
-
-			ChartingState.SONG = SONG;
-			ChartingState.EVENTS = EVENTS;
-			Main.switchState(new ChartingState());
+		if(FlxG.save.data.debug) {
+			if(FlxG.keys.justPressed.SEVEN)
+			{
+				if(ChartingState.SONG.song != SONG.song)
+					ChartingState.curSection = 0;
+				
+				ChartingState.songDiff = songDiff;
+	
+				ChartingState.SONG = SONG;
+				ChartingState.EVENTS = EVENTS;
+				Main.switchState(new ChartingState());
+			}
+	
+			if(FlxG.keys.justPressed.EIGHT)
+			{
+				var char = dad;
+				if(FlxG.keys.pressed.SHIFT)
+					char = boyfriend;
+				if(Controls.pressed(CONTROL))
+					char = gf;
+				
+				Main.switchState(new CharacterEditorState(char.curChar, true));
+			}
+	
+			if(FlxG.keys.justPressed.ONE)
+				endSong();
 		}
-
-		if(FlxG.keys.justPressed.EIGHT)
-		{
-			var char = dad;
-			if(FlxG.keys.pressed.SHIFT)
-				char = boyfriend;
-			if(Controls.pressed(CONTROL))
-				char = gf;
-			
-			Main.switchState(new CharacterEditorState(char.curChar, true));
-		}
-
-		if(FlxG.keys.justPressed.ONE)
-			endSong();
 		#end
 		
 		if(startedCountdown)

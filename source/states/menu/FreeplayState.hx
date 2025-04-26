@@ -23,6 +23,7 @@ using StringTools;
 
 typedef FreeplaySong = {
 	var name:String;
+	var week:String;
 	var icon:String;
 	var diffs:Array<String>;
 	var color:FlxColor;
@@ -31,15 +32,18 @@ class FreeplayState extends MusicBeatState
 {
 	var songList:Array<FreeplaySong> = [];
 	
-	function addSong(name:String, icon:String, diffs:Array<String>)
+	function addSong(name:String, icon:String, diffs:Array<String>, week:String)
 	{
 		songList.push({
 			name: name,
+			week: week,
 			icon: icon,
 			diffs: diffs,
 			color: HealthIcon.getColor(icon),
 		});
 	}
+
+	var weeks:Array<String> = [];
 
 	static var curSelected:Int = 0;
 	static var curDiff:Int = 1;
@@ -47,6 +51,7 @@ class FreeplayState extends MusicBeatState
 	var bg:FlxSprite;
 	var bgTween:FlxTween;
 	var grpItems:FlxGroup;
+	var grpCover:FlxTypedGroup<FlxSprite>;
 
 	var scoreCounter:ScoreCounter;
 
@@ -64,22 +69,36 @@ class FreeplayState extends MusicBeatState
         bg.screenCenter();
         bg.antialiasing = false;
         add(bg);
+
+		grpCover = new FlxTypedGroup<FlxSprite>();
 		
 		// adding songs
 		for(i in 0...SongData.weeks.length)
 		{
 			var week = SongData.getWeek(i);
+			weeks.push(week.weekFile);
+
 			var lockedWeek:Bool = false;
 			if(week.freeplayUnlock != null)
 				lockedWeek = !SongData.savedWeeks.get(week.freeplayUnlock);
 			if(week.storyModeOnly || lockedWeek) continue;
 
 			for(song in week.songs)
-				addSong(song[0], song[1], week.diffs);
+				addSong(song[0], song[1], week.diffs, week.weekFile);
+
+			var cover = new FlxSprite().loadGraphic(Paths.image('menu/freeplay/' + week.weekFile));
+			cover.scale.set(0.15, 0.15);
+			cover.updateHitbox();
+			cover.x = FlxG.width - cover.width - 10;
+			cover.y = FlxG.height - cover.height - 50;
+			cover.ID = i;
+			grpCover.add(cover);
 		}
 
 		grpItems = new FlxGroup();
 		add(grpItems);
+
+		add(grpCover);
 
 		for(i in 0...songList.length)
 		{
@@ -151,7 +170,7 @@ class FreeplayState extends MusicBeatState
 			updateScoreCount();
 		}
 
-		var toChartEditor:Bool = FlxG.keys.justPressed.SEVEN;
+		var toChartEditor:Bool = FlxG.keys.justPressed.SEVEN && FlxG.save.data.debug;
 		if(Controls.justPressed(ACCEPT) || toChartEditor)
 		{
 			try
@@ -229,6 +248,15 @@ class FreeplayState extends MusicBeatState
 				if(item.ID == curSelected)
 					item.alpha = 1;
 			}
+		}
+
+		var curSong = songList[curSelected];
+		for(item in grpCover.members)
+		{
+			if(item.ID == weeks.indexOf(curSong.week))
+				item.alpha = 1;
+			else
+				item.alpha = 0;
 		}
 		
 		if(bgTween != null) bgTween.cancel();

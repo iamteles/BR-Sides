@@ -15,7 +15,7 @@ using StringTools;
 
 class DebugState extends MusicBeatState
 {
-	var optionShit:Array<String> = ["menu", "freeplay", "credits", "options"];
+	var optionShit:Array<String> = ["week 1", "week 2", "menu", "freeplay", "credits", "options"];
 	static var curSelected:Int = 0;
 
 	var optionGroup:FlxTypedGroup<Alphabet>;
@@ -44,7 +44,7 @@ class DebugState extends MusicBeatState
 			item.align = CENTER;
 			item.text = optionShit[i].toUpperCase();
 			item.x = FlxG.width / 2;
-			item.y = 50 + ((item.height + 75) * i);
+			item.y = 50 + ((item.height + 50) * i);
 			item.ID = i;
 			optionGroup.add(item);
 		}
@@ -69,8 +69,15 @@ class DebugState extends MusicBeatState
 		if(Controls.justPressed(UI_DOWN))
 			changeSelection(1);
 
-		if(FlxG.keys.justPressed.ONE)
+		if(FlxG.keys.justPressed.ONE) {
 			SongData.unlockAll();
+			FlxG.sound.play(Paths.sound('volume'));
+		}
+
+		if(FlxG.keys.justPressed.TWO) {
+			SongData.lockAll();
+			FlxG.sound.play(Paths.sound('menu/nope'));
+		}
 
 		if(Controls.justPressed(ACCEPT))
 		{
@@ -105,6 +112,9 @@ class DebugState extends MusicBeatState
 						
 				case "options":
 					openSubState(new subStates.options.OptionsSubState());
+
+				default: // avoids freezing
+					Main.resetState();
 					
 			}
 		}

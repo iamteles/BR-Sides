@@ -13,6 +13,7 @@ import backend.song.SongData;
 import flixel.addons.display.FlxBackdrop;
 import openfl.display.BlendMode;
 import flixel.effects.FlxFlicker;
+import flixel.input.keyboard.FlxKey;
 
 using StringTools;
 
@@ -85,6 +86,13 @@ class MainMenu extends MusicBeatState
 	}
 
 	var selected:Bool = false;
+	var keysBuffer:String = "";
+    var easterEggKeys:Array<String> = [
+		'GROUP',
+		'DRUNK'
+	];
+	var allowedKeys:String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	var group:Bool = false;
 
 	override function update(elapsed:Float)
 	{
@@ -116,12 +124,52 @@ class MainMenu extends MusicBeatState
 				changeSelection(-1);
 			if(Controls.justPressed(UI_DOWN))
 				changeSelection(1);
-	
-			if(FlxG.keys.justPressed.ONE)
-				SongData.unlockAll();
 
-			if(FlxG.keys.justPressed.TWO)
-				SongData.lockAll();
+			if(FlxG.save.data.debug) {
+				if(FlxG.keys.justPressed.ONE) {
+					SongData.unlockAll();
+					FlxG.sound.play(Paths.sound('volume'));
+				}
+		
+				if(FlxG.keys.justPressed.TWO) {
+					SongData.lockAll();
+					FlxG.sound.play(Paths.sound('menu/nope'));
+				}
+
+				if(FlxG.keys.justPressed.SEVEN)
+					Main.switchState(new states.DebugState());
+			}
+			else {
+				if (FlxG.keys.firstJustPressed() != FlxKey.NONE)
+				{
+					var keyPressed:FlxKey = FlxG.keys.firstJustPressed();
+					var keyName:String = Std.string(keyPressed);
+					if(allowedKeys.contains(keyName)) {
+						keysBuffer += keyName;
+						if(keysBuffer.length >= 32) keysBuffer = keysBuffer.substring(1);
+						for (wordRaw in easterEggKeys)
+						{
+							var word:String = wordRaw.toUpperCase();
+							if (keysBuffer.contains(word))
+							{
+								switch (word) {
+									case "GROUP":
+										group = true;
+										FlxG.sound.play(Paths.sound('volume'));
+									case "DRUNK":
+										FlxG.sound.play(Paths.sound('menu/confirm'));
+										FlxG.save.data.debug = true;
+										FlxG.save.flush();
+								}
+								keysBuffer = '';
+							}
+						}
+					}
+				}
+			}
+
+			if(Controls.justPressed(BACK))
+				Main.switchState(new states.menu.TitleScreen());
 
 			if(Controls.justPressed(ACCEPT))
 			{
@@ -143,6 +191,9 @@ class MainMenu extends MusicBeatState
 					
 									case "credits":
 										Main.switchState(new states.menu.CreditsState());
+
+									default: // avoids freezing
+										Main.resetState();
 								}
 							});
 						}

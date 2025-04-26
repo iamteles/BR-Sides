@@ -1972,7 +1972,10 @@ class PlayState extends MusicBeatState
 		if(isStoryMode)
 		{
 			isStoryMode = false;
-			Main.switchState(new states.menu.MainMenu());
+			if(curWeek == "week2")
+				Main.switchState(new states.FreeplayCue(), 'base');
+			else
+				Main.switchState(new states.menu.StoryMenuState());
 		}
 		else
 			Main.switchState(new FreeplayState());

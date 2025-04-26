@@ -79,6 +79,12 @@ class DebugState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('menu/nope'));
 		}
 
+		if(FlxG.keys.justPressed.THREE)
+			Main.switchState(new states.LoadMisc());
+
+		if(FlxG.keys.justPressed.FOUR)
+			Main.switchState(new states.FreeplayCue());
+
 		if(Controls.justPressed(ACCEPT))
 		{
 			switch(optionShit[curSelected])

@@ -148,6 +148,9 @@ class OptionsSubState extends MusicBeatSubState
 
         #if !html5
         CoolUtil.playMusic('death/deathMusic');
+        Paths.preloadSound('music/settingOff');
+        Paths.preloadGraphic('notes/base/notes');
+        Paths.preloadGraphic('notes/_other/offset/spacebar_note');
         #end
 		DiscordIO.changePresence("Options - Tweakin' the Settings");
 

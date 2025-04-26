@@ -157,6 +157,9 @@ class LoadingState extends MusicBeatState
 			Logs.print('preloaded music');
 			loadPercent = 0.75;
 
+			for(note in ["holdSplashes", "notes", "splashes"])
+				Paths.preloadGraphic('notes/base/$note');
+
 			var dialData:DialogueData = DialogueUtil.loadDialogue(SONG.song, songDiff);
 			if(dialData.pages.length > 0) {
 				var dial = new Dialogue();
@@ -165,6 +168,14 @@ class LoadingState extends MusicBeatState
 			}
 
 			loadPercent = 0.85;
+
+			Paths.preloadGraphic('hud/base/vignette');
+
+			var cardName:String = "microondas-freestyle";
+			if(Paths.fileExists('images/hud/cards/${SONG.song}.png'))
+				cardName = SONG.song;
+
+			Paths.preloadGraphic('hud/cards/$cardName');
 			
 			// add custom preloads here!!
 			switch(SONG.song)
@@ -176,6 +187,10 @@ class LoadingState extends MusicBeatState
 						video.load(Paths.video("seq"));
 					}
 					#end
+
+					Paths.preloadGraphic('hud/cards/sequestro-2');
+				case "muito-lerdo":
+					Paths.preloadGraphic('notes/base/eye');
 				default:
 					Logs.print('preloaded NOTHING extra lol');
 			}

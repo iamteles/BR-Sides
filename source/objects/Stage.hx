@@ -177,20 +177,20 @@ class Stage extends FlxGroup
 					clouds.y = -500;
 					add(clouds);
 
-					/*if(curStage != "w2-n") {
+					if(curStage != "w2-n") {
 						var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay-s'));
 						overlay.blend = BlendMode.ADD;
-						overlay.alpha = 0.3;
+						overlay.alpha = 0.13;
 						bg.scrollFactor.set(0.3,0.7);
 						foreground.add(overlay);
 					}
 					else {
 						var overlay = new FlxSprite(-400, -400).loadGraphic(Paths.image('stages/w2/${suf}overlay'));
 						//overlay.blend = BlendMode.ADD;
-						overlay.alpha = 0;
+						overlay.alpha = 0.1;
 						bg.scrollFactor.set(0.3,0.7);
 						foreground.add(overlay);
-					}*/
+					}
 				}
 
 				var grd = new FlxSprite(-570, -360).loadGraphic(Paths.image('stages/w2/${suf}grd'));
@@ -210,11 +210,11 @@ class Stage extends FlxGroup
 				bg.scrollFactor.set(0,0);
 				add(bg);
 
-				if(!lowQuality) {
-					var back = new FlxSprite(-400, -600).loadGraphic(Paths.image("stages/w1/back"));
-					back.scrollFactor.set(0.6,0.9);
-					add(back);
+				var back = new FlxSprite(-400, -600).loadGraphic(Paths.image("stages/w1/back"));
+				back.scrollFactor.set(0.6,0.9);
+				add(back);
 
+				if(!lowQuality) {
 					var overlay = new FlxSprite(-400, -370).loadGraphic(Paths.image("stages/w1/overlay"));
 					overlay.scale.set(1.1,1.1);
 					overlay.blend = BlendMode.ADD;
@@ -233,35 +233,42 @@ class Stage extends FlxGroup
 				bfPos.x -= 150;
 				dadPos.x -= 150;
 			
-				var bg = new FlxSprite(-600, -400).loadGraphic(Paths.image("stages/stadium/sky"));
-				bg.scrollFactor.set(0.3,0.7);
-				bg.scale.set(1.3,1.3);
-				add(bg);
+				if(!lowQuality) {
+					var bg = new FlxSprite(-600, -400).loadGraphic(Paths.image("stages/stadium/sky"));
+					bg.scrollFactor.set(0.3,0.7);
+					bg.scale.set(1.3,1.3);
+					add(bg);
+				}
 			
 				var wall = new FlxSprite(-600, 0).loadGraphic(Paths.image("stages/stadium/wall"));
 				wall.scrollFactor.set(0.5,0.9);
 				wall.scale.set(1.3,1.3);
 				add(wall);
 			
-				var back = new FlxSprite(-600, -260).loadGraphic(Paths.image("stages/stadium/back"));
-				back.scrollFactor.set(0.7,0.9);
-				back.scale.set(1.3,1.3);
-				add(back);
+				if(!lowQuality) {
+					var back = new FlxSprite(-600, -260).loadGraphic(Paths.image("stages/stadium/back"));
+					back.scrollFactor.set(0.7,0.9);
+					back.scale.set(1.3,1.3);
+					add(back);
+				}
 			
 				var grd = new FlxSprite(-640, -500).loadGraphic(Paths.image("stages/stadium/grd"));
 				grd.scale.set(1.3,1.3);
 				add(grd);
-			
-				var lights = new FlxSprite(-640, -300).loadGraphic(Paths.image("stages/stadium/lights"));
-				lights.scale.set(1.3,1.3);
-				lights.scrollFactor.set(1.3,1);
-				lights.alpha = 0.56;
-				foreground.add(lights);
-			
-				var grass = new FlxSprite(-640, -400).loadGraphic(Paths.image("stages/stadium/grass"));
-				grass.scale.set(1.3,1.3);
-				grass.scrollFactor.set(1.3,1);
-				foreground.add(grass);
+
+				if(!lowQuality) {
+					var lights = new FlxSprite(-640, -300).loadGraphic(Paths.image("stages/stadium/lights"));
+					lights.scale.set(1.3,1.3);
+					lights.scrollFactor.set(1.3,1);
+					lights.alpha = 0.56;
+					foreground.add(lights);
+				
+					var grass = new FlxSprite(-640, -400).loadGraphic(Paths.image("stages/stadium/grass"));
+					grass.scale.set(1.3,1.3);
+					grass.scrollFactor.set(1.3,1);
+					foreground.add(grass);
+				}
+
 			default:
 				this.curStage = "stage";
 				camZoom = 0.9;

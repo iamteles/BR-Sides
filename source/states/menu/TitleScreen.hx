@@ -25,7 +25,7 @@ class TitleScreen extends MusicBeatState
         //CoolUtil.playMusic("MENU");
         CoolUtil.playMusic("freakyMenu");
 
-        CoolUtil.flash(FlxG.camera, 0.5);
+        //CoolUtil.flash(FlxG.camera, 0.5);
         
 		tiles = new FlxBackdrop(Paths.image('menu/grid'), XY, 0, 0);
         tiles.velocity.set(40,40);
@@ -90,6 +90,7 @@ class TitleScreen extends MusicBeatState
         CoolUtil.flash(FlxG.camera, 1, 0xffffffff); 
         FlxFlicker.flicker(info, 1.2, 0.06, true, false, function(_)
         {
+            Main.skipClearMemory = true;
             Main.switchState(new states.menu.MainMenu());
         });
     }

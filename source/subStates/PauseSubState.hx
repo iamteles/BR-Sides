@@ -22,10 +22,10 @@ class PauseSubState extends MusicBeatSubState
 {
 	var optionshit:Array<String> = [
 		"resumir",
-		"recomecar",
+		"recomeçar",
 		"botplay",
 		"fotografia",
-		"opcoes",
+		"opções",
 		"sair",
 	];
 	
@@ -171,7 +171,7 @@ class PauseSubState extends MusicBeatSubState
 					case "resumir":
 						closePause();
 
-					case "recomecar":
+					case "recomecar" | "recomeçar":
 						Main.skipStuff();
 						Main.resetState();
 					
@@ -179,7 +179,7 @@ class PauseSubState extends MusicBeatSubState
 						FlxG.sound.play(Paths.sound("menu/cancel"));
 						PlayState.botplay = !PlayState.botplay;
 
-					case "opcoes":
+					case "opcoes" | "opções":
 						//Main.switchState(new states.menu.opcoesState(new LoadSongState()));
 						persistentDraw = false;
 						pauseSong.pause();

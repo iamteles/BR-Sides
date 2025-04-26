@@ -186,7 +186,8 @@ class SplashState extends MusicBeatState
 	{
 		FlxG.stage.removeChild(_sprite);
 		FlxG.stage.removeChild(_text);
-		FlxG.switchState(new states.menu.TitleScreen());
+		Main.skipClearMemory = true;
+		Main.switchState(new DoidoSplash(), 'base');
 		//FlxG.game._gameJustStarted = true;
 	}
 
@@ -195,51 +196,67 @@ class SplashState extends MusicBeatState
 		//Thing to skip the splash screen
 		//Comment this out if you want it unskippable
 		if (Controls.justPressed(ACCEPT))
-		{
 			skip();
-		}
 
 		super.update(elapsed);
 	}
 }
 
-/*
-class ShatterdiskSplash extends MusicBeatState
+class DoidoSplash extends MusicBeatState
 {
 	var sprite:FlxSprite;
+	var canSkip:Bool;
+	var text:FlxText;
 	override public function create():Void 
 	{
 		super.create();
-		sprite = new FlxSprite();
-		sprite.frames = Paths.getSparrowAtlas("menu/shatterdisk");
-		sprite.animation.addByPrefix('start', 		'Shatterdisk logo', 24, false);
-		sprite.animation.play('start');
+		sprite = new FlxSprite().loadGraphic(Paths.image("doido_logo"));
 		sprite.updateHitbox();
 		sprite.screenCenter();
-		sprite.x += 30;
+		sprite.y -= 7;
+		sprite.alpha = 0;
 		add(sprite);
-		FlxG.sound.play(Paths.sound("shatterdisk"), 1, false, null, true);
+
+		var text = new FlxText(0, 16, 0, "Doido Engine ~ Kai");
+        text.setFormat(Main.gFont, 36, 0xFFFFFFFF, CENTER);
+        text.screenCenter(X);
+		text.y = sprite.y + sprite.height + 14;
+		text.alpha = 0;
+        add(text);
+
+		new FlxTimer().start(0.5, function(tmr:FlxTimer)
+		{
+			CoolUtil.flash(FlxG.camera, 1, 0xffffffff); 
+			canSkip = true;
+			sprite.alpha = 1;
+			FlxG.sound.play(Paths.sound("doido"), 1, false, null, true);
+
+			new FlxTimer().start(0.5, function(tmr:FlxTimer)
+			{
+				FlxTween.tween(text, {alpha: 1}, 0.6, {ease: FlxEase.linear, onComplete: function(twn:FlxTween)
+				{
+					new FlxTimer().start(2, function(tmr:FlxTimer)
+					{
+						finish();
+					});
+				}});
+			});
+		});
 	}
 	
 	override public function update(elapsed:Float):Void 
 	{
 		//Thing to skip the splash screen
 		//Comment this out if you want it unskippable
-		if (FlxG.keys.justPressed.SPACE || FlxG.mouse.justPressed)
-		{
+		if (Controls.justPressed(ACCEPT) && canSkip)
 			finish();
-		}
-
-		if(sprite.animation.curAnim.name == "start" && sprite.animation.curAnim.finished)
-			FlxG.camera.fade(FlxColor.BLACK, 1, false, finish);
 		
 		super.update(elapsed);
 	}
 	
 	private function finish():Void
 	{
-		FlxG.switchState(new WarningState());
+		Main.switchState(new states.menu.TitleScreen(), 'base');
 	}
 	
 }
-*/

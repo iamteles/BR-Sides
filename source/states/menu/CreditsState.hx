@@ -23,15 +23,15 @@ using StringTools;
 typedef CreditData = {
 	var name:String;
     var icon:String;
-    var color:FlxColor;
     var info:String;
 	var link:Null<String>;
+	var color:Null<FlxColor>;
 }
 class CreditsState extends MusicBeatState
 {
 	var creditList:Array<CreditData> = [];
     
-	function addCredit(name:String, icon:String, color:FlxColor, info:String, ?link:Null<String>)
+	function addCredit(name:String, icon:String, info:String, ?link:Null<String>, ?color:Null<FlxColor>)
 	{
 		creditList.push({
             name: name,
@@ -79,26 +79,26 @@ class CreditsState extends MusicBeatState
 		// :D
 		
 		// btw you dont need to credit everyone here on your mod, just credit doido engine as a whole and we're good
-		addCredit('JulianoBeta', 				'juliano', 	 0xFF696969, "Diretor, Compositor e Charter",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Daniel DGL', 				'dgl', 	 0xFF696969, "Artista Principal",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('teles', 				'teles', 	 0xFF696969, "Programadora Principal, Sound Design",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('DiogoTV', 				'diogotv', 	 0xFF696969, "Artista e Programador",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Bew', 				'bew', 	 0xFF696969, "Artista",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Lamenzito', 				'lamenzito', 	 0xFF696969, "Artista",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Julitolito', 				'julito', 	 0xFF696969, "Artista",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('DoubleoNikoo', 				'nikoo', 	 0xFF696969, "Artista",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Guityz', 				'guityz', 	 0xFF696969, "Artes Adicionais",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Novaize', 				'dn', 	 0xFF696969, "Animador",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Knira', 				'knira', 	 0xFF696969, "Designs",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Lucas Barbosa', 				'lucas', 	 0xFF696969, "Compositor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Neverminds', 				'nevermindslol', 	 0xFF696969, "Compositor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('ZieroSama', 				'ziero', 	 0xFF696969, "Compositor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Anna The Fennec', 				'anna', 	 0xFF696969, "Charter",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Telly', 				'telly', 	 0xFF696969, "Compositor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Morgan', 				'morgan', 	 0xFF696969, "Voice Actor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Hiro Mizuki', 				'hiro', 	 0xFF696969, "Voice Actor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Leozito', 				'leo', 	 0xFF696969, "Voice Actor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
-		addCredit('Tagaki', 				'tagaki', 	 0xFF696969, "Voice Actor",					'https://www.youtube.com/shorts/jQ1frxU_a6o');
+		addCredit('JulianoBeta', 			'juliano', 	 	"Diretor, Compositor e Charter",		'https://www.youtube.com/@JulianoBetotoso');
+		addCredit('Daniel DGL', 			'dgl', 	 		"Artista Principal",					'https://x.com/DGLDaniOfc1');
+		addCredit('teles', 					'teles', 	 	"Programadora Principal, Sound Design",	'https://www.youtube.com/@telesfnf');
+		addCredit('DiogoTV', 				'diogotv', 	 	"Artista e Programador",				'https://x.com/DiogoTVV');
+		addCredit('Bew', 					'bew', 	 		"Artista",								'');
+		addCredit('Lamenzito', 				'lamenzito', 	"Artista",								'https://x.com/Lamenzito_');
+		addCredit('Julitolito', 			'julito', 	 	"Artista",								'');
+		addCredit('DoubleoNikoo', 			'nikoo', 	 	"Artista",								'https://x.com/Mudoku__');
+		addCredit('Guityz', 				'guityz', 	 	"Artes Adicionais",						'');
+		addCredit('Novaize', 				'dn', 	 		"Animador",								'https://x.com/Novaizes');
+		addCredit('Knira', 					'knira', 	  	"Designs",								'');
+		addCredit('Lucas Barbosa', 			'lucas', 	  	"Compositor",							'https://www.youtube.com/@lucasbarbosameneghin');
+		addCredit('Neverminds', 			'nevermindslol',"Compositor",							'https://youtube.com/@thenevermindslol');
+		addCredit('ZieroSama', 				'ziero', 	  	"Compositor",							'https://x.com/sama_ziero');
+		addCredit('Anna The Fennec', 		'anna', 	 	"Charter",								'https://x.com/goldenfoxy2604');
+		addCredit('Telly', 					'telly', 	  	"Charter",								'');
+		addCredit('Morgan', 				'morgan', 	  	"Chromatic Maker",						'');
+		addCredit('Hiro Mizuki', 			'hiro', 	  	"Voice Actor",							'');
+		addCredit('Leozito', 				'leo', 	  		"Voice Actor",							'https://x.com/Leozitoplays1');
+		addCredit('Tagaki', 				'tagaki', 	  	"Voice Actor",							'https://x.com/SensatahTata');
 		
 		for(i in 0...creditList.length)
 		{

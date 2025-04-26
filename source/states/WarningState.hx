@@ -29,7 +29,8 @@ class WarningState extends MusicBeatState
 		
 		if(Controls.justPressed(ACCEPT))
 		{
-            Main.switchState(new states.SplashState());
+			Main.skipClearMemory = true;
+            Main.switchState(new states.SplashState(), 'base');
 
             FlxG.save.data.beenWarned = true;
             FlxG.save.flush();

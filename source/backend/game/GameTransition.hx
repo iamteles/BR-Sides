@@ -31,7 +31,7 @@ class GameTransition extends MusicBeatSubState
 
 		switch(transition) {
 			case 'side':
-				sprBlack = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+				sprBlack = new FlxSprite().makeGraphic(FlxG.width + 30, FlxG.height * 2, 0xFF000000);
 				sprBlack.screenCenter(X);
 				add(sprBlack);
 				
@@ -41,11 +41,12 @@ class GameTransition extends MusicBeatSubState
 					sprBlack.width - 40,
 				];
 				var curX:Int = (fadeOut ? 1 : 0);
+				var ease:String = "cubeOut";
 				
 				sprBlack.x = xPos[curX];
 
-				FlxTween.tween(sprBlack, {x: xPos[curX + 1]}, 0.8, {
-					ease: CoolUtil.stringToEase("cubeOut"),
+				FlxTween.tween(sprBlack, {x: xPos[curX + 1]}, 0.5, {
+					ease: CoolUtil.stringToEase(ease),
 					onComplete: function(twn:FlxTween)
 					{
 						endTransition();

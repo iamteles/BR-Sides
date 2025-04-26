@@ -103,9 +103,32 @@ class Paths
 	*	add .ogg at the end for sounds
 	*/
 	public static var dumpExclusions:Array<String> = [
+		// IMAGES
 		"menu/alphabet/default.png",
 		"menu/checkmark.png",
 		"menu/menuArrows.png",
+		"menu/grid.png",
+
+		// SOUNDS
+		'sounds/flixel.ogg',
+		'sounds/volume.ogg',
+		'sounds/menu/cancel.ogg',
+		'sounds/menu/confirm.ogg',
+		'sounds/menu/nope.ogg',
+		'sounds/menu/scroll.ogg',
+	];
+	public static var otherLoadings:Array<String> = [
+		'menu/main/gradient.png',
+		'menu/main/bg.png',
+		'menu/main/buttons/credits.png',
+		'menu/main/buttons/freeplay.png',
+		'menu/main/buttons/options.png',
+		'menu/main/buttons/story.png',
+
+		'menu/title/gradient.png',
+		'menu/title/logo.png',
+
+		"music/freakyMenu.ogg",
 	];
 	public static function clearMemory()
 	{	
@@ -151,6 +174,7 @@ class Paths
 		for (key => sound in renderedSounds)
 		{
 			if(dumpExclusions.contains(key + '.ogg')) continue;
+			trace("dumped " + key);
 			
 			Assets.cache.clear(key);
 			renderedSounds.remove(key);
@@ -337,6 +361,8 @@ class Paths
 		// no point in preloading something already loaded duh
 		if(renderedGraphics.exists(key)) return;
 
+		trace("preload! " + key);
+
 		var what = new FlxSprite().loadGraphic(image(key, library));
 		FlxG.state.add(what);
 		FlxG.state.remove(what);
@@ -344,6 +370,8 @@ class Paths
 	public static function preloadSound(key:String, ?library:String)
 	{
 		if(renderedSounds.exists(key)) return;
+
+		trace("preload! " + key);
 
 		var what = new FlxSound().loadEmbedded(getSound(key, library), false, false);
 		what.play();

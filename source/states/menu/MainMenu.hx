@@ -66,7 +66,7 @@ class MainMenu extends MusicBeatState
 
 		for(i in 0...optionShit.length)
 		{
-			var item = new FlxSprite().loadGraphic(Paths.image('menu/main/buttons/' + optionShit[i].toUpperCase()));
+			var item = new FlxSprite().loadGraphic(Paths.image('menu/main/buttons/' + (SaveData.en ? "eng/" : "")+ optionShit[i].toUpperCase()));
 			item.scale.set(0.95, 0.95);
 			item.updateHitbox();
 			item.screenCenter();
@@ -86,11 +86,11 @@ class MainMenu extends MusicBeatState
 			spl.updateHitbox();
 			spl.screenCenter();
 			spl.ID = i;
-			spl.x = FlxG.height * i;
+			spl.x = FlxG.height * (item.ID - curSelected);
 			splashGroup.add(spl);
 		}
 
-		var doidoSplash:String = 'BR Sides v${FlxG.stage.application.meta.get('version')} (IN-DEV)\nDoido Engine Kai v3.4.1k';
+		var doidoSplash:String = 'BR Sides v${FlxG.stage.application.meta.get('version')} (PRE-RELEASE)\nDoido Engine Kai v3.4.1k';
 
 		var splashTxt = new FlxText(4, 0, 0, '$doidoSplash');
 		splashTxt.setFormat(Main.gFont, 15, 0xFFFFFFFF, LEFT);
@@ -237,5 +237,11 @@ class MainMenu extends MusicBeatState
 
 		curSelected += change;
 		curSelected = FlxMath.wrap(curSelected, 0, optionShit.length - 1);
+	}
+
+	override function closeSubState() {
+		super.closeSubState();
+		Main.skipStuff(true);
+		Main.resetState();
 	}
 }

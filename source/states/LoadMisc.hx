@@ -121,8 +121,8 @@ class LoadMisc extends MusicBeatState
 		{
 			byeLol = true;
 			Main.skipClearMemory = true;
-            if(FlxG.save.data.beenWarned == null)
-                Main.switchState(new WarningState(), 'base');
+            if(!SaveData.data.get("first"))
+                Main.switchState(new LanguageState(), 'base');
             else
                 Main.switchState(new SplashState(), 'base');
 		}

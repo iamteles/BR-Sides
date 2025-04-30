@@ -49,7 +49,7 @@ class DebugState extends MusicBeatState
 			optionGroup.add(item);
 		}
 
-		var doidoSplash:String = 'BR Sides v${FlxG.stage.application.meta.get('version')} (IN-DEV)\nDoido Engine Kai v3.4.1k';
+		var doidoSplash:String = 'BR Sides v${FlxG.stage.application.meta.get('version')} (PRE-RELEASE)\nDoido Engine Kai v3.4.1k';
 
 		var splashTxt = new FlxText(4, 0, 0, '$doidoSplash');
 		splashTxt.setFormat(Main.gFont, 18, 0xFFFFFFFF, LEFT);

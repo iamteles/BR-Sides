@@ -121,10 +121,6 @@ class Paths
 	public static var otherLoadings:Array<String> = [
 		'menu/main/gradient.png',
 		'menu/main/bg.png',
-		'menu/main/buttons/credits.png',
-		'menu/main/buttons/freeplay.png',
-		'menu/main/buttons/options.png',
-		'menu/main/buttons/story.png',
 
 		'menu/title/gradient.png',
 		'menu/title/logo.png',

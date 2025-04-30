@@ -14,8 +14,8 @@ class WarningState extends MusicBeatState
 		super.create();
 		var tex:String = "Aviso!\n\n"
 			+ "Esse mod contem luzes piscantes que podem\n"
-			+ "prejudicar aqueles com epilepsia e sensibilidade a luz.\n"
-			+ "Você pode desativar elas no menu de Opções\n\n"
+			+ "prejudicar aqueles com epilepsia e sensibilidade à luz.\n"
+			+ "Você pode desativar elas no menu de Opções.\n\n"
 			+ "Pressione ACCEPT para continuar";
 		if(SaveData.en) {
 			tex = "Warning!\n\n"
@@ -39,8 +39,9 @@ class WarningState extends MusicBeatState
 			Main.skipClearMemory = true;
             Main.switchState(new states.SplashState(), 'base');
 
-            FlxG.save.data.beenWarned = true;
-            FlxG.save.flush();
+			FlxG.sound.play(Paths.sound('menu/cancel'));
+            SaveData.data.set("first", true);
+            SaveData.save();
         }
 	}
 }

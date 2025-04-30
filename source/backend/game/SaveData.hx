@@ -179,6 +179,11 @@ class SaveData
 			["same xd","same xd"],
 			[-100, 100],
 		],
+		"first" => [
+			false,
+			CHECKMARK,
+			["AAAI","PAU NO TEU CU"],
+		],
 	];
 	
 	public static var saveSettings:FlxSave = new FlxSave();

@@ -51,7 +51,7 @@ class HudClass extends FlxGroup
 		timeTxt.visible = true;
 		add(timeTxt);
 		
-		badScoreTxt = new FlxText(0,0,0,"SCORE WILL NOT BE SAVED");
+		badScoreTxt = new FlxText(0,0,0,(SaveData.en ? "SCORE WILL NOT BE SAVED" : "PONTUAÇÃO NÃO VAI SER SALVA"));
 		badScoreTxt.setFormat(Main.gFont, 26, 0xFFFF0000, CENTER);
 		badScoreTxt.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
 		badScoreTxt.screenCenter(X);
@@ -90,6 +90,18 @@ class HudClass extends FlxGroup
 			"(Gi)" 		=> 0xFF794D6F,
 			"(???)"		=> 0xFF000000
 		];
+
+		if(SaveData.en && lineB != "") {
+			switch(SaveData.data.get("Translated Lyrics")) {
+				case "OFF":
+					lineB = "";
+				case "ON":
+					lineA = lineB;
+					lineB = "";
+			}
+		}
+		else
+			lineB = "";
 
 		var formatA:FlxTextFormat = new FlxTextFormat(0xFFFFFFFF, false, false, FlxColor.BLACK, false);
 		var formatB:FlxTextFormat = new FlxTextFormat(0xFFFFFFFF, false, false, FlxColor.BLACK, false);
@@ -158,9 +170,17 @@ class HudClass extends FlxGroup
 	{
 		infoTxt.text = "";
 		
-		infoTxt.text += 			'Pontuação: '		+ Timings.score;
-		infoTxt.text += separator + 'Precisão: '	+ Timings.accuracy + "%" + ' (${Timings.getRank()})';
-		infoTxt.text += separator + 'Quebras: '		+ Timings.breaks;
+		if(SaveData.en) {
+			infoTxt.text += 			'Score: '		+ Timings.score;
+			infoTxt.text += separator + 'Accuracy: '	+ Timings.accuracy + "%" + ' (${Timings.getRank()})';
+			infoTxt.text += separator + 'Breaks: '		+ Timings.breaks;
+		}
+		else {
+			infoTxt.text += 			'Pontuação: '		+ Timings.score;
+			infoTxt.text += separator + 'Precisão: '	+ Timings.accuracy + "%" + ' (${Timings.getRank()})';
+			infoTxt.text += separator + 'Quebras: '		+ Timings.breaks;
+		}
+
 
 		infoTxt.screenCenter(X);
 	}

@@ -50,6 +50,16 @@ class PhotoSubState extends MusicBeatSubState
             'Control - Esconder Controles',
             'BACK - Sair'
 		];
+        if(SaveData.en) {
+            textArray = [
+                'ARROWS - Move Camera',
+                'Q / E - Zoom In/Out',
+                'SHIFT - Faster Movement',
+                'TAB - Hide HUD',
+                'CTRL - Hide Controls',
+                'BACK - Exit'
+            ];
+        }
 		for(i in 0...textArray.length)
 		{
 			if(textArray[i] == "") continue;

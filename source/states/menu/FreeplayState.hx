@@ -92,7 +92,7 @@ class FreeplayState extends MusicBeatState
 				addSong(song[0], song[1], week.diffs, week.weekFile);
 
 			var cover = new FlxSprite().loadGraphic(Paths.image('menu/freeplay/' + week.weekFile));
-			cover.scale.set(0.15, 0.15);
+			cover.scale.set(0.16, 0.16);
 			cover.updateHitbox();
 			cover.x = FlxG.width - cover.width - 10;
 			cover.y = FlxG.height - cover.height - 50;
@@ -133,7 +133,7 @@ class FreeplayState extends MusicBeatState
 		#if TOUCH_CONTROLS
 		createPad("reset");
 		#else
-		var resetTxt = new FlxText(0, 0, 0, "PRESSIONE RESET PARA DELETAR SUA PONTUAÇÃO");
+		var resetTxt = new FlxText(0, 0, 0, (SaveData.en ? "PRESS RESET TO DELETE SONG SCORE" : "PRESSIONE RESET PARA DELETAR SUA PONTUAÇÃO"));
 		resetTxt.setFormat(Main.gFont, 28, 0xFFFFFFFF, RIGHT);
 		var resetBg = new FlxSprite().makeGraphic(
 			Math.floor(FlxG.width * 1.5),
@@ -317,9 +317,17 @@ class ScoreCounter extends FlxGroup
 		super.update(elapsed);
 		text.text = "";
 
-		text.text +=   "PONTUAÇÃO: " + Math.floor(lerpValues.score);
-		text.text += "\nPRECISÃO:  " +(Math.floor(lerpValues.accuracy * 100) / 100) + "%" + ' [$rank]';
-		text.text += "\nQUEBRAS:    " + Math.floor(lerpValues.breaks);
+		if(SaveData.en) {
+			text.text +=   "HIGHSCORE: " + Math.floor(lerpValues.score);
+			text.text += "\nACCURACY:  " +(Math.floor(lerpValues.accuracy * 100) / 100) + "%" + ' [$rank]';
+			text.text += "\nMISSES:    " + Math.floor(lerpValues.breaks);
+		}
+		else {
+			text.text +=   "PONTUAÇÃO: " + Math.floor(lerpValues.score);
+			text.text += "\nPRECISÃO:  " +(Math.floor(lerpValues.accuracy * 100) / 100) + "%" + ' [$rank]';
+			text.text += "\nQUEBRAS:    " + Math.floor(lerpValues.breaks);
+		}
+
 
 		lerpValues.score 	= FlxMath.lerp(lerpValues.score, 	realValues.score, 	 elapsed * 8);
 		lerpValues.accuracy = FlxMath.lerp(lerpValues.accuracy, realValues.accuracy, elapsed * 8);

@@ -59,9 +59,15 @@ class StoryMenuState extends MusicBeatState
 		
 		for(i in 0...weekList.length)
 		{
-			var weekSpr = new FlxSprite().loadGraphic(Paths.image('menu/story/week/${weekList[i].weekFile}'));
+			var which:String = 'menu/story/week/';
+			if(Paths.fileExists("images/" + which + "eng/" + weekList[i].weekFile + ".png") && SaveData.en)
+				which += "eng/";
+			which += weekList[i].weekFile;
+
+			var weekSpr = new FlxSprite().loadGraphic(Paths.image(which));
 			weekSpr.ID = i;
 			weekSpr.screenCenter(X);
+			weekSpr.x += 250;
 			grpWeeks.add(weekSpr);
 
 			var backSpr = new FlxSprite().loadGraphic(Paths.image('menu/story/back/${weekList[i].weekFile}'));
@@ -81,9 +87,10 @@ class StoryMenuState extends MusicBeatState
 		//dd(yellowMf);
 		
 		#if !TOUCH_CONTROLS
-		resetTxt = new FlxText(0,0,0,"PRESSIONE RESET PARA DELETAR SUA PONTUAÇÃO");
+		resetTxt = new FlxText(0,0,0,(SaveData.en ? "PRESS RESET TO DELETE WEEK SCORE" : "PRESSIONE RESET PARA DELETAR SUA PONTUAÇÃO"));
 		resetTxt.setFormat(Main.gFont, 18, 0xFFFFFFFF, LEFT);
-		resetTxt.x = FlxG.width - resetTxt.width - 8;
+		resetTxt.screenCenter(X);
+		//resetTxt.x = FlxG.width - resetTxt.width - 8;
 		resetTxt.y = FlxG.height - resetTxt.height - 8;
 		resetTxt.alpha = 0.8;
 		add(resetTxt);
@@ -98,9 +105,9 @@ class StoryMenuState extends MusicBeatState
 		weekNameTxt.alpha = 0.8;
 		add(weekNameTxt);
 		
-		var trackTitle = new FlxText(0,0,0,"FAIXAS");
+		var trackTitle = new FlxText(0,0,0,(SaveData.en ? "TRACKS" : "FAIXAS"));
 		trackTitle.setFormat(Main.gFont, 48, 0xFFFFFFFF, CENTER);
-		trackTitle.setPosition(200 - trackTitle.width / 2, 50 + 392 + 20);
+		trackTitle.setPosition(300 - trackTitle.width / 2, 50 + 392 + 20);
 		add(trackTitle);
 		
 		trackTxt = new FlxText(0,0,0,"what the hell");
@@ -205,7 +212,7 @@ class StoryMenuState extends MusicBeatState
 		if(Math.abs(scoreCount[1] - scoreCount[0]) <= 0.4)
 			scoreCount[1] = scoreCount[0];
 		
-		weekScoreTxt.text = "WEEK SCORE: " + Math.floor(scoreCount[1]);
+		weekScoreTxt.text = (SaveData.en ? "WEEK SCORE: " : "PONTUAÇÃO DA SEMANA: ")  + Math.floor(scoreCount[1]);
 	}
 	
 	public function updateWeekPos(lerp:Float = 0)
@@ -219,7 +226,7 @@ class StoryMenuState extends MusicBeatState
 	public function changeWeek(change:Int = 0)
 	{
 		if(change != 0)
-			FlxG.sound.play(Paths.sound('menu/scrollMenu'));
+			FlxG.sound.play(Paths.sound('menu/scroll'));
 	
 		curWeek += change;
 		curWeek = FlxMath.wrap(curWeek, 0, weekList.length - 1);
@@ -248,7 +255,7 @@ class StoryMenuState extends MusicBeatState
 		trackTxt.text = "";
 		for(song in daWeek.songs)
 			trackTxt.text += song[0].toUpperCase() + '\n';
-		trackTxt.x = 200 - (trackTxt.width / 2);
+		trackTxt.x = 300 - (trackTxt.width / 2);
 		
 		weekNameTxt.text = weekList[curWeek].weekName.toUpperCase();
 		weekNameTxt.x = FlxG.width - weekNameTxt.width - 8;

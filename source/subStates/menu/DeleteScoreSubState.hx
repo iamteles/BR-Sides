@@ -32,16 +32,20 @@ class DeleteScoreSubState extends MusicBeatSubState
         if(displayName == null)
             displayName = song;
 
-        var title = new Alphabet(0, 150, 'APAGAR SCORE DE\n${displayName.replace('-', ' ')}\n???', true);
+        var text = (SaveData.en ? "DELETE SCORE OF" : "APAGAR SCORE DE");
+        var title = new Alphabet(0, 150, '$text\n${displayName.replace('-', ' ')}\n???', true);
         title.x = FlxG.width / 2;
         title.align = CENTER;
         title.updateHitbox();
         add(title);
 
+        var cancel:String = (SaveData.en ? "NO" : "CANCELAR");
+        var delete:String = (SaveData.en ? "YES" : "APAGAR");
+
         grpItems = new FlxTypedGroup<Alphabet>();
         for(i in 0...2)
         {
-            var opt = new Alphabet(0, 480, (i == 0) ? "CANCELAR" : "APAGAR", true);
+            var opt = new Alphabet(0, 480, (i == 0) ? cancel : delete, true);
             opt.x = (FlxG.width / 2) + 190 * ((i == 0) ? -1 : 1);
             opt.align = CENTER;
             opt.updateHitbox();

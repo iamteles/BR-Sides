@@ -23,6 +23,7 @@ class MainMenu extends MusicBeatState
 	static var curSelected:Int = 0;
 
 	var optionGroup:FlxTypedGroup<FlxSprite>;
+	var splashGroup:FlxTypedGroup<FlxSprite>;
 	var gradient:FlxSprite;
 	var bg:FlxSprite;
 	var tiles:FlxBackdrop;
@@ -52,6 +53,9 @@ class MainMenu extends MusicBeatState
         gradient.blend = BlendMode.ADD;
 		add(gradient);
 
+		splashGroup = new FlxTypedGroup<FlxSprite>();
+		add(splashGroup);
+
         bg = new FlxSprite().loadGraphic(Paths.image('menu/main/bg'));
 		bg.updateHitbox();
 		bg.screenCenter();
@@ -72,6 +76,18 @@ class MainMenu extends MusicBeatState
 			item.ID = i;
 			item.alpha = 0.56;
 			optionGroup.add(item);
+
+			var which:String = "menu/main/splash/";
+			if(Paths.fileExists("images/" + which + optionShit[i] + ".png"))
+				which += optionShit[i];
+			else
+				which += "story";
+			var spl = new FlxSprite().loadGraphic(Paths.image(which));
+			spl.updateHitbox();
+			spl.screenCenter();
+			spl.ID = i;
+			spl.x = FlxG.height * i;
+			splashGroup.add(spl);
 		}
 
 		var doidoSplash:String = 'BR Sides v${FlxG.stage.application.meta.get('version')} (IN-DEV)\nDoido Engine Kai v3.4.1k';
@@ -117,6 +133,11 @@ class MainMenu extends MusicBeatState
 			item.x -= 300;
 			item.y -= 240;
 			item.y += ((107 + 50) * item.ID);
+		}
+
+		for(item in splashGroup.members)
+		{
+			item.x = FlxMath.lerp(item.x, FlxG.height * (item.ID - curSelected), elapsed * 8);
 		}
 
 		if(!selected) {

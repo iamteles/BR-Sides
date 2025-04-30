@@ -26,39 +26,51 @@ class SaveData
 		* PREFERENCES
 		* 
 		*/
+		"Language" => [
+			"PORTUGUES",
+			SELECTOR,
+			["Linguagem do jogo.", "Game language."],
+			["PORTUGUES","ENGLISH"],
+		],
+		"Translated Lyrics" => [
+			"ON",
+			SELECTOR,
+			["Se as letras das musicas serão traduzidas (APENAS PARA INGLES)", "If song lyrics are translated (ENGLISH ONLY)"],
+			["ON","DUAL","OFF"],
+		],
 		"Resolution" => [
 			"1280x720",
 			SELECTOR,
-			"Muda a resolução do jogo, caso não caiba no seu monitor.",
+			["Muda a resolução do jogo, caso não caiba no seu monitor.", "Change the game's resolution if it doesn't fit your monitor."],
 			["640x360","854x480","960x540","1024x576","1152x648","1280x720","1366x768","1600x900","1920x1080", "2560x1440", "3840x2160"],
 		],
 		'Flashing Lights' => [
 			"ON",
 			SELECTOR,
-			"Desative isso caso tenha problemas com epilepsia ou luzes piscantes.",
+			["Desative isso caso tenha problemas com epilepsia ou luzes piscantes.", "Disable this if you have issues with Photosensitivity."],
 			["ON", "REDUCED", "OFF"]
 		],
 		"Cutscenes" => [
 			"ON",
 			SELECTOR,
-			"Decide se cutscenes são tocadas.",
+			["Decide se cutscenes são tocadas.", "Decides if cutscenes should play."],
 			["ON", "FREEPLAY OFF", "OFF"],
 		],
 		"FPS Counter" => [
 			"OFF",
 			SELECTOR,
-			"Contador que mostra informação de teste, incluindo FPS e memória.",
+			["Contador que mostra informação de teste, incluindo FPS e memória.", "Counter that can display debug information, such as the framerate or the memory usage."],
 			["FULL", "SIMPLE", "OFF"]
 		],
 		'Unfocus Pause' => [
 			true,
 			CHECKMARK,
-			"Pausa o jogo quando a janela sai de foco.",
+			["Pausa o jogo quando a janela sai de foco.", "Pauses the game when the window is unfocused."],
 		],
 		"Countdown on Unpause" => [
 			true,
 			CHECKMARK,
-			"Batida no pause para ajudar a voltar no ritmo.",
+			["Batida no pause para ajudar a voltar no ritmo.", "When unpausing the game, this 4 beat timer will help you get back on rhythm."],
 		],
 		'Discord RPC' => [
 			#if DISCORD_RPC
@@ -67,17 +79,17 @@ class SaveData
 			false,
 			#end
 			CHECKMARK,
-			"Mostra informações sobre o jogo no seu perfil de Discord.",
+			["Mostra informações sobre o jogo no seu perfil de Discord.", "Display game information on your Discord profile."],
 		],
 		"Shaders" => [
 			true,
 			CHECKMARK,
-			"Efeitos graficos legais. Desative isso caso não consiga abrir algumas musicas."
+			["Efeitos graficos legais. Desative isso caso não consiga abrir algumas musicas.", "Fancy graphical effects. Disable this if you get GPU related crashes."]
 		],
 		"Low Quality" => [
 			false,
 			CHECKMARK,
-			"Desativa alguns objetos nos stages, para diminuir lag."
+			["Desativa alguns objetos nos stages, para diminuir lag.", "Disables extra assets that might make very low end computers lag."]
 		],
 		/*
 		*
@@ -87,29 +99,29 @@ class SaveData
 		"Ghost Tapping" => [
 			true,
 			CHECKMARK,
-			"Deixa apertar teclas sem quebrar seu combo."
+			["Deixa apertar teclas sem quebrar seu combo.", "Makes you able to press keys freely without breaking notes."]
 		],
 		"Downscroll" => [
 			false,
 			CHECKMARK,
-			"Decide se suas notas sobem ou descem."
+			["Decide se suas notas sobem ou descem.", "Decides if the notes should scroll down or up."]
 		],
 		"FPS Cap"	=> [
 			"60",
 			SELECTOR,
-			"Quantos frames são mostrados num segundo.",
+			["Quantos frames são mostrados num segundo.", "How many frames can displayed in a second."],
 			["30", "60", "75", "120", "144"]
 		],
 		'Hitsounds' => [
 			"OFF",
 			SELECTOR,
-			"Som quando você aperta uma nota.",
+			["Som quando você aperta uma nota.", "Clicking sounds whenever you hit a note."],
 			["OFF", "OSU", "CD"]
 		],
 		'Hitsound Volume' => [
 			100,
 			SELECTOR,
-			"Volume dos Hitsounds.",
+			["Volume dos Hitsounds.", "The volume at which hitsounds are played."],
 			[0, 100]
 		],
 		/*
@@ -120,12 +132,12 @@ class SaveData
 		"Antialiasing" => [
 			true,
 			CHECKMARK,
-			"Aumento de sprites suavizado."
+			["Aumento de sprites suavizado.", "Smoothing on sprite scaling. Disabling this may improve performance."]
 		],
 		"Dark Mode" => [
 			true,
 			CHECKMARK,
-			"Tema da janela."
+			["Tema da janela.", "The theme of the Window."]
 		],
 		/*
 		*
@@ -135,19 +147,19 @@ class SaveData
 		"Invert Swipes" => [
 			"OFF",
 			SELECTOR,
-			"Inverte a direção de deslizar a tela.",
+			["Inverte a direção de deslizar a tela.", "Inverts the direction of the swipes."],
 			["HORIZONTAL", "VERTICAL", "BOTH", "OFF"],
 		],
 		"Button Opacity" => [
 			5,
 			SELECTOR,
-			"Decide a transparência dos botões.",
+			["Decide a transparência dos botões.", "Decides the transparency of the virtual buttons."],
 			[0, 10]
 		],
 		"Hitbox Opacity" => [
 			7,
 			SELECTOR,
-			"Decide a transparência dos Hitboxes.",
+			["Decide a transparência dos Hitboxes.", "Decides the transparency of the playing Hitboxes."],
 			[0, 10]
 		],
 		/*
@@ -158,13 +170,13 @@ class SaveData
 		"Song Offset" => [
 			0,
 			SELECTOR,
-			"no one is going to see this anyway whatever",
+			["no one is going to see this anyway whatever","no one is going to see this anyway whatever"],
 			[-100, 100],
 		],
 		"Input Offset" => [
 			0,
 			SELECTOR,
-			"same xd",
+			["same xd","same xd"],
 			[-100, 100],
 		],
 	];
@@ -278,4 +290,11 @@ class SaveData
 		FlxG.stage.window.y = Math.floor(Capabilities.screenResolutionY / 2 - (windowSize[1] + 16) / 2);
 		#end
 	}
+
+	public static var en(get, never):Bool;
+
+    private static function get_en():Bool
+    {
+        return data.get("Language") == "ENGLISH";
+    }
 }

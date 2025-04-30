@@ -42,6 +42,17 @@ class PauseSubState extends MusicBeatSubState
 	public function new()
 	{
 		super();
+		
+		if(SaveData.en) {
+			optionshit = [
+				"resume",
+				"restart",
+				"botplay",
+				"photo mode",
+				"options",
+				"exit",
+			];
+		}
 		PlayState.instance.setScript("this", this);
 		DiscordIO.changePresence("Paused - Restin' a bit");
 		this.cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
@@ -79,7 +90,7 @@ class PauseSubState extends MusicBeatSubState
 		
 		var textArray:Array<String> = [
 			PlayState.SONG.song,
-			'INFARTOS PATRIOTAS: ' + PlayState.blueballed,
+			(SaveData.en ? 'PATRIOT STROKES: ' : 'INFARTOS PATRIOTAS: ') + PlayState.blueballed,
 		];
 		for(i in 0...textArray.length)
 		{
@@ -168,10 +179,10 @@ class PauseSubState extends MusicBeatSubState
 					default:
 						FlxG.sound.play(Paths.sound("menu/cancel"));
 					
-					case "resumir":
+					case "resumir" | "resume":
 						closePause();
 
-					case "recomecar" | "recomeçar":
+					case "recomecar" | "recomeçar" | "restart":
 						Main.skipStuff();
 						Main.resetState();
 					
@@ -179,18 +190,18 @@ class PauseSubState extends MusicBeatSubState
 						FlxG.sound.play(Paths.sound("menu/cancel"));
 						PlayState.botplay = !PlayState.botplay;
 
-					case "opcoes" | "opções":
+					case "opcoes" | "opções" | "options":
 						//Main.switchState(new states.menu.opcoesState(new LoadSongState()));
 						persistentDraw = false;
 						pauseSong.pause();
 						this.openSubState(new OptionsSubState(PlayState.instance));
 
-					case "sair":
+					case "sair" | "exit":
 						//Main.switchState(new MenuState());
 						persistentDraw = true;
 						PlayState.sendToMenu();
 					
-					case "fotografia":
+					case "fotografia" | "photo mode":
 						persistentDraw = false;
 						this.openSubState(new PhotoSubState());
 				}

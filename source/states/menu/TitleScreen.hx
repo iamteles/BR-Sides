@@ -52,9 +52,9 @@ class TitleScreen extends MusicBeatState
 		FlxTween.tween(logo, {y: storeY + 20}, 1.6, {type: FlxTweenType.PINGPONG, ease: FlxEase.sineInOut});
 		add(logo);
 
-        var text:String = "Press ENTER to start!";
-        if(SaveData.data.get("Touch Controls"))
-            text = "Touch Screen to start!";
+        var text:String = "Pressione ACCEPT pra começar!";
+        if(SaveData.en)
+            text = "Press ACCEPT to start!";
 
         info = new FlxText(0,0,0,text);
 		info.setFormat(Main.gFont, 50, 0xFFFFFFFF, CENTER);

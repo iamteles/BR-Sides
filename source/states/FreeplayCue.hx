@@ -25,7 +25,7 @@ class FreeplayCue extends MusicBeatState
 		sprite.alpha = 0;
 		add(sprite);
 
-		var text = new FlxText(0, 16, 0, "Algumas musicas foram desbloqueadas no Freeplay!");
+		var text = new FlxText(0, 16, 0, (SaveData.en ? "Some songs have been unlocked in Freeplay!" : "Algumas músicas foram desbloqueadas no Freeplay!"));
         text.setFormat(Main.gFont, 36, 0xFFFFFFFF, CENTER);
         text.screenCenter(X);
 		text.y = sprite.y + sprite.height + 14;

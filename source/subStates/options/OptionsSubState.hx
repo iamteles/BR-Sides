@@ -50,6 +50,8 @@ class OptionsSubState extends MusicBeatSubState
             "Hitsound Volume",
 		],
         "system" => [
+            "Language",
+            "Translated Lyrics",
             "Countdown on Unpause",
             #if DISCORD_RPC
             "Discord RPC",
@@ -96,7 +98,9 @@ class OptionsSubState extends MusicBeatSubState
         "Cutscenes" => "Cutscenes",
         "Invert Swipes" => "Inverter Deslizes",
         "Button Opacity" => "Opacidade dos Botões",
-        "Hitbox Opacity" => "Opacidade dos Hitboxes"
+        "Hitbox Opacity" => "Opacidade dos Hitboxes",
+        "Language" => "Linguagem",
+        "Translated Lyrics" => "Letras Traduzidas"
 	];
     
     var restartTimer:Float = 0;
@@ -180,7 +184,7 @@ class OptionsSubState extends MusicBeatSubState
         restartTxt = new FlxText(0, 0, 0, "");
         restartTxt.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
         restartTxt.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
-        restartTxt.text = "recomece a musica para aplicar algumas opções".toUpperCase();
+        restartTxt.text = (SaveData.en ? "restart the song to apply some options": "recomece a musica para aplicar algumas opções").toUpperCase();
         restartTxt.scale.set(0.65,0.65);
         restartTxt.updateHitbox();
         restartTxt.screenCenter(X);
@@ -306,6 +310,8 @@ class OptionsSubState extends MusicBeatSubState
                         // custom stuff
                         if(selec.label == "Resolution")
                             SaveData.updateWindowSize();
+                        else if(selec.label == "Language")
+                            spawnItems(curCat);
                         #if TOUCH_CONTROLS
                         else if(selec.label == "Button Opacity")
                             pad.togglePad(true);
@@ -428,7 +434,7 @@ class OptionsSubState extends MusicBeatSubState
                 var text = new FlxText(0, 0, 0, "");
                 text.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
                 text.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
-                if(tl.get(mainShit[i]) != null)
+                if(tl.get(mainShit[i]) != null && !SaveData.en)
                     text.text = tl.get(mainShit[i]).toUpperCase();
                 else
                     text.text = mainShit[i].toUpperCase();
@@ -467,7 +473,7 @@ class OptionsSubState extends MusicBeatSubState
                 var text = new FlxText(0, 0, 0, "");
                 text.setFormat(Main.gFont, 59, 0xFFFFFFFF, CENTER);
                 text.setBorderStyle(OUTLINE, 0xFF000000, 2.7);
-                if(tl.get(curOption[i]) != null)
+                if(tl.get(curOption[i]) != null && !SaveData.en)
                     text.text = tl.get(curOption[i]);
                 else
                     text.text = curOption[i];
@@ -525,7 +531,7 @@ class OptionsSubState extends MusicBeatSubState
 
         if(SaveData.displaySettings.exists(optionShit.get(curCat)[curSelected]))
         {
-            infoTxt.text = SaveData.displaySettings.get(optionShit.get(curCat)[curSelected])[2];
+            infoTxt.text = SaveData.displaySettings.get(optionShit.get(curCat)[curSelected])[2][SaveData.en ? 1 : 0];
             infoTxt.screenCenter(X);
             infoTxt.y = FlxG.height - infoTxt.height - 12 - 18;
         }

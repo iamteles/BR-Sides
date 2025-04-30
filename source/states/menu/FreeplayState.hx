@@ -39,7 +39,7 @@ class FreeplayState extends MusicBeatState
 			week: week,
 			icon: icon,
 			diffs: diffs,
-			color: HealthIcon.getColor(icon),
+			color: HealthIcon.getColor(icon, true),
 		});
 	}
 
@@ -69,6 +69,11 @@ class FreeplayState extends MusicBeatState
         bg.screenCenter();
         bg.antialiasing = false;
         add(bg);
+
+		var grad = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/gradient'));
+		grad.screenCenter();
+		grad.alpha = 0.77;
+		add(grad);
 
 		grpCover = new FlxTypedGroup<FlxSprite>();
 		

@@ -162,8 +162,15 @@ class OptionsSubState extends MusicBeatSubState
         bg.antialiasing = false;
         add(bg);
 
+        var grad = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/gradient'));
+		grad.screenCenter();
+		add(grad);
+
         bg.alpha = 0;
 		FlxTween.tween(bg, {alpha: 0.8}, 0.1);
+
+        grad.alpha = 0;
+		FlxTween.tween(grad, {alpha: 0.77}, 0.1);
 
         grpItems = new FlxTypedGroup<FlxText>();
         grpAttachs = new FlxGroup();

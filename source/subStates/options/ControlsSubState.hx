@@ -64,9 +64,14 @@ class ControlsSubState extends MusicBeatSubState
         bg.updateHitbox();
         bg.screenCenter();
         bg.color = 0xFF3C94FF;
-        bg.alpha = 0.4;
+        bg.alpha = 0.65;
         bg.antialiasing = false;
         add(bg);
+
+        var grad = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/gradient'));
+		grad.screenCenter();
+		grad.alpha = 0.77;
+		add(grad);
 
         strumline = new Strumline(FlxG.width / 2, null, false, true, true, PlayState.assetModifier);
         strumline.downscroll = downscroll;

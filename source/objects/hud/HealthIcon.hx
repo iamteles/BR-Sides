@@ -71,12 +71,13 @@ class HealthIcon extends FlxSprite
 		animation.curAnim.curFrame = daFrame;
 	}
 
-	public static function getColor(char:String = ""):FlxColor
+	public static function getColor(char:String = "", freeplay:Bool = false):FlxColor
 	{
 		var colorMap:Map<String, FlxColor> = [
 			"face" 		=> 0xFFA1A1A1,
 			"bf" 		=> 0xFF66FFFF,
 			"gf"		=> 0xFF603657,
+			"gf-_fp"	=> 0xFF7d4d73,
 			"danilo"	=> 0xFFE5E3FA,
 			"purobobora"=> 0xFF339999,
 			"saco"		=> 0xFF74A40D,
@@ -85,6 +86,9 @@ class HealthIcon extends FlxSprite
 			"vrazillian"=> 0xFF4D4DF9,
 			"dublando"	=> 0xFF663333,
 		];
+
+		if(freeplay)
+			char += '-_fp';
 
 		function loopMap()
 		{

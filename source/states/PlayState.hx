@@ -517,7 +517,7 @@ class PlayState extends MusicBeatState
 		{
 			switch(SONG.song) {
 				case "microondas-freestyle":
-					startVideo("test");
+					startVideo("w1");
 				case "sequestro":
 					startVideo("seq");
 				default:
@@ -559,7 +559,10 @@ class PlayState extends MusicBeatState
 				doNoteUp = false;
 				doHudBAlpha = false;
 				followCamera(boyfriend.char, stageBuild.bfCam.x, stageBuild.bfCam.y);
-			case "microondas-freestyle" | "fluxo" | "vei-brabo": 
+			case "microondas-freestyle":
+				camGame.fade(0xff000000, 0.001, false);
+				zoomPl = 0.1;
+			case "fluxo" | "vei-brabo": 
 				zoomPl = 0.1;
 		}
 
@@ -646,6 +649,9 @@ class PlayState extends MusicBeatState
 		createPad("pause", [camOther]);
 		hitbox.toggleHbx(true);
 		#end
+
+		if(SONG.song == "microondas-freestyle")
+			camGame.fade(0xff000000, 0.001, true);
 
 		var daCount:Int = 0;
 		
@@ -765,7 +771,14 @@ class PlayState extends MusicBeatState
 	}
 	
 	public function hasCutscene():Bool
-		return SaveData.data.get('Cutscenes') != "OFF";
+	{
+		return switch(SaveData.data.get('Cutscenes'))
+		{
+			default: true;
+			case "FREEPLAY OFF": isStoryMode;
+			case "OFF": false;
+		}
+	}
 
 	public function startSong()
 	{
@@ -1753,7 +1766,7 @@ class PlayState extends MusicBeatState
 			switch(SONG.song)
 			{
 				case "useless":
-					startVideo("test", true);
+					startVideo("w1", true);
 					return;
 			}
 		}

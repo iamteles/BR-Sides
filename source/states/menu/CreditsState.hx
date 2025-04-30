@@ -50,6 +50,8 @@ class CreditsState extends MusicBeatState
 	var infoTxtFocus:AlphabetRetro;
 	var infoTxt:FlxText;
 
+	public static var doido:Bool = false;
+
 	override function create()
 	{
 		super.create();
@@ -65,6 +67,11 @@ class CreditsState extends MusicBeatState
         bg.antialiasing = false;
         add(bg);
 
+		var grad = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/gradient'));
+		grad.screenCenter();
+		grad.alpha = 0.77;
+		add(grad);
+
 		grpItems = new FlxGroup();
 		add(grpItems);
 
@@ -78,27 +85,42 @@ class CreditsState extends MusicBeatState
 		// yes, this implies coders aren't people
 		// :D
 		
-		// btw you dont need to credit everyone here on your mod, just credit doido engine as a whole and we're good
-		addCredit('JulianoBeta', 			'juliano', 	 	"Diretor, Compositor e Charter",		'https://www.youtube.com/@JulianoBetotoso');
-		addCredit('Daniel DGL', 			'dgl', 	 		"Artista Principal",					'https://x.com/DGLDaniOfc1');
-		addCredit('teles', 					'teles', 	 	"Programadora Principal, Sound Design",	'https://www.youtube.com/@telesfnf');
-		addCredit('DiogoTV', 				'diogotv', 	 	"Artista e Programador",				'https://x.com/DiogoTVV');
-		addCredit('Bew', 					'bew', 	 		"Artista",								'');
-		addCredit('Lamenzito', 				'lamenzito', 	"Artista",								'https://x.com/Lamenzito_');
-		addCredit('Julitolito', 			'julito', 	 	"Artista",								'');
-		addCredit('DoubleoNikoo', 			'nikoo', 	 	"Artista",								'https://x.com/Mudoku__');
-		addCredit('Guityz', 				'guityz', 	 	"Artes Adicionais",						'');
-		addCredit('Novaize', 				'dn', 	 		"Animador",								'https://x.com/Novaizes');
-		addCredit('Knira', 					'knira', 	  	"Designs",								'');
-		addCredit('Lucas Barbosa', 			'lucas', 	  	"Compositor",							'https://www.youtube.com/@lucasbarbosameneghin');
-		addCredit('Neverminds', 			'nevermindslol',"Compositor",							'https://youtube.com/@thenevermindslol');
-		addCredit('ZieroSama', 				'ziero', 	  	"Compositor",							'https://x.com/sama_ziero');
-		addCredit('Anna The Fennec', 		'anna', 	 	"Charter",								'https://x.com/goldenfoxy2604');
-		addCredit('Telly', 					'telly', 	  	"Charter",								'');
-		addCredit('Morgan', 				'morgan', 	  	"Chromatic Maker",						'');
-		addCredit('Hiro Mizuki', 			'hiro', 	  	"Voice Actor",							'');
-		addCredit('Leozito', 				'leo', 	  		"Voice Actor",							'https://x.com/Leozitoplays1');
-		addCredit('Tagaki', 				'tagaki', 	  	"Voice Actor",							'https://x.com/SensatahTata');
+		if(!doido) {
+			addCredit('JulianoBeta', 			'juliano', 	 	"Diretor, Compositor e Charter",		'https://www.youtube.com/@JulianoBetotoso');
+			addCredit('Daniel DGL', 			'dgl', 	 		"Artista Principal",					'https://x.com/DGLDaniOfc1');
+			addCredit('teles', 					'teles', 	 	"Programadora Principal, Sound Design",	'https://www.youtube.com/@telesfnf');
+			addCredit('DiogoTV', 				'diogotv', 	 	"Artista e Programador",				'https://x.com/DiogoTVV');
+			addCredit('Bew', 					'bew', 	 		"Artista",								'');
+			addCredit('Lamenzito', 				'lamenzito', 	"Artista",								'https://x.com/Lamenzito_');
+			addCredit('Julitolito', 			'julitolito', 	"Artista",								'');
+			addCredit('DoubleoNikoo', 			'nikoo', 	 	"Artista",								'https://x.com/Mudoku__', 0xFF9308e5);
+			addCredit('Guityz', 				'guityz', 	 	"Artes Adicionais",						'');
+			addCredit('Novaize', 				'dn', 	 		"Animador",								'https://x.com/Novaizes');
+			addCredit('Knira', 					'knira', 	  	"Designs",								'');
+			addCredit('Lucas Barbosa', 			'lucas', 	  	"Compositor",							'https://www.youtube.com/@lucasbarbosameneghin');
+			addCredit('Neverminds', 			'nevermindslol',"Compositor",							'https://youtube.com/@thenevermindslol');
+			addCredit('ZieroSama', 				'ziero', 	  	"Compositor",							'https://x.com/sama_ziero');
+			addCredit('Anna The Fennec', 		'anna', 	 	"Charter",								'https://x.com/goldenfoxy2604');
+			addCredit('Telly', 					'telly', 	  	"Charter",								'');
+			addCredit('Morgan', 				'morgan', 	  	"Chromatic Maker",						'');
+			addCredit('Hiro Mizuki', 			'hiro', 	  	"Voice Actor",							'');
+			addCredit('Leozito', 				'leo', 	  		"Voice Actor",							'https://x.com/Leozitoplays1');
+			addCredit('Tagaki', 				'tagaki', 	  	"Voice Actor",							'https://x.com/SensatahTata');
+			addCredit('Doido Engine ~ Kai', 	'doido', 	  	"Press ACCEPT to see engine credits",	'_DOIDO', 0xFFFFFFFF);
+		}
+		else {
+			addCredit('DiogoTV', 			'diogotv', 	  "Doido Engine's Owner and Main Coder", 							'https://bsky.app/profile/diogotv.bsky.social');
+			addCredit('teles', 				'teles', 	  "Doido Engine's Additional Coder\nKAI fork Owner and Main Coder",				'https://youtube.com/@telesfnf');
+			addCredit('GoldenFoxy',			'anna', 	  "Main designer of Doido Engine's chart editor",					'https://bsky.app/profile/goldenfoxy.bsky.social');
+			addCredit('JulianoBeta', 		'juyko', 	  "Composed Doido Engine's offset menu music",			'https://www.youtube.com/@prodjuyko');
+			addCredit('crowplexus',			'crowplexus', "Creator of HScript Iris",							'https://github.com/crowplexus/hscript-iris');
+			addCredit('yoisabo',			'yoisabo',	  "Chart Editor's Event Icons Artist",					'https://bsky.app/profile/yoisabo.bsky.social');
+			addCredit('cocopuffs',			'coco',	 	  "Mobile Button Artist",								'https://x.com/cocopuffswow');
+			addCredit('doubleonikoo', 		'nikoo', 	  "didn't really do much but i already made this icon so you can stay... for now\n-DiogoTV",	'https://bsky.app/profile/doubleonikoo.bsky.social');
+			addCredit('Github Contributors','github', 	  'Thank you\n${specialCoders}!!', 		'https://github.com/DoidoTeam/FNF-Doido-Engine/graphs/contributors');
+			addCredit('Special Thanks', 	'heart', 	  'Thank you\n${specialPeople}!!', "https://youtu.be/Fo7L8p1I_Hw");
+			addCredit('FNF: BR-Sides', 		'br', 	  	  "Press ACCEPT to return to mod credits",	'_MOD');
+		}
 		
 		for(i in 0...creditList.length)
 		{
@@ -109,13 +131,20 @@ class CreditsState extends MusicBeatState
 			item.updateHitbox();
 			grpItems.add(item);
 
+			var iconName:String = 'credits/';
+			if(doido)
+				iconName += 'doido/';
+			iconName += credit.icon;
+
 			var icon = new FlxSprite();
-			icon.loadGraphic(Paths.image('credits/${credit.icon}'));
+			icon.loadGraphic(Paths.image(iconName));
 			grpItems.add(icon);
 
 			// big ears
 			if(credit.icon == "anna")
 				icon.offset.y = 30;
+			if(credit.icon == "tagaki" || credit.icon == "doido" || credit.icon == "br")
+				icon.offset.x = -10;
 
 			item.icon = icon;
 			item.ID = i;
@@ -153,7 +182,10 @@ class CreditsState extends MusicBeatState
 					infoTxtFocus = item;
 					item.alpha = 1;
 
-					color = CoolUtil.dominantColor(item.icon);
+					if(creditList[curSelected].color != null)
+						color = creditList[curSelected].color;
+					else
+						color = CoolUtil.dominantColor(item.icon);
 				}
 			}
 		}
@@ -168,6 +200,19 @@ class CreditsState extends MusicBeatState
 			FlxG.sound.play(Paths.sound("menu/scroll"));
 	}
 
+	function goBack() {
+		if(doido)
+			switchCreds()
+		else
+			Main.switchState(new states.menu.MainMenu());
+	}
+
+	function switchCreds() {
+		doido = !doido;
+		Main.resetState();
+		curSelected = 0;
+	}
+
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
@@ -178,13 +223,17 @@ class CreditsState extends MusicBeatState
 			changeSelection(1);
 
 		if(Controls.justPressed(BACK))
-			Main.switchState(new states.menu.MainMenu());
+			goBack();
 
 		if(Controls.justPressed(ACCEPT))
 		{
 			var daCredit = creditList[curSelected].link;
-			if(daCredit != null)
-				CoolUtil.openURL(daCredit);
+			if(daCredit != null) {
+				if(daCredit == "_DOIDO" || daCredit == "_MOD")
+					switchCreds();
+				else
+					CoolUtil.openURL(daCredit);
+			}
 		}
 		
 		infoTxt.y = infoTxtFocus.y + infoTxtFocus.height + 48;

@@ -108,6 +108,7 @@ class Paths
 		"menu/checkmark.png",
 		"menu/menuArrows.png",
 		"menu/grid.png",
+		'menu/backgrounds/gradient.png',
 
 		// SOUNDS
 		'sounds/flixel.ogg',
@@ -128,7 +129,10 @@ class Paths
 		'menu/title/gradient.png',
 		'menu/title/logo.png',
 
+		'doido_logo.png',
+
 		"music/freakyMenu.ogg",
+		"sounds/doido.ogg"
 	];
 	public static function clearMemory()
 	{	

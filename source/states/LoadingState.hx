@@ -184,7 +184,7 @@ class LoadingState extends MusicBeatState
 					#if VIDEOS_ALLOWED
 					if(SaveData.data.get('Cutscenes') != "OFF") {
 						var video = new DoidoVideoSprite();
-						video.load(Paths.video("test"));
+						video.load(Paths.video("w1"));
 					}
 					#end
 				case "sequestro":

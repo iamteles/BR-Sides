@@ -65,9 +65,14 @@ class OffsetsSubState extends MusicBeatSubState
         bg.updateHitbox();
         bg.screenCenter();
         bg.color = 0xFFFF6C6C;
-        bg.alpha = 0.4;
+        bg.alpha = 0.65;
         bg.antialiasing = false;
         add(bg);
+
+        var grad = new FlxSprite().loadGraphic(Paths.image('menu/backgrounds/gradient'));
+		grad.screenCenter();
+		grad.alpha = 0.77;
+		add(grad);
 
         countdownSpr = new Alphabet(0, 0, "holyshit", true);
         countdownSpr.align = CENTER;

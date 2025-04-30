@@ -231,7 +231,7 @@ class DoidoSplash extends MusicBeatState
 			sprite.alpha = 1;
 			FlxG.sound.play(Paths.sound("doido"), 1, false, null, true);
 
-			new FlxTimer().start(0.5, function(tmr:FlxTimer)
+			new FlxTimer().start(0.25, function(tmr:FlxTimer)
 			{
 				FlxTween.tween(text, {alpha: 1}, 0.6, {ease: FlxEase.linear, onComplete: function(twn:FlxTween)
 				{

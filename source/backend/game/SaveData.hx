@@ -42,7 +42,7 @@ class SaveData
 			"ON",
 			SELECTOR,
 			"Decide se cutscenes são tocadas.",
-			["ON", "OFF"],
+			["ON", "FREEPLAY OFF", "OFF"],
 		],
 		"FPS Counter" => [
 			"OFF",

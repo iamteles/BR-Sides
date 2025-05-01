@@ -207,7 +207,7 @@ class Character extends FlxAnimate
 					['singDOWN', 	'down0', 24, false],
 				];
 
-				scale.set(0.75,0.75);
+				scale.set(0.8,0.8);
 
 			case 'danilo-brabo':
 				doidoChar.spritesheet += 'danilo/DaniloBrabo';
@@ -226,7 +226,7 @@ class Character extends FlxAnimate
 					doidoChar.anims.push(['rage', 			'brabo', 		24, false]);
 				}
 
-				scale.set(0.75,0.75);
+				scale.set(0.8,0.8);
 
 			case "test-note":
 				doidoChar.spritesheet = "notes/base/notes";

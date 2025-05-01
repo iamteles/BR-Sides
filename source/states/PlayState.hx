@@ -516,6 +516,21 @@ class PlayState extends MusicBeatState
 		if(hasCutscene() && !playedCutscene)
 		{
 			switch(SONG.song) {
+				case "vei-brabo":
+					camZoom = 1.1;
+					followCamera(dad.char, stageBuild.dadCam.x, stageBuild.dadCam.y);
+					dad.char.animation.play('start');
+					new FlxTimer().start(0.7, function(tmr:FlxTimer)
+					{
+						FlxG.sound.play(Paths.sound('rage'));
+						dad.char.animation.play('rage');
+
+						new FlxTimer().start(1.7, function(tmr:FlxTimer)
+						{
+							camZoom = 0.8;
+							startCountdown();
+						});
+					});
 				case "microondas-freestyle":
 					startVideo("w1");
 				case "sequestro":
@@ -770,7 +785,7 @@ class PlayState extends MusicBeatState
 		#end
 	}
 	
-	public function hasCutscene():Bool
+	public static function hasCutscene():Bool
 	{
 		return switch(SaveData.data.get('Cutscenes'))
 		{

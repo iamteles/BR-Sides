@@ -220,6 +220,12 @@ class Character extends FlxAnimate
 					['singDOWN', 	'down0', 24, false],
 				];
 
+				if(states.PlayState.hasCutscene()) {
+					doidoChar.extrasheets = ['danilo/DaniloCut'];
+					doidoChar.anims.push(['start', 			'brabo0007', 		24, true]);
+					doidoChar.anims.push(['rage', 			'brabo', 		24, false]);
+				}
+
 				scale.set(0.75,0.75);
 
 			case "test-note":

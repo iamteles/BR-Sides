@@ -164,6 +164,9 @@ class FreeplayState extends MusicBeatState
 		if(Controls.justPressed(UI_RIGHT))
 			changeDiff(1);
 
+		for(item in grpCover.members)
+			item.y = FlxMath.lerp(item.y, FlxG.height - item.height - 50, elapsed * 8);
+
 		if(Controls.justPressed(RESET)) {
 			var curSong = songList[curSelected];
 			openSubState(new DeleteScoreSubState(curSong.name, curSong.diffs[curDiff]));
@@ -258,10 +261,15 @@ class FreeplayState extends MusicBeatState
 		var curSong = songList[curSelected];
 		for(item in grpCover.members)
 		{
+			var storeAlpha:Float = item.alpha;
+
 			if(item.ID == weeks.indexOf(curSong.week))
 				item.alpha = 1;
 			else
 				item.alpha = 0;
+
+			if(storeAlpha != item.alpha)
+				item.y -= 30;
 		}
 		
 		if(bgTween != null) bgTween.cancel();

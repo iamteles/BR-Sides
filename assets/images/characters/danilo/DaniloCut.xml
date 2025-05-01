@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="danilobrabo.png">
+	<!-- Created with Adobe Animate version 19.2.0.405 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="brabo0000" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0001" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0002" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0003" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0004" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0005" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0006" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0007" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0008" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0009" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0010" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0011" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0012" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0013" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0014" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0015" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0016" x="884" y="4" width="427" height="783" frameX="0" frameY="-5" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0017" x="1315" y="4" width="427" height="781" frameX="0" frameY="-7" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0018" x="4" y="791" width="425" height="778" frameX="0" frameY="-10" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0019" x="4" y="791" width="425" height="778" frameX="0" frameY="-10" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0020" x="433" y="791" width="440" height="769" frameX="-5" frameY="-19" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0021" x="433" y="791" width="440" height="769" frameX="-5" frameY="-19" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0022" x="877" y="791" width="432" height="785" frameX="0" frameY="-3" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0023" x="877" y="791" width="432" height="785" frameX="0" frameY="-3" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0024" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0025" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0026" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0027" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0028" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0029" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0030" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0031" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0032" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0033" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0034" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0035" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0036" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+	<SubTexture name="brabo0037" x="1313" y="791" width="427" height="788" frameX="0" frameY="0" frameWidth="445" frameHeight="788"/>
+</TextureAtlas>

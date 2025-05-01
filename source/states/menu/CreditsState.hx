@@ -98,7 +98,7 @@ class CreditsState extends MusicBeatState
 			addCredit('Novaize', 				'dn', 	 		"Animador",								'https://x.com/Novaizes');
 			addCredit('Knira', 					'knira', 	  	"Designs",								'');
 			addCredit('Lucas Barbosa', 			'lucas', 	  	"Compositor",							'https://www.youtube.com/@lucasbarbosameneghin');
-			addCredit('Neverminds', 			'nevermindslol',"Compositor",							'https://youtube.com/@thenevermindslol');
+			addCredit('nevermindslol', 			'nevermindslol',"Compositor",							'https://youtube.com/@thenevermindslol');
 			addCredit('ZieroSama', 				'ziero', 	  	"Compositor",							'https://x.com/sama_ziero');
 			addCredit('Anna The Fennec', 		'anna', 	 	"Charter",								'https://x.com/goldenfoxy2604');
 			addCredit('Telly', 					'telly', 	  	"Charter",								'');

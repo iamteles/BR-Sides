@@ -90,7 +90,7 @@ class MainMenu extends MusicBeatState
 			splashGroup.add(spl);
 		}
 
-		var doidoSplash:String = 'BR Sides v${FlxG.stage.application.meta.get('version')} (PRE-RELEASE)\nDoido Engine Kai v3.4.1k';
+		var doidoSplash:String = 'BR Sides v${FlxG.stage.application.meta.get('version')}\nDoido Engine Kai v3.4.1k';
 
 		var splashTxt = new FlxText(4, 0, 0, '$doidoSplash');
 		splashTxt.setFormat(Main.gFont, 15, 0xFFFFFFFF, LEFT);

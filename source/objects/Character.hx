@@ -80,7 +80,7 @@ class Character extends FlxAnimate
 				flipX = true;
 
 				scale.set(0.75,0.75);
-			case "purobobora":
+			case "purobobora" | "purobobora-d":
 				doidoChar.spritesheet += 'purobobora/purobobora';
 				doidoChar.anims = [
 					['idle', 			'idle0', 		24, false],
@@ -91,6 +91,12 @@ class Character extends FlxAnimate
 					['singUP', 		'up0', 	24, false],
 					['singDOWN', 	'down0', 24, false],
 				];
+
+
+				if(curChar == "purobobora-d") {
+					doidoChar.extrasheets = ['purobobora/dancing'];
+					doidoChar.anims.push(['dance', 			'arroz', 		24, true]);
+				}
 
 				scale.set(0.75,0.75);
 			case "gf":

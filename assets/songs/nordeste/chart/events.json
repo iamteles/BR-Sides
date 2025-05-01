@@ -21,6 +21,12 @@
 					"0.9",
 					"",
 					""
+				],
+				[
+					"Change Cam Section",
+					"none",
+					"",
+					""
 				]
 			]
 		],
@@ -513,6 +519,30 @@
 					"0",
 					"2",
 					"camStrum"
+				]
+			]
+		],
+		[
+			48,
+			69818.1818181819,
+			[
+				[
+					"Play Animation",
+					"dad",
+					"dance",
+					"false"
+				],
+				[
+					"Change Cam Section",
+					"dad",
+					"",
+					""
+				],
+				[
+					"Change Cam Zoom",
+					"1",
+					"",
+					""
 				]
 			]
 		]

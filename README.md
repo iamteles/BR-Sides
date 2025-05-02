@@ -35,4 +35,4 @@ A few days later, on a trip to the Northwest, Beto and Gi meet Abobrinha and Pur
 - Photo Mode
 - Full English translation
 
-# Developed with [FNF: Doido Engine ~ KAI](https://github.com/DoidoTeam/FNF-Doido-Engine)
+# Developed with [FNF: Doido Engine](https://github.com/DoidoTeam/FNF-Doido-Engine) ~ [KAI](https://github.com/iamteles/DoidoEngine-Kai)

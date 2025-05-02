@@ -1,6 +1,6 @@
 # FNF: BR Sides
 <p align="center">
-<img src="https://www.newgrounds.com/dump/draw/a7487bb1dcc15a499c00a5c5d4be5eb3">
+<img src="brsides_promo.png">
 </p>
 
 ## PT-BR

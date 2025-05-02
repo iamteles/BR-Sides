@@ -174,7 +174,7 @@ class Paths
 		for (key => sound in renderedSounds)
 		{
 			if(dumpExclusions.contains(key + '.ogg')) continue;
-			trace("dumped " + key);
+			//trace("dumped " + key);
 			
 			Assets.cache.clear(key);
 			renderedSounds.remove(key);
@@ -361,7 +361,7 @@ class Paths
 		// no point in preloading something already loaded duh
 		if(renderedGraphics.exists(key)) return;
 
-		trace("preload! " + key);
+		//trace("preload! " + key);
 
 		var what = new FlxSprite().loadGraphic(image(key, library));
 		FlxG.state.add(what);
@@ -371,7 +371,7 @@ class Paths
 	{
 		if(renderedSounds.exists(key)) return;
 
-		trace("preload! " + key);
+		//trace("preload! " + key);
 
 		var what = new FlxSound().loadEmbedded(getSound(key, library), false, false);
 		what.play();

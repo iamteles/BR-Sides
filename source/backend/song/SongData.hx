@@ -143,10 +143,10 @@ class SongData
 			
 			for(fWeek in weeks) {
 				var week:String = fWeek.weekFile;
-				trace("try week " + week);
+				//trace("try week " + week);
 				if(savedWeeks.get(week) == null) {
 					savedWeeks.set(week, false);
-					trace("set week " + week);
+					//trace("set week " + week);
 				}
 			}
 
